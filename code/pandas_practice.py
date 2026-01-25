@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 df = pd.read_excel(io = "data/IRIS.xlsx", sheet_name = "IRIS", engine = "openpyxl")
 
@@ -21,6 +22,15 @@ df = pd.read_excel(io = "data/IRIS.xlsx", sheet_name = "IRIS", engine = "openpyx
 # print(df.info())
 # print(new_df.info())
 
+# clean_df = df.dropna()
+# sorted_df = df.sort_values(by = "petal_length", ascending = 0)
+# print(clean_df.info())
+# print(sorted_df.dropna().info())
+# print(sorted_df.dropna().head(10))
 
-sorted_df = df.dropna().sort_values(by = "petal_length", ascending = 0)
-print(sorted_df.head(10))
+data = {'name': ['Jack', 'John', 'Peter', 'David', 'Daniel'],
+        'hight': [175 for i in range(5)],
+        'weight': [65 for i in range(5)],
+        'scores': np.random.randint(40,90,5)}
+df = pd.DataFrame(data)
+print(df)
