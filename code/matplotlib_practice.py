@@ -33,8 +33,8 @@ y2 = np.sin(x2)
 # axes[1].set_title('fitted curve')
 # plt.show()
 
-# 柱状图
-x = [1,2,3]
-y = [4,6,10]
-plt.bar(x,y)
-plt.show()
+# # 柱状图
+# x = [1,2,3]
+# y = [4,6,10]
+# plt.bar(x,y)
+# plt.show()
