@@ -9,13 +9,13 @@ including:
   - Sampling (NUTS) and saving inference data
 
 Inputs:
-  data/T05_model_ready_events_route2.csv
-  data/T02_long_format_panel.csv
+  data/T05_model_ready_events_route2_v2.csv
+  data/T02_long_format_panel_v2.csv
 
 Outputs:
-  data/T07_input_consistency_report.json
-  data/T07_trace_route2.nc
-  data/T07_posterior_mean_consistency.json
+  data/T07_input_consistency_report_v2.json
+  data/T07_trace_route2_v2.nc
+  data/T07_posterior_mean_consistency_v2.json
 """
 
 from __future__ import annotations
@@ -108,7 +108,7 @@ def normalize_scores(panel: pd.DataFrame) -> pd.DataFrame:
     df["contestant_key"] = df.apply(lambda r: contestant_key(r["season"], r["celebrity_name"]), axis=1)
 
     # active proxy in panel: has >=1 judge score and total notna
-    df["active_proxy"] = (df["judge_score_count"].fillna(0).astype(int) >= 1) & df["judge_score_total"].notna()
+    df["active_proxy"] = df["judge_score_total"].fillna(0) > 0
 
     # z-score by season (only active_proxy rows)
     df["score_z"] = np.nan
@@ -367,10 +367,10 @@ def posterior_mean_consistency(idata, data: ModelInput, out_path: Path) -> Dict[
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input_t05", default="data/T05_model_ready_events_route2.csv")
+    ap.add_argument("--input_t05", default="data/T05_model_ready_events_route2_v2.csv")
     ap.add_argument("--input_panel", default="data/T02_long_format_panel.csv")
     ap.add_argument("--out_report", default="data/T07_input_consistency_report.json")
-    ap.add_argument("--out_trace", default="data/T07_trace_route2.nc")
+    ap.add_argument("--out_trace", default="data/T07_trace_route2_v2.nc")
     ap.add_argument("--out_mean_consistency", default="data/T07_posterior_mean_consistency.json")
 
     ap.add_argument("--draws", type=int, default=800)
