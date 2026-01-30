@@ -1,211 +1,172 @@
-# code/t03_elimination_structure_route2.py
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
-T03 (Route2, Normalized) — Build season-week event structure with multi-elimination support.
+T03 (Route2 v1): Build per-(season,week) active set and eliminated set from the long panel table,
+then export:
+  - data/T03_active_elimination_structure_route2.json
+  - data/T05_model_ready_events_route2.csv
 
-Canonical output schema (per event_key = "{season}-{week}"):
-
-{
-  "schema_version": "route2_norm_v1",
-  "generated_at": "...ISO8601...",
-  "events": {
-      "1-1": {
-          "season": 1,
-          "week": 1,
-          "next_week": 2,
-          "delta_week": 1,
-          "active_ids": ["S1:NameA", ...],            # sorted, unique
-          "eliminated_ids": ["S1:NameX", ...],        # sorted, unique, subset of active_ids
-          "eliminated_indices": [int, ...],           # positions in active_ids
-          "n_active": int,
-          "elim_count": int,
-          "terminal": bool
-      },
-      ...
-  }
-}
-
-Elimination definition:
-- "eliminated in week t" = active(t) \ active(next_observed_week).
-
-Active rule (kept consistent with your pipeline):
-- judge_score_count > 0 AND judge_score_total > 0
+Schema contract:
+  contestant_key := f"S{season}:{celebrity_name}"
+  events[event_id] contains active_ids, eliminated_ids, eliminated_indices (all stable, sorted).
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
-from datetime import datetime, timezone
+from typing import Dict, List, Any, Tuple
 
+import numpy as np
 import pandas as pd
 
-# =========================
-# CONFIG
-# =========================
-INPUT_PANEL = Path("data/T02_long_format_panel.csv")
-OUTPUT_JSON = Path("data/T03_active_elimination_structure_route2.json")
-OUTPUT_CSV  = Path("data/T03_active_elimination_structure_route2.csv")  # optional snapshot
 
-ONLY_CONSECUTIVE_WEEKS = False
-ACTIVE_RULE = "count_and_total_positive"  # supported: "count_and_total_positive"
-SCHEMA_VERSION = "route2_norm_v1"
+def contestant_key(season: int, celebrity_name: str) -> str:
+    return f"S{int(season)}:{str(celebrity_name)}"
 
 
-def normalize_name(x: str) -> str:
-    return " ".join(str(x).strip().split())
+def build_events(
+    panel: pd.DataFrame,
+    min_judges: int = 1,
+    only_consecutive_weeks: bool = True,
+) -> Dict[str, Any]:
+    # required columns
+    req = {"celebrity_name", "season", "week", "judge_score_total", "judge_score_count"}
+    missing = req - set(panel.columns)
+    if missing:
+        raise ValueError(f"[T03] Panel missing required columns: {sorted(missing)}")
+
+    df = panel.copy()
+    df["season"] = df["season"].astype(int)
+    df["week"] = df["week"].astype(int)
+    df["contestant_key"] = df.apply(lambda r: contestant_key(r["season"], r["celebrity_name"]), axis=1)
+
+    # active definition
+    df["active"] = (df["judge_score_count"].fillna(0).astype(int) >= int(min_judges)) & df["judge_score_total"].notna()
+
+    events: Dict[str, Any] = {}
+    stats_elim_counts: List[int] = []
+    max_active = 0
+    max_elim = 0
+    n_events = 0
+
+    for season, gS in df.groupby("season", sort=True):
+        weeks = sorted(gS["week"].unique().tolist())
+        for idx_w, w in enumerate(weeks):
+            n_events += 1
+            next_week = weeks[idx_w + 1] if idx_w + 1 < len(weeks) else None
+            delta_week = (next_week - w) if next_week is not None else None
+
+            gW = gS[gS["week"] == w]
+            active_ids = sorted(gW.loc[gW["active"], "contestant_key"].unique().tolist())
+            max_active = max(max_active, len(active_ids))
+
+            eliminated_ids: List[str] = []
+            terminal = next_week is None
+
+            if not terminal:
+                gNext = gS[gS["week"] == next_week]
+                active_next = set(sorted(gNext.loc[gNext["active"], "contestant_key"].unique().tolist()))
+                active_now = set(active_ids)
+
+                if (not only_consecutive_weeks) or (delta_week == 1):
+                    eliminated_ids = sorted(list(active_now - active_next))
+                else:
+                    eliminated_ids = []
+
+            eliminated_indices = [active_ids.index(x) for x in eliminated_ids]  # stable by sorting
+            elim_count = len(eliminated_ids)
+
+            max_elim = max(max_elim, elim_count)
+            stats_elim_counts.append(elim_count)
+
+            event_id = f"{season}-{w}"
+            events[event_id] = {
+                "season": int(season),
+                "week": int(w),
+                "next_week": int(next_week) if next_week is not None else None,
+                "delta_week": int(delta_week) if delta_week is not None else None,
+                "active_ids": active_ids,
+                "eliminated_ids": eliminated_ids,
+                "eliminated_indices": eliminated_indices,
+                "n_active": len(active_ids),
+                "elim_count": elim_count,
+                "terminal": bool(terminal),
+            }
+
+    payload = {
+        "schema_version": "route2.v1",
+        "generated_at": pd.Timestamp.utcnow().isoformat(),
+        "config": {
+            "min_judges": int(min_judges),
+            "only_consecutive_weeks": bool(only_consecutive_weeks),
+            "active_definition": "judge_score_count>=min_judges AND judge_score_total notna",
+            "contestant_key": "S{season}:{celebrity_name}",
+            "event_id": "season-week",
+        },
+        "stats": {
+            "n_events": int(n_events),
+            "max_active": int(max_active),
+            "max_elim": int(max_elim),
+            "elim_count_hist": dict(pd.Series(stats_elim_counts).value_counts().sort_index().to_dict()),
+        },
+        "events": events,
+    }
+    return payload
 
 
-def make_contestant_key(season: int, celebrity_name: str) -> str:
-    return f"S{int(season)}:{normalize_name(celebrity_name)}"
-
-
-def is_active_row(row) -> bool:
-    if ACTIVE_RULE == "count_and_total_positive":
-        return (row["judge_score_count"] > 0) and (row["judge_score_total"] > 0)
-    raise ValueError(f"Unknown ACTIVE_RULE={ACTIVE_RULE}")
+def export_t05(events_payload: Dict[str, Any]) -> pd.DataFrame:
+    rows = []
+    for event_id, ev in events_payload["events"].items():
+        rows.append(
+            {
+                "season": ev["season"],
+                "week": ev["week"],
+                "next_week": ev["next_week"],
+                "delta_week": ev["delta_week"],
+                "n_active": ev["n_active"],
+                "elim_count": ev["elim_count"],
+                # JSON strings (stable, parseable)
+                "active_ids": json.dumps(ev["active_ids"], ensure_ascii=False),
+                "eliminated_ids": json.dumps(ev["eliminated_ids"], ensure_ascii=False),
+                "eliminated_indices": json.dumps(ev["eliminated_indices"], ensure_ascii=False),
+            }
+        )
+    df = pd.DataFrame(rows).sort_values(["season", "week"]).reset_index(drop=True)
+    return df
 
 
 def main():
-    df = pd.read_csv(INPUT_PANEL)
-    df["season"] = df["season"].astype(int)
-    df["week"] = df["week"].astype(int)
-    df["celebrity_name"] = df["celebrity_name"].astype(str).map(normalize_name)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--input_panel", default="data/T02_long_format_panel.csv")
+    ap.add_argument("--out_t03", default="data/T03_active_elimination_structure_route2.json")
+    ap.add_argument("--out_t05", default="data/T05_model_ready_events_route2.csv")
+    ap.add_argument("--min_judges", type=int, default=1)
+    ap.add_argument("--only_consecutive_weeks", action="store_true", default=True)
+    ap.add_argument("--allow_nonconsecutive", action="store_true", default=False)
+    args = ap.parse_args()
 
-    active_df = df[df.apply(is_active_row, axis=1)].copy()
-    active_df["contestant_key"] = active_df.apply(
-        lambda r: make_contestant_key(r["season"], r["celebrity_name"]), axis=1
-    )
+    only_consecutive = args.only_consecutive_weeks and (not args.allow_nonconsecutive)
 
-    active_sets = {
-        (int(season), int(week)): sorted(set(g["contestant_key"].tolist()))
-        for (season, week), g in active_df.groupby(["season", "week"])
-    }
+    in_path = Path(args.input_panel)
+    if not in_path.exists():
+        raise FileNotFoundError(f"[T03] input_panel not found: {in_path}")
 
-    seasons = sorted(active_df["season"].unique().astype(int).tolist())
+    panel = pd.read_csv(in_path)
+    payload = build_events(panel, min_judges=args.min_judges, only_consecutive_weeks=only_consecutive)
 
-    events = {}
-    stats = {
-        "num_seasons": len(seasons),
-        "num_events_total": 0,
-        "num_events_kept": 0,
-        "num_terminal": 0,
-        "elim_count_hist": {},
-        "anomalies": {
-            "non_consecutive_skipped": 0,
-            "elim_not_subset_active": 0,
-            "next_active_mismatch": 0,
-        }
-    }
+    out_t03 = Path(args.out_t03)
+    out_t03.parent.mkdir(parents=True, exist_ok=True)
+    out_t03.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[T03] Saved: {out_t03}  (n_events={payload['stats']['n_events']}, max_active={payload['stats']['max_active']}, max_elim={payload['stats']['max_elim']})")
 
-    for season in seasons:
-        weeks = sorted(active_df.loc[active_df["season"] == season, "week"].unique().astype(int).tolist())
-        for i, w_now in enumerate(weeks):
-            key = f"{season}-{w_now}"
-            A = active_sets.get((season, w_now), [])
-            A_set = set(A)
-
-            stats["num_events_total"] += 1
-
-            if i == len(weeks) - 1:
-                events[key] = {
-                    "season": int(season),
-                    "week": int(w_now),
-                    "next_week": None,
-                    "delta_week": None,
-                    "active_ids": A,
-                    "eliminated_ids": [],
-                    "eliminated_indices": [],
-                    "n_active": int(len(A)),
-                    "elim_count": 0,
-                    "terminal": True,
-                }
-                stats["num_terminal"] += 1
-                stats["num_events_kept"] += 1
-                continue
-
-            w_next = int(weeks[i + 1])
-            delta = int(w_next - w_now)
-
-            if ONLY_CONSECUTIVE_WEEKS and delta != 1:
-                stats["anomalies"]["non_consecutive_skipped"] += 1
-                continue
-
-            B = active_sets.get((season, w_next), [])
-            B_set = set(B)
-
-            eliminated = sorted(list(A_set - B_set))
-            elim_count = int(len(eliminated))
-
-            if not set(eliminated).issubset(A_set):
-                stats["anomalies"]["elim_not_subset_active"] += 1
-
-            idx_map = {cid: j for j, cid in enumerate(A)}
-            eliminated_indices = [int(idx_map[e]) for e in eliminated]
-
-            expected_B = sorted(list(A_set - set(eliminated)))
-            if expected_B != sorted(list(B_set)):
-                stats["anomalies"]["next_active_mismatch"] += 1
-
-            events[key] = {
-                "season": int(season),
-                "week": int(w_now),
-                "next_week": int(w_next),
-                "delta_week": int(delta),
-                "active_ids": A,
-                "eliminated_ids": eliminated,
-                "eliminated_indices": eliminated_indices,
-                "n_active": int(len(A)),
-                "elim_count": elim_count,
-                "terminal": False,
-            }
-
-            stats["elim_count_hist"][elim_count] = stats["elim_count_hist"].get(elim_count, 0) + 1
-            stats["num_events_kept"] += 1
-
-    payload = {
-        "schema_version": SCHEMA_VERSION,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "config": {
-            "ONLY_CONSECUTIVE_WEEKS": ONLY_CONSECUTIVE_WEEKS,
-            "ACTIVE_RULE": ACTIVE_RULE,
-            "INPUT_PANEL": str(INPUT_PANEL),
-        },
-        "stats": stats,
-        "events": events,
-    }
-
-    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-
-    rows = []
-    for ek, e in events.items():
-        rows.append({
-            "event_key": ek,
-            "season": e["season"],
-            "week": e["week"],
-            "next_week": e["next_week"],
-            "delta_week": e["delta_week"],
-            "n_active": e["n_active"],
-            "elim_count": e["elim_count"],
-            "terminal": e["terminal"],
-            "active_ids": json.dumps(e["active_ids"], ensure_ascii=False),
-            "eliminated_ids": json.dumps(e["eliminated_ids"], ensure_ascii=False),
-            "eliminated_indices": json.dumps(e["eliminated_indices"], ensure_ascii=False),
-        })
-    pd.DataFrame(rows).to_csv(OUTPUT_CSV, index=False)
-
-    print("\n=== T03 (Route2, Normalized) SUMMARY ===")
-    print(f"Output JSON: {OUTPUT_JSON}")
-    print(f"Output CSV : {OUTPUT_CSV}")
-    print(f"Events kept: {stats['num_events_kept']} (terminal={stats['num_terminal']})")
-    print("elim_count histogram:")
-    for k in sorted(stats["elim_count_hist"].keys()):
-        print(f"  elim_count={k}: {stats['elim_count_hist'][k]}")
-    print("Anomalies:")
-    for k, v in stats["anomalies"].items():
-        print(f"  {k}: {v}")
+    t05 = export_t05(payload)
+    out_t05 = Path(args.out_t05)
+    out_t05.parent.mkdir(parents=True, exist_ok=True)
+    t05.to_csv(out_t05, index=False, encoding="utf-8")
+    print(f"[T05] Saved: {out_t05}  (rows={len(t05)})")
 
 
 if __name__ == "__main__":

@@ -1,126 +1,180 @@
-# code/t07_run_model_sample_route2.py
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
-T07 (Route2, Normalized) — Build tensors, run strict consistency checks, then sample PyMC model.
+T07 (Route2 v1): Build PyMC hierarchical model with multi-elimination likelihood (sequential without replacement),
+including:
+  - Input consistency checks (saved as JSON report)
+  - Score normalization (z-score per season)
+  - Sampling (NUTS) and saving inference data
+
+Inputs:
+  data/T05_model_ready_events_route2.csv
+  data/T02_long_format_panel.csv
 
 Outputs:
-- data/T07_input_consistency_report.json
-- data/T07_trace.nc
-
-Hard guarantees going forward:
-- Only read canonical T03 payload (schema_version == route2_norm_v1).
-- contestant_key canonicalization is identical to T03.
+  data/T07_input_consistency_report.json
+  data/T07_trace_route2.nc
+  data/T07_posterior_mean_consistency.json
 """
 
 from __future__ import annotations
 
+import argparse
 import json
+import math
+from dataclasses import dataclass
 from pathlib import Path
-from datetime import datetime, timezone
-from typing import Dict, Any, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
+
 import pymc as pm
+import pymc as pm
+import pytensor.tensor as pt
 
-from t06_topk_likelihood_pymc import ModelData, build_model
-
-
-# =========================
-# CONFIG
-# =========================
-DATA_DIR = Path("data")
-
-INPUT_PANEL = DATA_DIR / "T02_long_format_panel.csv"
-INPUT_T03   = DATA_DIR / "T03_active_elimination_structure_route2.json"
-
-TRACE_OUT   = DATA_DIR / "T07_trace.nc"
-REPORT_OUT  = DATA_DIR / "T07_input_consistency_report.json"
-
-FEATURE_COLS = ["judge_score_total"]
-
-W_INDEX_MODE = "event"  # "event" or "week_number"
-LIKELIHOOD   = "plackett_luce_set"  # or "softmax_set_approx"
-
-DRAWS = 1000
-TUNE = 1000
-CHAINS = 2
-TARGET_ACCEPT = 0.9
-RANDOM_SEED = 2026
-
-DROP_ZERO_ELIM_EVENTS = False
-MISSING_SCORE_POLICY = "raise"  # "raise" or "zero"
-
-SCHEMA_VERSION_REQUIRED = "route2_norm_v1"
+logsumexp = pm.math.logsumexp
 
 
-def normalize_name(x: str) -> str:
-    return " ".join(str(x).strip().split())
+
+def _parse_list_cell(x: Any) -> list:
+    """Robustly parse list-like cells that may be JSON string or Python repr."""
+    if isinstance(x, list):
+        return x
+    if x is None or (isinstance(x, float) and np.isnan(x)):
+        return []
+    s = str(x).strip()
+    if s == "":
+        return []
+    # Try JSON first
+    try:
+        return json.loads(s)
+    except Exception:
+        pass
+    # Fallback: Python literal
+    import ast
+    try:
+        return ast.literal_eval(s)
+    except Exception as e:
+        raise ValueError(f"Cannot parse list cell: {x}") from e
 
 
-def make_contestant_key(season: int, celebrity_name: str) -> str:
-    return f"S{int(season)}:{normalize_name(celebrity_name)}"
+def contestant_key(season: int, celebrity_name: str) -> str:
+    return f"S{int(season)}:{str(celebrity_name)}"
 
 
-def load_t03_payload(path: Path) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-    with open(path, "r", encoding="utf-8") as f:
-        obj = json.load(f)
-    if isinstance(obj, dict) and "events" in obj and "schema_version" in obj:
-        meta = {k: v for k, v in obj.items() if k != "events"}
-        return meta, obj["events"]
-    raise ValueError("T03 is not normalized payload. Re-run T03.")
+@dataclass
+class ModelInput:
+    # dimensions
+    n_events: int
+    n_contestants: int
+    max_active: int
+    max_elim: int
+
+    # arrays
+    active_key_idx: np.ndarray      # (E, A) int32
+    score_z: np.ndarray             # (E, A) float32
+    active_mask: np.ndarray         # (E, A) bool
+    elim_idx: np.ndarray            # (E, K) int32 (padded)
+    elim_mask: np.ndarray           # (E, K) bool
+
+    # metadata
+    event_ids: List[str]
+    contestant_keys: List[str]
+    season_of_event: np.ndarray     # (E,) int32
+    week_of_event: np.ndarray       # (E,) int32
 
 
-def pad_and_mask(list_of_lists: List[List[int]], maxlen: int, pad_val: int = -1):
-    arr = np.full((len(list_of_lists), maxlen), pad_val, dtype=np.int32)
-    mask = np.zeros((len(list_of_lists), maxlen), dtype=bool)
-    for i, l in enumerate(list_of_lists):
-        arr[i, :len(l)] = np.asarray(l, dtype=np.int32)
-        mask[i, :len(l)] = True
-    return arr, mask
+def load_inputs(t05_path: Path, panel_path: Path) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    if not t05_path.exists():
+        raise FileNotFoundError(f"[T07] missing: {t05_path}")
+    if not panel_path.exists():
+        raise FileNotFoundError(f"[T07] missing: {panel_path}")
+    ev = pd.read_csv(t05_path)
+    panel = pd.read_csv(panel_path)
+    return ev, panel
 
 
-def main():
-    panel = pd.read_csv(INPUT_PANEL)
-    panel["season"] = panel["season"].astype(int)
-    panel["week"] = panel["week"].astype(int)
-    panel["celebrity_name"] = panel["celebrity_name"].astype(str).map(normalize_name)
-    panel["contestant_key"] = panel.apply(lambda r: make_contestant_key(r["season"], r["celebrity_name"]), axis=1)
-    panel["event_key"] = panel.apply(lambda r: f"{r['season']}-{r['week']}", axis=1)
+def normalize_scores(panel: pd.DataFrame) -> pd.DataFrame:
+    req = {"celebrity_name", "season", "week", "judge_score_total", "judge_score_count"}
+    miss = req - set(panel.columns)
+    if miss:
+        raise ValueError(f"[T07] panel missing columns: {sorted(miss)}")
 
-    missing_cols = [c for c in FEATURE_COLS if c not in panel.columns]
-    if missing_cols:
-        raise KeyError(f"Missing FEATURE_COLS: {missing_cols}")
+    df = panel.copy()
+    df["season"] = df["season"].astype(int)
+    df["week"] = df["week"].astype(int)
+    df["contestant_key"] = df.apply(lambda r: contestant_key(r["season"], r["celebrity_name"]), axis=1)
 
-    dup = panel.duplicated(subset=["event_key", "contestant_key"], keep=False)
-    dup_rows = int(dup.sum())
-    if dup_rows > 0:
-        panel = (
-            panel.groupby(["event_key", "season", "week", "contestant_key"], as_index=False)[FEATURE_COLS]
-            .mean()
-        )
+    # active proxy in panel: has >=1 judge score and total notna
+    df["active_proxy"] = (df["judge_score_count"].fillna(0).astype(int) >= 1) & df["judge_score_total"].notna()
 
-    score_lookup = {}
-    for _, r in panel.iterrows():
-        score_lookup[(r["event_key"], r["contestant_key"])] = np.asarray(
-            [float(r[c]) for c in FEATURE_COLS], dtype=np.float64
-        )
+    # z-score by season (only active_proxy rows)
+    df["score_z"] = np.nan
+    for season, g in df[df["active_proxy"]].groupby("season", sort=True):
+        mu = float(g["judge_score_total"].mean())
+        sd = float(g["judge_score_total"].std(ddof=0))
+        if not np.isfinite(sd) or sd <= 0:
+            sd = 1.0
+        idx = g.index
+        df.loc[idx, "score_z"] = (g["judge_score_total"] - mu) / sd
+    return df
 
-    meta, events = load_t03_payload(INPUT_T03)
-    if meta.get("schema_version") != SCHEMA_VERSION_REQUIRED:
-        raise ValueError(f"T03 schema_version mismatch: {meta.get('schema_version')}")
 
-    def ek_sort_key(ek: str):
-        s, w = ek.split("-")
-        return (int(s), int(w))
+def build_model_input(ev: pd.DataFrame, panel_norm: pd.DataFrame) -> Tuple[ModelInput, Dict[str, Any]]:
+    # required columns in event table
+    req = {"season", "week", "active_ids", "eliminated_indices", "eliminated_ids", "n_active", "elim_count"}
+    miss = req - set(ev.columns)
+    if miss:
+        raise ValueError(f"[T07] T05 missing columns: {sorted(miss)}")
 
-    event_keys = sorted(events.keys(), key=ek_sort_key)
+    # parse list cells
+    ev = ev.copy()
+    ev["active_ids"] = ev["active_ids"].apply(_parse_list_cell)
+    ev["eliminated_ids"] = ev["eliminated_ids"].apply(_parse_list_cell)
+    ev["eliminated_indices"] = ev["eliminated_indices"].apply(_parse_list_cell)
+
+    # build event_ids
+    ev["season"] = ev["season"].astype(int)
+    ev["week"] = ev["week"].astype(int)
+    ev["event_id"] = ev.apply(lambda r: f"{int(r['season'])}-{int(r['week'])}", axis=1)
+
+    # compute dimensions
+    event_ids = ev["event_id"].tolist()
+    n_events = len(ev)
+    max_active = int(max(len(x) for x in ev["active_ids"])) if n_events > 0 else 0
+    max_elim = int(max(len(x) for x in ev["eliminated_indices"])) if n_events > 0 else 0
+    max_elim = max(max_elim, 1)  # at least 1 for arrays
+
+    # contestant universe from active_ids
+    all_keys = sorted({k for lst in ev["active_ids"] for k in lst})
+    key2idx = {k: i for i, k in enumerate(all_keys)}
+    n_contestants = len(all_keys)
+
+    # mapping from (season, week, key) -> score_z
+    panel_norm = panel_norm.copy()
+    panel_norm["season"] = panel_norm["season"].astype(int)
+    panel_norm["week"] = panel_norm["week"].astype(int)
+    score_map = {
+        (int(r.season), int(r.week), str(r.contestant_key)): float(r.score_z)
+        for r in panel_norm.dropna(subset=["score_z"]).itertuples(index=False)
+    }
+
+    # allocate arrays
+    A = max_active
+    K = max_elim
+    active_key_idx = np.zeros((n_events, A), dtype=np.int32)
+    score_z = np.zeros((n_events, A), dtype=np.float32)
+    active_mask = np.zeros((n_events, A), dtype=bool)
+    elim_idx = np.zeros((n_events, K), dtype=np.int32)
+    elim_mask = np.zeros((n_events, K), dtype=bool)
+
+    season_of_event = ev["season"].to_numpy(dtype=np.int32)
+    week_of_event = ev["week"].to_numpy(dtype=np.int32)
 
     anomalies = {
-        "dup_panel_event_contestant_rows": dup_rows,
-        "event_missing_fields": 0,
-        "active_ids_not_sorted": 0,
+        "dup_event_ids": int(ev["event_id"].duplicated().sum()),
         "elim_not_subset_active": 0,
         "elim_indices_mismatch": 0,
         "elim_count_mismatch": 0,
@@ -129,169 +183,279 @@ def main():
         "max_elim_count": 0,
     }
 
-    active_ids_by_event: List[List[str]] = []
-    eliminated_pos_by_event: List[List[int]] = []
-    event_week_labels = []
+    for e, row in enumerate(ev.itertuples(index=False)):
+        act: List[str] = list(row.active_ids)
+        elim_ids: List[str] = list(row.eliminated_ids)
+        elim_inds: List[int] = list(row.eliminated_indices)
 
-    for ek in event_keys:
-        e = events[ek]
-        required = ["season", "week", "active_ids", "eliminated_ids", "eliminated_indices", "n_active", "elim_count", "terminal"]
-        if any(k not in e for k in required):
-            anomalies["event_missing_fields"] += 1
-            continue
+        # enforce sorted active_ids for stability
+        act_sorted = sorted(act)
+        if act != act_sorted:
+            act = act_sorted  # canonicalize
 
-        week = int(e["week"])
-        A = list(e["active_ids"])
-        E_ids = list(e["eliminated_ids"])
-        E_idx = list(e["eliminated_indices"])
+        # basic
+        nA = len(act)
+        active_mask[e, :nA] = True
+        active_key_idx[e, :nA] = np.array([key2idx[k] for k in act], dtype=np.int32)
 
-        if A != sorted(A):
-            anomalies["active_ids_not_sorted"] += 1
-            A = sorted(A)
+        # scores
+        missing_local = []
+        for j, k in enumerate(act):
+            val = score_map.get((int(row.season), int(row.week), k), None)
+            if val is None or (isinstance(val, float) and (not np.isfinite(val))):
+                missing_local.append(k)
+                val = 0.0
+            score_z[e, j] = np.float32(val)
 
-        if not set(E_ids).issubset(set(A)):
+        if missing_local:
+            anomalies["missing_scores"] += 1
+            if len(anomalies["missing_scores_samples"]) < 10:
+                anomalies["missing_scores_samples"].append(
+                    {"event_id": str(row.event_id), "missing_keys": missing_local[:5]}
+                )
+
+        # elimination subset check
+        if not set(elim_ids).issubset(set(act)):
             anomalies["elim_not_subset_active"] += 1
 
-        if int(e["elim_count"]) != len(E_ids) or int(e["elim_count"]) != len(E_idx):
+        # elim_count check
+        if int(row.elim_count) != len(elim_inds) or int(row.elim_count) != len(elim_ids):
             anomalies["elim_count_mismatch"] += 1
 
-        anomalies["max_elim_count"] = max(anomalies["max_elim_count"], len(E_ids))
-
-        idx_map = {cid: j for j, cid in enumerate(A)}
-        E_idx_re = [idx_map[cid] for cid in E_ids]
-        if E_idx_re != E_idx:
+        # indices check
+        if any((ix < 0 or ix >= nA) for ix in elim_inds):
             anomalies["elim_indices_mismatch"] += 1
-            E_idx = E_idx_re  # force canonical
 
-        active_ids_by_event.append(A)
-        eliminated_pos_by_event.append(E_idx)
+        anomalies["max_elim_count"] = max(anomalies["max_elim_count"], len(elim_inds))
 
-        if W_INDEX_MODE == "event":
-            event_week_labels.append(ek)
-        elif W_INDEX_MODE == "week_number":
-            event_week_labels.append(week)
-        else:
-            raise ValueError(f"Unknown W_INDEX_MODE={W_INDEX_MODE}")
+        # pad elimination arrays
+        m = len(elim_inds)
+        if m > 0:
+            elim_idx[e, :m] = np.array(elim_inds, dtype=np.int32)
+            elim_mask[e, :m] = True
+        # if m==0 => keep defaults (idx=0, mask=False)
 
-    n_events = len(active_ids_by_event)
-    if n_events == 0:
-        raise RuntimeError("No valid events loaded from T03.")
-
-    all_contestants = sorted({cid for A in active_ids_by_event for cid in A})
-    key2id = {k: i for i, k in enumerate(all_contestants)}
-    n_contestants = len(all_contestants)
-
-    if W_INDEX_MODE == "event":
-        week2id = {label: i for i, label in enumerate(event_week_labels)}
-        event_week_idx = np.asarray([week2id[label] for label in event_week_labels], dtype=np.int32)
-        n_weeks = len(week2id)
-    else:
-        uniq_week = sorted(set(event_week_labels))
-        week2id = {w: i for i, w in enumerate(uniq_week)}
-        event_week_idx = np.asarray([week2id[w] for w in event_week_labels], dtype=np.int32)
-        n_weeks = len(week2id)
-
-    max_active = max(len(a) for a in active_ids_by_event)
-    max_elim = max(len(e) for e in eliminated_pos_by_event)
-
-    active_idx_list: List[List[int]] = []
-    X_active_list: List[np.ndarray] = []
-
-    for i in range(n_events):
-        ek = event_keys[i]
-        A = active_ids_by_event[i]
-
-        active_idx_list.append([key2id[cid] for cid in A])
-
-        X_rows = []
-        for cid in A:
-            vec = score_lookup.get((ek, cid))
-            if vec is None:
-                anomalies["missing_scores"] += 1
-                if len(anomalies["missing_scores_samples"]) < 10:
-                    anomalies["missing_scores_samples"].append({"event_key": ek, "contestant_key": cid})
-                if MISSING_SCORE_POLICY == "raise":
-                    raise KeyError(f"Missing score for (event_key, contestant_key)=({ek},{cid})")
-                vec = np.zeros((len(FEATURE_COLS),), dtype=np.float64)
-            X_rows.append(vec)
-        X_active_list.append(np.vstack(X_rows).astype(np.float64))
-
-    active_idx_pad, active_mask = pad_and_mask(active_idx_list, max_active)
-
-    p = len(FEATURE_COLS)
-    X_active_pad = np.zeros((n_events, max_active, p), dtype=np.float64)
-    for i, Xmat in enumerate(X_active_list):
-        X_active_pad[i, :Xmat.shape[0], :] = Xmat
-
-    elim_pos_pad, elim_mask = pad_and_mask(eliminated_pos_by_event, max_elim)
-
-    if DROP_ZERO_ELIM_EVENTS:
-        k = elim_mask.sum(axis=1)
-        zero = (k == 0)
-        elim_mask[zero, :] = False
-        elim_pos_pad[zero, :] = -1
-
-    report = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "inputs": {"INPUT_PANEL": str(INPUT_PANEL), "INPUT_T03": str(INPUT_T03)},
-        "config": {
-            "FEATURE_COLS": FEATURE_COLS,
-            "W_INDEX_MODE": W_INDEX_MODE,
-            "LIKELIHOOD": LIKELIHOOD,
-            "DROP_ZERO_ELIM_EVENTS": DROP_ZERO_ELIM_EVENTS,
-            "MISSING_SCORE_POLICY": MISSING_SCORE_POLICY,
-        },
-        "dimensions": {
-            "n_events": n_events,
-            "n_contestants": n_contestants,
-            "n_weeks": int(n_weeks),
-            "max_active": int(max_active),
-            "max_elim": int(max_elim),
-        },
-        "anomalies": anomalies,
-    }
-    REPORT_OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[T07] Consistency report saved: {REPORT_OUT}")
-    print(json.dumps(report["dimensions"], indent=2))
-    print("anomalies:", json.dumps(anomalies, indent=2))
-
-    data = ModelData(
-        n_contestants=n_contestants,
+    mi = ModelInput(
         n_events=n_events,
-        n_weeks=int(n_weeks),
-        p=p,
-        event_week_idx=event_week_idx,
+        n_contestants=n_contestants,
         max_active=max_active,
-        active_idx_pad=active_idx_pad,
-        active_mask=active_mask,
-        X_active_pad=X_active_pad,
         max_elim=max_elim,
-        elim_pos_pad=elim_pos_pad,
+        active_key_idx=active_key_idx,
+        score_z=score_z,
+        active_mask=active_mask,
+        elim_idx=elim_idx,
         elim_mask=elim_mask,
+        event_ids=event_ids,
+        contestant_keys=all_keys,
+        season_of_event=season_of_event,
+        week_of_event=week_of_event,
     )
 
+    dims = {
+        "n_events": n_events,
+        "n_contestants": n_contestants,
+        "max_active": max_active,
+        "max_elim": max_elim,
+    }
+    return mi, {"dimensions": dims, "anomalies": anomalies}
+
+
+def build_pymc_model(data: ModelInput) -> pm.Model:
+    E, A, K = data.n_events, data.max_active, data.max_elim
+
+    with pm.Model() as model:
+        # data containers (NO mutable kwarg: version-safe)
+        active_key_idx = pm.Data("active_key_idx", data.active_key_idx.astype("int32"))
+        score_z = pm.Data("score_z", data.score_z.astype("float32"))
+        active_mask = pm.Data("active_mask", data.active_mask.astype("int8"))  # 0/1 for pytensor ops
+        elim_idx = pm.Data("elim_idx", data.elim_idx.astype("int32"))
+        elim_mask = pm.Data("elim_mask", data.elim_mask.astype("int8"))
+
+        # priors
+        beta0 = pm.Normal("beta0", mu=0.0, sigma=1.0)
+        beta1 = pm.Normal("beta1", mu=0.0, sigma=1.0)
+
+        sigma_u = pm.HalfNormal("sigma_u", sigma=1.0)
+        sigma_w = pm.HalfNormal("sigma_w", sigma=1.0)
+
+        u_raw = pm.Normal("u_raw", mu=0.0, sigma=1.0, shape=(data.n_contestants,))
+        w_raw = pm.Normal("w_raw", mu=0.0, sigma=1.0, shape=(data.n_events,))
+
+        # sum-to-zero constraints for identifiability (softmax is shift-invariant)
+        u = pm.Deterministic("u", sigma_u * (u_raw - pt.mean(u_raw)))
+        w = pm.Deterministic("w", sigma_w * (w_raw - pt.mean(w_raw)))
+
+        # utilities for each (event, slot)
+        slot_u = u[active_key_idx]  # (E,A)
+        logV = beta0 + beta1 * score_z + slot_u + w[:, None]  # (E,A)
+
+        # Multi-elimination likelihood: sequential draws WITHOUT replacement on losers
+        # Probability proportional to exp(-logV) among remaining active slots.
+        big_neg = np.float32(-1e9)
+
+        # selected mask: (E,A) bool/int8
+        selected = pt.zeros((E, A), dtype="int8")
+        total_logp = 0.0
+
+        arangeE = pt.arange(E)
+        arangeA = pt.arange(A)[None, :]
+
+        for r in range(K):
+            mr = elim_mask[:, r].astype("int8")  # (E,)
+            idx_r = elim_idx[:, r]  # (E,)
+
+            # safe index to avoid -1 gather (if mr=0 we won't use it)
+            idx_safe = pt.where(mr, idx_r, 0)
+
+            # remaining = active_mask & (~selected)
+            remaining = pt.and_(
+                pt.gt(active_mask, 0),
+                pt.eq(selected, 0)
+            )
+
+            logits = -logV
+            logits_masked = pt.where(remaining, logits, big_neg)  # (E,A)
+
+            denom = logsumexp(logits_masked, axis=1)  # (E,)
+            chosen = logits_masked[arangeE, idx_safe]  # (E,)
+            step_logp = chosen - denom  # (E,)
+
+            total_logp = total_logp + pt.sum(pt.where(mr, step_logp, 0.0))
+
+            # update selected mask where mr=1: mark idx_r as selected
+            onehot = pt.eq(arangeA, idx_safe[:, None]).astype("int8")  # (E,A)
+            selected = pt.where(mr[:, None], pt.clip(selected + onehot, 0, 1), selected)
+
+        pm.Potential("elim_like", total_logp)
+
+    return model
+
+
+def posterior_mean_consistency(idata, data: ModelInput, out_path: Path) -> Dict[str, Any]:
+    # Minimal: use posterior means of beta0,beta1,u,w to compute mean-logV consistency
+    post = idata.posterior
+    beta0 = float(post["beta0"].mean().values)
+    beta1 = float(post["beta1"].mean().values)
+    u = post["u"].mean(dim=("chain", "draw")).values  # (C,)
+    w = post["w"].mean(dim=("chain", "draw")).values  # (E,)
+
+    E, A = data.n_events, data.max_active
+    logV = beta0 + beta1 * data.score_z + u[data.active_key_idx] + w[:, None]
+    active_mask = data.active_mask
+    elim_mask = data.elim_mask
+    elim_idx = data.elim_idx
+
+    # hard check: for each event, are eliminated indices among the bottom-k of logV?
+    hard_hits = []
+    for e in range(E):
+        k = int(elim_mask[e].sum())
+        if k == 0:
+            continue
+        nA = int(active_mask[e].sum())
+        vals = logV[e, :nA]
+        bottom_k = set(np.argsort(vals)[:k].tolist())
+        elim_set = set(elim_idx[e, :k].tolist())
+        hard_hits.append(int(elim_set.issubset(bottom_k)))
+
+    summary = {
+        "n_events_with_elim": int(len(hard_hits)),
+        "hard_consistency_rate_mean_logV": float(np.mean(hard_hits)) if hard_hits else None,
+    }
+    out_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    return summary
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--input_t05", default="data/T05_model_ready_events_route2.csv")
+    ap.add_argument("--input_panel", default="data/T02_long_format_panel.csv")
+    ap.add_argument("--out_report", default="data/T07_input_consistency_report.json")
+    ap.add_argument("--out_trace", default="data/T07_trace_route2.nc")
+    ap.add_argument("--out_mean_consistency", default="data/T07_posterior_mean_consistency.json")
+
+    ap.add_argument("--draws", type=int, default=800)
+    ap.add_argument("--tune", type=int, default=800)
+    ap.add_argument("--chains", type=int, default=4)
+    ap.add_argument("--target_accept", type=float, default=0.9)
+    ap.add_argument("--seed", type=int, default=20260130)
+
+    args = ap.parse_args()
+
+    t05_path = Path(args.input_t05)
+    panel_path = Path(args.input_panel)
+
+    print("[T07] Loading inputs...")
+    ev, panel = load_inputs(t05_path, panel_path)
+
+    print("[T07] Normalizing judge scores (z-score per season)...")
+    panel_norm = normalize_scores(panel)
+
+    print("[T07] Building model arrays + consistency checks...")
+    mi, report = build_model_input(ev, panel_norm)
+
+    out_report = Path(args.out_report)
+    out_report.parent.mkdir(parents=True, exist_ok=True)
+    out_report.write_text(
+        json.dumps(
+            {
+                "generated_at": pd.Timestamp.utcnow().isoformat(),
+                "inputs": {"INPUT_T05": str(t05_path), "INPUT_PANEL": str(panel_path)},
+                "dimensions": report["dimensions"],
+                "anomalies": report["anomalies"],
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    print(f"[T07] Consistency report saved: {out_report}")
+    print(json.dumps({"dimensions": report["dimensions"], "anomalies": report["anomalies"]}, ensure_ascii=False, indent=2))
+
+    if report["anomalies"]["missing_scores"] > 0:
+        raise RuntimeError("[T07] Missing scores detected. Fix panel/event alignment before sampling.")
+
     print("[T07] Building model...")
-    model = build_model(data, likelihood=LIKELIHOOD)
+    model = build_pymc_model(mi)
 
     print("[T07] Sampling...")
     with model:
-        trace = pm.sample(
-            draws=DRAWS,
-            tune=TUNE,
-            chains=CHAINS,
-            target_accept=TARGET_ACCEPT,
-            random_seed=RANDOM_SEED,
-            return_inferencedata=True,
-        )
+        # Compatibility: some versions default to InferenceData already
+        try:
+            idata = pm.sample(
+                draws=args.draws,
+                tune=args.tune,
+                chains=args.chains,
+                target_accept=args.target_accept,
+                random_seed=args.seed,
+                return_inferencedata=True,
+            )
+        except TypeError:
+            idata = pm.sample(
+                draws=args.draws,
+                tune=args.tune,
+                chains=args.chains,
+                target_accept=args.target_accept,
+                random_seed=args.seed,
+            )
 
-    # avoid hard dependency on arviz
-    try:
-        import arviz as az
-        az.to_netcdf(trace, TRACE_OUT)
-    except ImportError:
-        trace.to_netcdf(TRACE_OUT)
+    out_trace = Path(args.out_trace)
+    out_trace.parent.mkdir(parents=True, exist_ok=True)
+    # InferenceData has to_netcdf; MultiTrace doesn't. Guard it.
+    if hasattr(idata, "to_netcdf"):
+        idata.to_netcdf(out_trace)
+        print(f"[T07] Trace saved: {out_trace}")
+    else:
+        print("[T07] WARNING: idata has no to_netcdf(); you are likely on an older backend returning MultiTrace.")
 
-    print(f"[T07] Trace saved: {TRACE_OUT}")
+    # quick posterior mean consistency (optional)
+    if hasattr(idata, "posterior"):
+        out_mean = Path(args.out_mean_consistency)
+        out_mean.parent.mkdir(parents=True, exist_ok=True)
+        s = posterior_mean_consistency(idata, mi, out_mean)
+        print(f"[T07] Posterior-mean hard consistency saved: {out_mean}")
+        print(json.dumps(s, ensure_ascii=False, indent=2))
+
+    print("[T07] Done.")
 
 
 if __name__ == "__main__":
