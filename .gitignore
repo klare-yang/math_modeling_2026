@@ -90,3 +90,5 @@ dist/
 *~
 *.swp
 *.swo
+
+.venv311
