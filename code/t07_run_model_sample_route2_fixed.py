@@ -398,7 +398,7 @@ def main():
     out_report.write_text(
         json.dumps(
             {
-                "generated_at": pd.Timestamp.utcnow().isoformat(),
+                "generated_at": pd.Timestamp.now("UTC").isoformat(),
                 "inputs": {"INPUT_T05": str(t05_path), "INPUT_PANEL": str(panel_path)},
                 "dimensions": report["dimensions"],
                 "anomalies": report["anomalies"],
