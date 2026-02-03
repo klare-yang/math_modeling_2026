@@ -1,0 +1,14 @@
+{
+  "dimensions": {
+    "n_events": 335,
+    "n_contestants": 421,
+    "max_active": 16,
+    "max_elim": 3
+  },
+  "sanity": {
+    "pct_events_elim0": 0.2208955223880597,
+    "pct_events_elim1": 0.6597014925373135,
+    "pct_events_elim2": 0.11343283582089553,
+    "pct_events_elim3": 0.005970149253731343
+  }
+}

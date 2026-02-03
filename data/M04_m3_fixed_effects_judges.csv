@@ -1,0 +1,16 @@
+group,param,mean,sd,hdi_3,hdi_97,ess_bulk,r_hat,label
+judges,beta0,-0.098,0.04,-0.169,-0.018,569.0,1.01,
+judges,beta_age,-0.261,0.017,-0.292,-0.229,2555.0,1.0,
+judges,beta_week,0.577,0.014,0.551,0.603,3059.0,1.0,
+judges,beta_ind[0],0.145,0.031,0.087,0.202,2717.0,1.0,industry=Actor/Actress
+judges,beta_ind[1],0.042,0.036,-0.021,0.113,2764.0,1.0,industry=Athlete
+judges,beta_ind[2],-0.109,0.086,-0.26,0.061,2586.0,1.0,industry=Comedian
+judges,beta_ind[3],-0.055,0.083,-0.212,0.098,2632.0,1.0,industry=Model
+judges,beta_ind[4],-0.108,0.054,-0.213,-0.015,2586.0,1.0,industry=Other
+judges,beta_ind[5],0.142,0.039,0.073,0.217,2847.0,1.0,industry=Singer/Rapper
+judges,beta_ind[6],0.088,0.077,-0.058,0.227,2634.0,1.0,industry=Social Media Personality
+judges,beta_ind[7],-0.144,0.038,-0.215,-0.073,3200.0,1.0,industry=TV Personality
+judges,sigma_eps,0.699,0.009,0.682,0.717,2343.0,1.0,
+judges,sigma_pro,0.197,0.037,0.132,0.269,468.0,1.0,
+judges,sigma_season,0.058,0.03,0.0,0.105,383.0,1.01,
+judges,sigma_celeb,0.0,0.0,0.0,0.0,2504.0,,

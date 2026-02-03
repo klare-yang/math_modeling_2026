@@ -1,0 +1,61 @@
+group,pro_id,pro_name,mean,sd,hdi_3,hdi_97,ess_bulk,r_hat
+judges,19,Derek Hough,0.397,0.066,0.266,0.514,1496.0,1.0
+judges,12,Charlotte Jorgensen,0.342,0.183,0.01,0.7,1490.0,1.0
+judges,7,Artem Chigvintsev,0.243,0.079,0.098,0.392,1942.0,1.0
+judges,16,Damian Whitewood,0.193,0.174,-0.129,0.528,2505.0,1.0
+judges,55,Val Chmerkovskiy,0.189,0.176,-0.138,0.507,2513.0,1.0
+judges,45,Mark Ballas,0.174,0.064,0.062,0.302,1589.0,1.0
+judges,44,Maksim Chmerkoskiy,0.171,0.07,0.04,0.302,1692.0,1.0
+judges,57,Valentin Chmerkovskiy,0.16,0.066,0.053,0.296,982.0,1.0
+judges,50,Sasha Farber,0.158,0.075,0.017,0.3,1359.0,1.01
+judges,40,Kym Johnson,0.15,0.074,0.017,0.292,1915.0,1.0
+judges,46,Nick Kosovich,0.113,0.163,-0.165,0.431,3110.0,1.0
+judges,58,Witney Carson,0.112,0.072,-0.023,0.243,1971.0,1.0
+judges,52,Tony Dovolani,0.101,0.068,-0.025,0.228,1699.0,1.0
+judges,14,Cheryl Burke,0.098,0.06,-0.012,0.215,1618.0,1.0
+judges,34,Jonathan Roberts,0.083,0.119,-0.12,0.327,3019.0,1.0
+judges,20,Dmitry Chaplin,0.082,0.123,-0.153,0.303,2823.0,1.0
+judges,1,Alan Bersten (Rashad Jennings week 9),0.08,0.142,-0.179,0.352,3237.0,1.0
+judges,9,Brandon Armstrong,0.077,0.094,-0.094,0.255,2038.0,1.0
+judges,18,Daniella Karagach (Rumer Willis week 9),0.066,0.149,-0.206,0.347,3626.0,1.0
+judges,47,Pasha Pashkov,0.064,0.102,-0.128,0.251,2792.0,1.0
+judges,24,Emma Slater/Kaitlyn Bristowe (week 9),0.061,0.158,-0.252,0.356,2871.0,1.0
+judges,35,Julianne Hough,0.057,0.102,-0.127,0.248,2890.0,1.0
+judges,32,Jenna Johnson,0.052,0.087,-0.113,0.215,2155.0,1.0
+judges,3,Allison Holker,0.03,0.114,-0.187,0.235,2162.0,1.0
+judges,2,Alec Mazo,0.029,0.126,-0.194,0.275,2347.0,1.0
+judges,56,Val Chmerkovskiy (Joey Graziadei week 9),0.023,0.148,-0.259,0.288,3348.0,1.0
+judges,0,Alan Bersten,0.012,0.086,-0.157,0.166,2164.0,1.0
+judges,59,Witney Carson (Xoshitl Gomez week 9),0.005,0.141,-0.258,0.274,3297.0,1.0
+judges,43,Louis van Amstel,-0.003,0.085,-0.176,0.15,2369.0,1.0
+judges,30,Inna Brayer,-0.011,0.185,-0.348,0.357,3316.0,1.0
+judges,10,Brian Fortuna,-0.011,0.182,-0.375,0.31,3612.0,1.0
+judges,15,Corky Ballas,-0.011,0.144,-0.27,0.266,3137.0,1.0
+judges,31,Jan Ravnik,-0.03,0.165,-0.359,0.253,3053.0,1.0
+judges,27,Fabian Sanchez,-0.031,0.157,-0.327,0.263,3188.0,1.0
+judges,28,Gleb Savchenko,-0.033,0.082,-0.189,0.114,1890.0,1.0
+judges,29,Henry Byalikov,-0.04,0.194,-0.387,0.355,3286.0,1.0
+judges,48,Peta Murgatroyd,-0.049,0.071,-0.179,0.088,1972.0,1.0
+judges,51,Sharna Burgess,-0.05,0.075,-0.198,0.085,1898.0,1.0
+judges,36,Karina Smirnoff,-0.05,0.069,-0.171,0.08,2019.0,1.0
+judges,33,Jesse DeSoto,-0.052,0.187,-0.414,0.287,3172.0,1.0
+judges,42,Lindsay Arnold,-0.055,0.08,-0.195,0.106,1541.0,1.0
+judges,17,Daniella Karagach,-0.059,0.103,-0.25,0.136,2696.0,1.0
+judges,23,Emma Slater,-0.062,0.075,-0.206,0.073,1649.0,1.0
+judges,53,Tristan MacManus,-0.064,0.124,-0.299,0.164,2865.0,1.0
+judges,21,Edyta Sliwinska,-0.07,0.091,-0.236,0.106,2426.0,1.0
+judges,26,Ezra Sosa (Apolo Anton Ohno week 9),-0.073,0.143,-0.345,0.191,3234.0,1.0
+judges,4,Andrea Hale,-0.078,0.196,-0.454,0.278,2942.0,1.0
+judges,6,Anna Trebunskaya,-0.08,0.091,-0.243,0.093,2789.0,1.0
+judges,11,Britt Stewart,-0.091,0.111,-0.292,0.107,2168.0,1.0
+judges,25,Ezra Sosa,-0.108,0.189,-0.457,0.247,2986.0,1.0
+judges,39,Kym Herjavec,-0.127,0.17,-0.438,0.198,2696.0,1.0
+judges,37,Keo Motsepe,-0.147,0.105,-0.341,0.047,2932.0,1.0
+judges,13,Chelsie Hightower,-0.177,0.099,-0.368,0.005,2905.0,1.0
+judges,54,Tyne Stecklein,-0.18,0.185,-0.536,0.147,2928.0,1.0
+judges,49,Rylee Arnold,-0.194,0.119,-0.409,0.033,2301.0,1.0
+judges,41,Lacey Schwimmer,-0.197,0.099,-0.385,-0.015,2607.0,1.0
+judges,5,Anna Demidova,-0.244,0.17,-0.544,0.081,2311.0,1.0
+judges,38,Koko Iwasaki,-0.252,0.159,-0.542,0.045,2437.0,1.0
+judges,8,Ashly DelGrosso,-0.316,0.145,-0.576,-0.033,2019.0,1.0
+judges,22,Elena Grinenko,-0.401,0.19,-0.76,-0.057,1286.0,1.0

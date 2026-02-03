@@ -1,0 +1,19 @@
+{
+  "fans": {
+    "group": "fans",
+    "ppc_available": true,
+    "rmse_predmean": 1.1060047247275173,
+    "mae_predmean": 0.8543616776159045,
+    "corr_predmean_obs": 0.6346712900436488,
+    "n_obs": 2766
+  },
+  "judges": {
+    "group": "judges",
+    "ppc_available": true,
+    "rmse_predmean": 0.6918902158710657,
+    "mae_predmean": 0.5369273818076263,
+    "corr_predmean_obs": 0.7224058976801095,
+    "n_obs": 2766
+  },
+  "note": "PPC uses posterior predictive of likelihood; metrics based on posterior predictive mean per observation."
+}

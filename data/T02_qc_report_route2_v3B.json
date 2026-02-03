@@ -1,0 +1,28 @@
+{
+  "raw": {
+    "path": "data/2026_MCM_Problem_C_Data.csv",
+    "shape": [
+      421,
+      53
+    ],
+    "n_score_cols": 44,
+    "n_meta_cols": 9
+  },
+  "long": {
+    "n_rows_total": 18524,
+    "n_score_nonnull": 13783,
+    "n_score_nan_or_non_numeric": 4741,
+    "score_min": 0.0,
+    "score_max": 13.3333
+  },
+  "panel": {
+    "path": "data/T02_long_format_panel_route2_v3B.csv",
+    "n_rows": 4199,
+    "n_seasons": 34,
+    "season_min": 1,
+    "season_max": 34,
+    "week_max_global": 11,
+    "pct_rows_total_eq_0": 0.3386520600142891,
+    "pct_rows_count_eq_0": 0.0
+  }
+}

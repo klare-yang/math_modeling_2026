@@ -1,0 +1,12 @@
+{
+  "base_dir": "/Users/yang/Documents/code/math_modeling_2026",
+  "t08b_path": "/Users/yang/Documents/code/math_modeling_2026/data/T08b_votes_posterior_stats_route2_v3B.csv",
+  "out_dir": "/Users/yang/Documents/code/math_modeling_2026/data/model4_results/out",
+  "n_draws": 200,
+  "seed": 20260202,
+  "method": "dirichlet_moment_match",
+  "alpha0_global_median": 4.558154124464553,
+  "fallback_events": 0,
+  "rows": 2777,
+  "events": 335
+}

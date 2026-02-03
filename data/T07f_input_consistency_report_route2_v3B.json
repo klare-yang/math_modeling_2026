@@ -1,0 +1,19 @@
+{
+  "dimensions": {
+    "n_events": 335,
+    "n_contestants": 421,
+    "max_active": 16,
+    "max_elim": 3
+  },
+  "events": {
+    "n_rank": 87,
+    "n_percent": 248,
+    "n_two_stage": 44
+  },
+  "elim_count": {
+    "n0": 74,
+    "n1": 221,
+    "n2": 38,
+    "n3": 2
+  }
+}

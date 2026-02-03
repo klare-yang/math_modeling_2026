@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "panel": "data/M01_panel_m3.csv",
+    "map": "data/M01_keymap_m3.json",
+    "fans_latent_obs": "data/M10_fans_latent_obs_posterior.csv"
+  },
+  "outputs": {
+    "elim_panel": "data/M11_elim_panel.csv",
+    "event_summary": "data/M11_elim_event_summary.csv"
+  },
+  "filters": {
+    "only_elim_events": true,
+    "rows_before": 2766,
+    "rows_after": 2228,
+    "events_before": 335,
+    "events_after": 259
+  },
+  "fan_predictor_used": "y_latent_mean",
+  "dims": {
+    "n_pro": 60,
+    "n_industry": 8,
+    "n_season": 34,
+    "n_celeb": 419
+  },
+  "event_elim_distribution": {
+    "0": 76,
+    "1": 219,
+    "2": 38,
+    "3": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "t05_path": "data/T05_model_ready_events_route2_v3B.csv",
+  "mask_path": "data/T04_judges_save_event_mask_route2_v3B.csv",
+  "n_events": 335,
+  "use_two_stage": 44,
+  "tau_rank": 0.15,
+  "sampling": {
+    "draws": 2000,
+    "tune": 2000,
+    "chains": 4,
+    "cores": 4,
+    "target_accept": 0.99,
+    "seed": 20260202
+  },
+  "note": "Model spec imported from T07f for exact consistency."
+}

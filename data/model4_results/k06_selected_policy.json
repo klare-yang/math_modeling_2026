@@ -1,0 +1,13 @@
+{
+  "policy_id": 39,
+  "w": 0.65,
+  "delta": 0,
+  "objectives": {
+    "f1": 0.505147266897524,
+    "f2": 0.7604979592531457,
+    "f3": 0.4022058823529411
+  },
+  "notes": {
+    "selection": "min distance to utopia in normalized benefit space (Pareto set)"
+  }
+}

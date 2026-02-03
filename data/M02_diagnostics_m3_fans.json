@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "panel": "data/M01_panel_m3.csv",
+    "map": "data/M01_keymap_m3.json"
+  },
+  "outputs": {
+    "trace": "data/M02_trace_m3_fans.nc",
+    "summary": "data/M02_summary_m3_fans.csv"
+  },
+  "config": {
+    "seed": 20260201,
+    "chains": 4,
+    "draws": 1000,
+    "tune": 1000,
+    "target_accept": 0.95,
+    "include_celeb_re": false
+  },
+  "qc": {
+    "n_obs_used": 2766,
+    "divergences_total": 0,
+    "rhat_max": 1.008146986186266,
+    "ess_min": 887.9810593505618,
+    "max_id_check": {
+      "pro_id_max": 59,
+      "pro_id_dim": 60,
+      "industry_id_max": 7,
+      "industry_dim": 8,
+      "season_id_max": 33,
+      "season_dim": 34,
+      "celeb_id_max": 418,
+      "celeb_dim": 419
+    },
+    "include_celeb_re": false,
+    "sigma_celeb_fixed_if_disabled": 0.0
+  }
+}

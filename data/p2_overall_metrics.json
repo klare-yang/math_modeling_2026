@@ -1,0 +1,34 @@
+{
+    "percent": {
+        "exact_match_rate": 0.7457399626517274,
+        "align_fan": 0.7284030784030784,
+        "align_judge": 0.5853415103415103,
+        "sens_fan": 0.721162566268218,
+        "sens_judge": 0.7236470696254271
+    },
+    "percent_js": {
+        "exact_match_rate": 0.563608776844071,
+        "align_fan": 0.5025613275613275,
+        "align_judge": 0.7688071188071188,
+        "sens_fan": 0.721162566268218,
+        "sens_judge": 0.7236470696254271
+    },
+    "rank": {
+        "exact_match_rate": 0.6898926237161531,
+        "align_fan": 0.6814694564694564,
+        "align_judge": 0.5452140452140452,
+        "sens_fan": 0.7208963316145355,
+        "sens_judge": 0.754158550299922
+    },
+    "rank_js": {
+        "exact_match_rate": 0.5549719887955182,
+        "align_fan": 0.48184223184223185,
+        "align_judge": 0.7389490139490139,
+        "sens_fan": 0.7208963316145355,
+        "sens_judge": 0.754158550299922
+    },
+    "js_impact": {
+        "changed_elim_rate_rank": 0.23076923076923078,
+        "changed_elim_rate_percent": 0.23529411764705882
+    }
+}

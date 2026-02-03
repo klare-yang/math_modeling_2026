@@ -1,0 +1,16 @@
+group,param,mean,sd,hdi_3,hdi_97,ess_bulk,r_hat,label
+fans,beta0,-2.797,0.102,-2.975,-2.597,888.0,1.0,
+fans,beta_age,-0.545,0.027,-0.594,-0.493,6083.0,1.0,
+fans,beta_week,0.371,0.022,0.331,0.413,9361.0,1.0,
+fans,beta_ind[0],0.254,0.05,0.158,0.347,4685.0,1.0,industry=Actor/Actress
+fans,beta_ind[1],0.087,0.059,-0.028,0.195,4359.0,1.0,industry=Athlete
+fans,beta_ind[2],-0.028,0.138,-0.289,0.227,5124.0,1.0,industry=Comedian
+fans,beta_ind[3],-0.254,0.13,-0.484,0.01,5200.0,1.0,industry=Model
+fans,beta_ind[4],-0.053,0.089,-0.225,0.104,4970.0,1.0,industry=Other
+fans,beta_ind[5],0.337,0.063,0.232,0.468,4349.0,1.0,industry=Singer/Rapper
+fans,beta_ind[6],-0.065,0.127,-0.293,0.177,4858.0,1.0,industry=Social Media Personality
+fans,beta_ind[7],-0.276,0.06,-0.39,-0.172,4239.0,1.0,industry=TV Personality
+fans,sigma_eps,1.015,0.016,0.985,1.046,6759.0,1.0,
+fans,sigma_pro,0.522,0.077,0.383,0.666,1029.0,1.01,
+fans,sigma_season,0.299,0.052,0.205,0.399,1493.0,1.0,
+fans,sigma_celeb,0.0,0.0,0.0,0.0,,,absent_in_trace->assumed_0

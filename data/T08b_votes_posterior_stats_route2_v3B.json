@@ -1,0 +1,17 @@
+{
+  "trace": "data/T07f_trace_route2_v3B.nc",
+  "t05": "data/T05_model_ready_events_route2_v3B.csv",
+  "n_events": 335,
+  "max_active": 16,
+  "n_posterior_samples_used": 4000,
+  "hdi_prob": 0.94,
+  "pi_sum_check": {
+    "mean_pi_sum_mean": 1.0,
+    "mean_abs_err": 3.3140985809706165e-18,
+    "max_abs_err": 2.220446049250313e-16,
+    "p95_abs_err": 0.0
+  },
+  "outputs": {
+    "csv": "data/T08b_votes_posterior_stats_route2_v3B.csv"
+  }
+}

@@ -1,0 +1,60 @@
+Run Date: Mon Feb  2 20:11:28 2026
+Python Version: 3.11.14 (main, Oct  9 2025, 16:16:55) [Clang 17.0.0 (clang-1700.6.3.2)]
+Global Seed: 20260202
+Draws: 200 (min 100 enforced in k02)
+Draw construction: Dirichlet moment-match from T08b pi_mean/pi_sd (k02)
+f2 definition: mean bottom-half (by judges) survival fraction per elimination week (k05)
+Pareto selection: maximize f1,f2 minimize f3; select min utopia distance on Pareto set (k06)
+--------------------
+Script: k01_validate_and_profile_inputs.py
+Success: True
+Duration: 0.40s
+Output:
+[k01] OK
+
+--------------------
+Script: k02_load_posterior_samples.py
+Success: True
+Duration: 0.27s
+Output:
+[k02] OK: draws=200, events=335, rows=2777
+
+--------------------
+Script: k03_define_policy_grid.py
+Success: True
+Duration: 0.17s
+Output:
+[k03] OK: policies=63
+
+--------------------
+Script: k04_replay_season_under_policy.py
+Success: True
+Duration: 181.00s
+Output:
+[k04] OK: draws=200, policies=63, missing_map=0
+
+--------------------
+Script: k05_compute_objectives.py
+Success: True
+Duration: 817.04s
+Output:
+[k05] draws=200, policies=63
+[k05] wrote: k05_policy_objectives_by_draw.csv, k05_policy_objectives_summary.csv to /Users/yang/Documents/code/math_modeling_2026/data/model4_results/out
+
+--------------------
+Script: k06_pareto_and_selection.py
+Success: True
+Duration: 0.28s
+Output:
+[k06] pareto_points=32
+[k06] wrote: k06_pareto_frontier.csv, k06_selected_policy.json, k06_compare_baselines.csv to /Users/yang/Documents/code/math_modeling_2026/data/model4_results/out
+
+--------------------
+Script: k07_make_figures.py
+Success: True
+Duration: 0.67s
+Output:
+[k07] OK
+
+--------------------
+All scripts completed successfully.

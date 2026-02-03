@@ -1,0 +1,103 @@
+{
+  "inputs": {
+    "panel": "data/M01_panel_m3.csv",
+    "map": "data/M01_keymap_m3.json",
+    "trace_fans": "data/M06_trace_m3_fans_celeb.nc",
+    "trace_judges": "data/M07_trace_m3_judges_celeb.nc"
+  },
+  "outputs": {
+    "effectsizes_fans": "data/M08_effectsizes_fans.csv",
+    "effectsizes_judges": "data/M08_effectsizes_judges.csv",
+    "varshare_json": "data/M08_varshare_fixed_random.json",
+    "fig_varshare_bar": "fig/M08_varshare_bar.png"
+  },
+  "notes": {
+    "standardized_effect": "beta / sigma_eps (signal-to-noise on outcome scale).",
+    "variance_share": "ANOVA-style: Var(Xbeta) + sigma^2 components; fixed share depends on covariate distribution.",
+    "fans_measurement_error_mean_se2": 0.17574683846654265
+  },
+  "fans": {
+    "prefix": "fans",
+    "n_draws_used": 1000,
+    "var_fixed": {
+      "mean": 0.4924581840343906,
+      "sd": 0.06628540810583443,
+      "hdi_3": 0.3687596060602621,
+      "hdi_97": 0.6137167343999013
+    },
+    "shares": {
+      "fixed": {
+        "mean": 0.25769361419402564,
+        "sd": 0.028699588854999326,
+        "hdi_3": 0.20946177995231116,
+        "hdi_97": 0.31884220598395063
+      },
+      "eps": {
+        "mean": 0.27545465616606885,
+        "sd": 0.017151155041306123,
+        "hdi_3": 0.24100431506362988,
+        "hdi_97": 0.3057518909091831
+      },
+      "pro": {
+        "mean": 0.04769147778171164,
+        "sd": 0.026407075395832428,
+        "hdi_3": 5.906401315566328e-05,
+        "hdi_97": 0.09186075849956248
+      },
+      "season": {
+        "mean": 0.019110402282905028,
+        "sd": 0.015603228442402927,
+        "hdi_3": 1.5799318244938748e-08,
+        "hdi_97": 0.04810448545193888
+      },
+      "celeb": {
+        "mean": 0.4000498495752889,
+        "sd": 0.030158498019644715,
+        "hdi_3": 0.34397052645220716,
+        "hdi_97": 0.45754498113913716
+      }
+    }
+  },
+  "judges": {
+    "prefix": "judges",
+    "n_draws_used": 1000,
+    "var_fixed": {
+      "mean": 0.43405222147760925,
+      "sd": 0.023181892545714435,
+      "hdi_3": 0.3905493799070342,
+      "hdi_97": 0.47491929223955065
+    },
+    "shares": {
+      "fixed": {
+        "mean": 0.4437293692014611,
+        "sd": 0.016568476062829234,
+        "hdi_3": 0.41034275734372466,
+        "hdi_97": 0.47320235290858886
+      },
+      "eps": {
+        "mean": 0.39978179704104333,
+        "sd": 0.01403082855876324,
+        "hdi_3": 0.3746065428514248,
+        "hdi_97": 0.4249942921778443
+      },
+      "pro": {
+        "mean": 0.01984574269743637,
+        "sd": 0.009971894622588247,
+        "hdi_3": 0.004436025883569465,
+        "hdi_97": 0.039353426945493694
+      },
+      "season": {
+        "mean": 0.001045499896403974,
+        "sd": 0.0015808170498647438,
+        "hdi_3": 6.517249362760122e-10,
+        "hdi_97": 0.0036445266788058296
+      },
+      "celeb": {
+        "mean": 0.13559759116365525,
+        "sd": 0.015368736532835398,
+        "hdi_3": 0.10521159572979669,
+        "hdi_97": 0.16328141425271822
+      }
+    }
+  }
+}

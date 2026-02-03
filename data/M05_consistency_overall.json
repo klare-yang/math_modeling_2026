@@ -1,0 +1,18 @@
+{
+  "spearman_score_vs_share": {
+    "mean": 0.9783499161303884,
+    "median": 0.9880235200593538,
+    "p05": 0.9327713743316227,
+    "p95": 1.0,
+    "n_events_used": 332
+  },
+  "upset_rate_judges_lowest_survives": {
+    "mean": 0.5598455598455598,
+    "n_events_used": 259
+  },
+  "elim_in_bottomk_by_judges": {
+    "mean": 0.37065637065637064,
+    "n_events_used": 259
+  },
+  "pro_effect_corr_fans_vs_judges": 0.9485354416258709
+}

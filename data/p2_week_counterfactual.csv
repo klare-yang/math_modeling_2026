@@ -1,0 +1,1341 @@
+season,week,event_id,rule_variant,elim_count,pred_eliminated_ids,pred_bottom2_ids,real_eliminated_ids,match_real_any,match_real_all
+1,1,1-1,rank,0,,,,1,1
+1,1,1-1,percent,0,,,,1,1
+1,1,1-1,rank_js,0,,,,1,1
+1,1,1-1,percent_js,0,,,,1,1
+1,2,1-2,rank,1,S1:Trista Sutter,,S1:Trista Sutter,1,1
+1,2,1-2,percent,1,S1:Trista Sutter,,S1:Trista Sutter,1,1
+1,2,1-2,rank_js,1,S1:Evander Holyfield,S1:Trista Sutter;S1:Evander Holyfield,S1:Trista Sutter,0,0
+1,2,1-2,percent_js,1,S1:Evander Holyfield,S1:Trista Sutter;S1:Evander Holyfield,S1:Trista Sutter,0,0
+1,3,1-3,rank,1,S1:Evander Holyfield,,S1:Evander Holyfield,1,1
+1,3,1-3,percent,1,S1:Evander Holyfield,,S1:Evander Holyfield,1,1
+1,3,1-3,rank_js,1,S1:Evander Holyfield,S1:Evander Holyfield;S1:Joey McIntyre,S1:Evander Holyfield,1,1
+1,3,1-3,percent_js,1,S1:Evander Holyfield,S1:Evander Holyfield;S1:Joey McIntyre,S1:Evander Holyfield,1,1
+1,4,1-4,rank,1,S1:Joey McIntyre,,S1:Rachel Hunter,0,0
+1,4,1-4,percent,1,S1:Rachel Hunter,,S1:Rachel Hunter,1,1
+1,4,1-4,rank_js,1,S1:Joey McIntyre,S1:Joey McIntyre;S1:Rachel Hunter,S1:Rachel Hunter,0,0
+1,4,1-4,percent_js,1,S1:Joey McIntyre,S1:Rachel Hunter;S1:Joey McIntyre,S1:Rachel Hunter,0,0
+1,5,1-5,rank,1,S1:Joey McIntyre,,S1:Joey McIntyre,1,1
+1,5,1-5,percent,1,S1:Joey McIntyre,,S1:Joey McIntyre,1,1
+1,5,1-5,rank_js,1,S1:Joey McIntyre,S1:Joey McIntyre;S1:Kelly Monaco,S1:Joey McIntyre,1,1
+1,5,1-5,percent_js,1,S1:Joey McIntyre,S1:Joey McIntyre;S1:Kelly Monaco,S1:Joey McIntyre,1,1
+1,6,1-6,rank,0,,,,1,1
+1,6,1-6,percent,0,,,,1,1
+1,6,1-6,rank_js,0,,,,1,1
+1,6,1-6,percent_js,0,,,,1,1
+2,1,2-1,rank,1,S2:Kenny Mayne,,S2:Kenny Mayne,1,1
+2,1,2-1,percent,1,S2:Kenny Mayne,,S2:Kenny Mayne,1,1
+2,1,2-1,rank_js,1,S2:Kenny Mayne,S2:Kenny Mayne;S2:Lisa Rinna,S2:Kenny Mayne,1,1
+2,1,2-1,percent_js,1,S2:Master P,S2:Kenny Mayne;S2:Master P,S2:Kenny Mayne,0,0
+2,2,2-2,rank,1,S2:Tatum O'Neal,,S2:Tatum O'Neal,1,1
+2,2,2-2,percent,1,S2:Tatum O'Neal,,S2:Tatum O'Neal,1,1
+2,2,2-2,rank_js,1,S2:Tatum O'Neal,S2:Tatum O'Neal;S2:Lisa Rinna,S2:Tatum O'Neal,1,1
+2,2,2-2,percent_js,1,S2:Tatum O'Neal,S2:Tatum O'Neal;S2:Giselle Fernandez,S2:Tatum O'Neal,1,1
+2,3,2-3,rank,1,S2:Giselle Fernandez,,S2:Giselle Fernandez,1,1
+2,3,2-3,percent,1,S2:Giselle Fernandez,,S2:Giselle Fernandez,1,1
+2,3,2-3,rank_js,1,S2:Master P,S2:Giselle Fernandez;S2:Master P,S2:Giselle Fernandez,0,0
+2,3,2-3,percent_js,1,S2:Master P,S2:Giselle Fernandez;S2:Master P,S2:Giselle Fernandez,0,0
+2,4,2-4,rank,1,S2:Master P,,S2:Master P,1,1
+2,4,2-4,percent,1,S2:Master P,,S2:Master P,1,1
+2,4,2-4,rank_js,1,S2:Master P,S2:Master P;S2:Tia Carrere,S2:Master P,1,1
+2,4,2-4,percent_js,1,S2:Master P,S2:Master P;S2:Tia Carrere,S2:Master P,1,1
+2,5,2-5,rank,1,S2:Tia Carrere,,S2:Tia Carrere,1,1
+2,5,2-5,percent,1,S2:Tia Carrere,,S2:Tia Carrere,1,1
+2,5,2-5,rank_js,1,S2:Tia Carrere,S2:Tia Carrere;S2:Lisa Rinna,S2:Tia Carrere,1,1
+2,5,2-5,percent_js,1,S2:Tia Carrere,S2:Tia Carrere;S2:Lisa Rinna,S2:Tia Carrere,1,1
+2,6,2-6,rank,1,S2:George Hamilton,,S2:George Hamilton,1,1
+2,6,2-6,percent,1,S2:George Hamilton,,S2:George Hamilton,1,1
+2,6,2-6,rank_js,1,S2:George Hamilton,S2:George Hamilton;S2:Lisa Rinna,S2:George Hamilton,1,1
+2,6,2-6,percent_js,1,S2:George Hamilton,S2:George Hamilton;S2:Lisa Rinna,S2:George Hamilton,1,1
+2,7,2-7,rank,1,S2:Lisa Rinna,,S2:Lisa Rinna,1,1
+2,7,2-7,percent,1,S2:Lisa Rinna,,S2:Lisa Rinna,1,1
+2,7,2-7,rank_js,1,S2:Jerry Rice,S2:Lisa Rinna;S2:Jerry Rice,S2:Lisa Rinna,0,0
+2,7,2-7,percent_js,1,S2:Lisa Rinna,S2:Lisa Rinna;S2:Drew Lachey,S2:Lisa Rinna,1,1
+2,8,2-8,rank,0,,,,1,1
+2,8,2-8,percent,0,,,,1,1
+2,8,2-8,rank_js,0,,,,1,1
+2,8,2-8,percent_js,0,,,,1,1
+3,1,3-1,rank,1,S3:Tucker Carlson,,S3:Tucker Carlson,1,1
+3,1,3-1,percent,1,S3:Tucker Carlson,,S3:Tucker Carlson,1,1
+3,1,3-1,rank_js,1,S3:Tucker Carlson,S3:Tucker Carlson;S3:Sara Evans,S3:Tucker Carlson,1,1
+3,1,3-1,percent_js,1,S3:Tucker Carlson,S3:Tucker Carlson;S3:Sara Evans,S3:Tucker Carlson,1,1
+3,2,3-2,rank,1,S3:Shanna Moakler,,S3:Shanna Moakler,1,1
+3,2,3-2,percent,1,S3:Jerry Springer,,S3:Shanna Moakler,0,0
+3,2,3-2,rank_js,1,S3:Jerry Springer,S3:Shanna Moakler;S3:Jerry Springer,S3:Shanna Moakler,0,0
+3,2,3-2,percent_js,1,S3:Jerry Springer,S3:Jerry Springer;S3:Harry Hamlin,S3:Shanna Moakler,0,0
+3,3,3-3,rank,1,S3:Jerry Springer,,S3:Harry Hamlin,0,0
+3,3,3-3,percent,1,S3:Harry Hamlin,,S3:Harry Hamlin,1,1
+3,3,3-3,rank_js,1,S3:Jerry Springer,S3:Jerry Springer;S3:Harry Hamlin,S3:Harry Hamlin,0,0
+3,3,3-3,percent_js,1,S3:Jerry Springer,S3:Harry Hamlin;S3:Jerry Springer,S3:Harry Hamlin,0,0
+3,4,3-4,rank,1,S3:Sara Evans,,S3:Vivica A. Fox,0,0
+3,4,3-4,percent,1,S3:Sara Evans,,S3:Vivica A. Fox,0,0
+3,4,3-4,rank_js,1,S3:Sara Evans,S3:Sara Evans;S3:Jerry Springer,S3:Vivica A. Fox,0,0
+3,4,3-4,percent_js,1,S3:Sara Evans,S3:Sara Evans;S3:Jerry Springer,S3:Vivica A. Fox,0,0
+3,5,3-5,rank,2,S3:Sara Evans;S3:Jerry Springer,,S3:Sara Evans;S3:Willa Ford,1,0
+3,5,3-5,percent,2,S3:Sara Evans;S3:Jerry Springer,,S3:Sara Evans;S3:Willa Ford,1,0
+3,5,3-5,rank_js,2,S3:Sara Evans;S3:Jerry Springer,,S3:Sara Evans;S3:Willa Ford,1,0
+3,5,3-5,percent_js,2,S3:Sara Evans;S3:Jerry Springer,,S3:Sara Evans;S3:Willa Ford,1,0
+3,6,3-6,rank,0,,,,1,1
+3,6,3-6,percent,0,,,,1,1
+3,6,3-6,rank_js,0,,,,1,1
+3,6,3-6,percent_js,0,,,,1,1
+3,7,3-7,rank,1,S3:Jerry Springer,,S3:Jerry Springer,1,1
+3,7,3-7,percent,1,S3:Jerry Springer,,S3:Jerry Springer,1,1
+3,7,3-7,rank_js,1,S3:Jerry Springer,S3:Jerry Springer;S3:Monique Coleman,S3:Jerry Springer,1,1
+3,7,3-7,percent_js,1,S3:Jerry Springer,S3:Jerry Springer;S3:Monique Coleman,S3:Jerry Springer,1,1
+3,8,3-8,rank,1,S3:Monique Coleman,,S3:Monique Coleman,1,1
+3,8,3-8,percent,1,S3:Monique Coleman,,S3:Monique Coleman,1,1
+3,8,3-8,rank_js,1,S3:Monique Coleman,S3:Monique Coleman;S3:Joey Lawrence,S3:Monique Coleman,1,1
+3,8,3-8,percent_js,1,S3:Monique Coleman,S3:Monique Coleman;S3:Joey Lawrence,S3:Monique Coleman,1,1
+3,9,3-9,rank,1,S3:Joey Lawrence,,S3:Joey Lawrence,1,1
+3,9,3-9,percent,1,S3:Joey Lawrence,,S3:Joey Lawrence,1,1
+3,9,3-9,rank_js,1,S3:Joey Lawrence,S3:Joey Lawrence;S3:Emmitt Smith,S3:Joey Lawrence,1,1
+3,9,3-9,percent_js,1,S3:Joey Lawrence,S3:Joey Lawrence;S3:Emmitt Smith,S3:Joey Lawrence,1,1
+3,10,3-10,rank,0,,,,1,1
+3,10,3-10,percent,0,,,,1,1
+3,10,3-10,rank_js,0,,,,1,1
+3,10,3-10,percent_js,0,,,,1,1
+4,1,4-1,rank,0,,,,1,1
+4,1,4-1,percent,0,,,,1,1
+4,1,4-1,rank_js,0,,,,1,1
+4,1,4-1,percent_js,0,,,,1,1
+4,2,4-2,rank,1,S4:Clyde Drexler,,S4:Paulina Porizkova,0,0
+4,2,4-2,percent,1,S4:Clyde Drexler,,S4:Paulina Porizkova,0,0
+4,2,4-2,rank_js,1,S4:Clyde Drexler,S4:Clyde Drexler;S4:Paulina Porizkova,S4:Paulina Porizkova,0,0
+4,2,4-2,percent_js,1,S4:Clyde Drexler,S4:Clyde Drexler;S4:Paulina Porizkova,S4:Paulina Porizkova,0,0
+4,3,4-3,rank,1,S4:John Ratzenberger,,S4:Shandi Finnessey,0,0
+4,3,4-3,percent,1,S4:Clyde Drexler,,S4:Shandi Finnessey,0,0
+4,3,4-3,rank_js,1,S4:John Ratzenberger,S4:John Ratzenberger;S4:Shandi Finnessey,S4:Shandi Finnessey,0,0
+4,3,4-3,percent_js,1,S4:Clyde Drexler,S4:Clyde Drexler;S4:John Ratzenberger,S4:Shandi Finnessey,0,0
+4,4,4-4,rank,1,S4:Leeza Gibbons,,S4:Leeza Gibbons,1,1
+4,4,4-4,percent,1,S4:Leeza Gibbons,,S4:Leeza Gibbons,1,1
+4,4,4-4,rank_js,1,S4:Leeza Gibbons,S4:Leeza Gibbons;S4:John Ratzenberger,S4:Leeza Gibbons,1,1
+4,4,4-4,percent_js,1,S4:Clyde Drexler,S4:Leeza Gibbons;S4:Clyde Drexler,S4:Leeza Gibbons,0,0
+4,5,4-5,rank,1,S4:Clyde Drexler,,S4:Clyde Drexler,1,1
+4,5,4-5,percent,1,S4:Clyde Drexler,,S4:Clyde Drexler,1,1
+4,5,4-5,rank_js,1,S4:Clyde Drexler,S4:Clyde Drexler;S4:John Ratzenberger,S4:Clyde Drexler,1,1
+4,5,4-5,percent_js,1,S4:Clyde Drexler,S4:Clyde Drexler;S4:Billy Ray Cyrus,S4:Clyde Drexler,1,1
+4,6,4-6,rank,1,S4:John Ratzenberger,,S4:Heather Mills,0,0
+4,6,4-6,percent,1,S4:John Ratzenberger,,S4:Heather Mills,0,0
+4,6,4-6,rank_js,1,S4:John Ratzenberger,S4:John Ratzenberger;S4:Billy Ray Cyrus,S4:Heather Mills,0,0
+4,6,4-6,percent_js,1,S4:John Ratzenberger,S4:John Ratzenberger;S4:Billy Ray Cyrus,S4:Heather Mills,0,0
+4,7,4-7,rank,1,S4:Billy Ray Cyrus,,S4:John Ratzenberger,0,0
+4,7,4-7,percent,1,S4:Billy Ray Cyrus,,S4:John Ratzenberger,0,0
+4,7,4-7,rank_js,1,S4:Billy Ray Cyrus,S4:Billy Ray Cyrus;S4:John Ratzenberger,S4:John Ratzenberger,0,0
+4,7,4-7,percent_js,1,S4:Billy Ray Cyrus,S4:Billy Ray Cyrus;S4:John Ratzenberger,S4:John Ratzenberger,0,0
+4,8,4-8,rank,1,S4:Billy Ray Cyrus,,S4:Billy Ray Cyrus,1,1
+4,8,4-8,percent,1,S4:Billy Ray Cyrus,,S4:Billy Ray Cyrus,1,1
+4,8,4-8,rank_js,1,S4:Billy Ray Cyrus,S4:Billy Ray Cyrus;S4:Ian Ziering,S4:Billy Ray Cyrus,1,1
+4,8,4-8,percent_js,1,S4:Billy Ray Cyrus,S4:Billy Ray Cyrus;S4:Ian Ziering,S4:Billy Ray Cyrus,1,1
+4,9,4-9,rank,1,S4:Ian Ziering,,S4:Ian Ziering,1,1
+4,9,4-9,percent,1,S4:Ian Ziering,,S4:Ian Ziering,1,1
+4,9,4-9,rank_js,1,S4:Ian Ziering,S4:Ian Ziering;S4:Apolo Anton Ohno,S4:Ian Ziering,1,1
+4,9,4-9,percent_js,1,S4:Ian Ziering,S4:Ian Ziering;S4:Apolo Anton Ohno,S4:Ian Ziering,1,1
+4,10,4-10,rank,0,,,,1,1
+4,10,4-10,percent,0,,,,1,1
+4,10,4-10,rank_js,0,,,,1,1
+4,10,4-10,percent_js,0,,,,1,1
+5,1,5-1,rank,1,S5:Josie Maran,,S5:Josie Maran,1,1
+5,1,5-1,percent,1,S5:Josie Maran,,S5:Josie Maran,1,1
+5,1,5-1,rank_js,1,S5:Josie Maran,S5:Josie Maran;S5:Floyd Mayweather Jr. ,S5:Josie Maran,1,1
+5,1,5-1,percent_js,1,S5:Josie Maran,S5:Josie Maran;S5:Floyd Mayweather Jr. ,S5:Josie Maran,1,1
+5,2,5-2,rank,1,S5:Wayne Newton,,S5:Albert Reed,0,0
+5,2,5-2,percent,1,S5:Wayne Newton,,S5:Albert Reed,0,0
+5,2,5-2,rank_js,1,S5:Wayne Newton,S5:Wayne Newton;S5:Albert Reed,S5:Albert Reed,0,0
+5,2,5-2,percent_js,1,S5:Wayne Newton,S5:Wayne Newton;S5:Mark Cuban,S5:Albert Reed,0,0
+5,3,5-3,rank,1,S5:Wayne Newton,,S5:Wayne Newton,1,1
+5,3,5-3,percent,1,S5:Wayne Newton,,S5:Wayne Newton,1,1
+5,3,5-3,rank_js,1,S5:Wayne Newton,S5:Wayne Newton;S5:Floyd Mayweather Jr. ,S5:Wayne Newton,1,1
+5,3,5-3,percent_js,1,S5:Wayne Newton,S5:Wayne Newton;S5:Floyd Mayweather Jr. ,S5:Wayne Newton,1,1
+5,4,5-4,rank,1,S5:Floyd Mayweather Jr. ,,S5:Floyd Mayweather Jr. ,1,1
+5,4,5-4,percent,1,S5:Floyd Mayweather Jr. ,,S5:Floyd Mayweather Jr. ,1,1
+5,4,5-4,rank_js,1,S5:Mark Cuban,S5:Floyd Mayweather Jr. ;S5:Mark Cuban,S5:Floyd Mayweather Jr. ,0,0
+5,4,5-4,percent_js,1,S5:Mark Cuban,S5:Floyd Mayweather Jr. ;S5:Mark Cuban,S5:Floyd Mayweather Jr. ,0,0
+5,5,5-5,rank,1,S5:Mark Cuban,,S5:Mark Cuban,1,1
+5,5,5-5,percent,1,S5:Mark Cuban,,S5:Mark Cuban,1,1
+5,5,5-5,rank_js,1,S5:Mark Cuban,S5:Mark Cuban;S5:Cameron Mathison,S5:Mark Cuban,1,1
+5,5,5-5,percent_js,1,S5:Mark Cuban,S5:Mark Cuban;S5:Marie Osmond,S5:Mark Cuban,1,1
+5,6,5-6,rank,1,S5:Jane Seymour,,S5:Sabrina Bryan,0,0
+5,6,5-6,percent,1,S5:Jane Seymour,,S5:Sabrina Bryan,0,0
+5,6,5-6,rank_js,1,S5:Jane Seymour,S5:Jane Seymour;S5:Sabrina Bryan,S5:Sabrina Bryan,0,0
+5,6,5-6,percent_js,1,S5:Jane Seymour,S5:Jane Seymour;S5:Sabrina Bryan,S5:Sabrina Bryan,0,0
+5,7,5-7,rank,1,S5:Jane Seymour,,S5:Jane Seymour,1,1
+5,7,5-7,percent,1,S5:Jane Seymour,,S5:Jane Seymour,1,1
+5,7,5-7,rank_js,1,S5:Jane Seymour,S5:Jane Seymour;S5:Cameron Mathison,S5:Jane Seymour,1,1
+5,7,5-7,percent_js,1,S5:Jane Seymour,S5:Jane Seymour;S5:Cameron Mathison,S5:Jane Seymour,1,1
+5,8,5-8,rank,1,S5:Jennie Garth,,S5:Cameron Mathison,0,0
+5,8,5-8,percent,1,S5:Cameron Mathison,,S5:Cameron Mathison,1,1
+5,8,5-8,rank_js,1,S5:Jennie Garth,S5:Jennie Garth;S5:Cameron Mathison,S5:Cameron Mathison,0,0
+5,8,5-8,percent_js,1,S5:Jennie Garth,S5:Cameron Mathison;S5:Jennie Garth,S5:Cameron Mathison,0,0
+5,9,5-9,rank,1,S5:Jennie Garth,,S5:Jennie Garth,1,1
+5,9,5-9,percent,1,S5:Jennie Garth,,S5:Jennie Garth,1,1
+5,9,5-9,rank_js,1,S5:Marie Osmond,S5:Jennie Garth;S5:Marie Osmond,S5:Jennie Garth,0,0
+5,9,5-9,percent_js,1,S5:Marie Osmond,S5:Jennie Garth;S5:Marie Osmond,S5:Jennie Garth,0,0
+5,10,5-10,rank,0,,,,1,1
+5,10,5-10,percent,0,,,,1,1
+5,10,5-10,rank_js,0,,,,1,1
+5,10,5-10,percent_js,0,,,,1,1
+6,1,6-1,rank,0,,,,1,1
+6,1,6-1,percent,0,,,,1,1
+6,1,6-1,rank_js,0,,,,1,1
+6,1,6-1,percent_js,0,,,,1,1
+6,2,6-2,rank,2,S6:Monica Seles;S6:Penn Jillette,,S6:Monica Seles;S6:Penn Jillette,1,1
+6,2,6-2,percent,2,S6:Monica Seles;S6:Penn Jillette,,S6:Monica Seles;S6:Penn Jillette,1,1
+6,2,6-2,rank_js,2,S6:Monica Seles;S6:Penn Jillette,,S6:Monica Seles;S6:Penn Jillette,1,1
+6,2,6-2,percent_js,2,S6:Monica Seles;S6:Penn Jillette,,S6:Monica Seles;S6:Penn Jillette,1,1
+6,3,6-3,rank,1,S6:Marissa Jaret Winokur,,S6:Steve Guttenberg,0,0
+6,3,6-3,percent,1,S6:Marissa Jaret Winokur,,S6:Steve Guttenberg,0,0
+6,3,6-3,rank_js,1,S6:Marissa Jaret Winokur,S6:Marissa Jaret Winokur;S6:Steve Guttenberg,S6:Steve Guttenberg,0,0
+6,3,6-3,percent_js,1,S6:Marissa Jaret Winokur,S6:Marissa Jaret Winokur;S6:Steve Guttenberg,S6:Steve Guttenberg,0,0
+6,4,6-4,rank,1,S6:Adam Carolla,,S6:Adam Carolla,1,1
+6,4,6-4,percent,1,S6:Adam Carolla,,S6:Adam Carolla,1,1
+6,4,6-4,rank_js,1,S6:Adam Carolla,S6:Adam Carolla;S6:Priscilla Presley,S6:Adam Carolla,1,1
+6,4,6-4,percent_js,1,S6:Adam Carolla,S6:Adam Carolla;S6:Priscilla Presley,S6:Adam Carolla,1,1
+6,5,6-5,rank,1,S6:Priscilla Presley,,S6:Priscilla Presley,1,1
+6,5,6-5,percent,1,S6:Priscilla Presley,,S6:Priscilla Presley,1,1
+6,5,6-5,rank_js,1,S6:Priscilla Presley,S6:Priscilla Presley;S6:Marlee Matlin,S6:Priscilla Presley,1,1
+6,5,6-5,percent_js,1,S6:Priscilla Presley,S6:Priscilla Presley;S6:Marlee Matlin,S6:Priscilla Presley,1,1
+6,6,6-6,rank,1,S6:Marlee Matlin,,S6:Marlee Matlin,1,1
+6,6,6-6,percent,1,S6:Marlee Matlin,,S6:Marlee Matlin,1,1
+6,6,6-6,rank_js,1,S6:Marlee Matlin,S6:Marlee Matlin;S6:Shannon Elizabeth,S6:Marlee Matlin,1,1
+6,6,6-6,percent_js,1,S6:Marlee Matlin,S6:Marlee Matlin;S6:Shannon Elizabeth,S6:Marlee Matlin,1,1
+6,7,6-7,rank,1,S6:Shannon Elizabeth,,S6:Shannon Elizabeth,1,1
+6,7,6-7,percent,1,S6:Shannon Elizabeth,,S6:Shannon Elizabeth,1,1
+6,7,6-7,rank_js,1,S6:Cristian de la Fuente,S6:Shannon Elizabeth;S6:Cristian de la Fuente,S6:Shannon Elizabeth,0,0
+6,7,6-7,percent_js,1,S6:Cristian de la Fuente,S6:Shannon Elizabeth;S6:Cristian de la Fuente,S6:Shannon Elizabeth,0,0
+6,8,6-8,rank,1,S6:Marissa Jaret Winokur,,S6:Mario,0,0
+6,8,6-8,percent,1,S6:Mario,,S6:Mario,1,1
+6,8,6-8,rank_js,1,S6:Marissa Jaret Winokur,S6:Marissa Jaret Winokur;S6:Mario,S6:Mario,0,0
+6,8,6-8,percent_js,1,S6:Marissa Jaret Winokur,S6:Mario;S6:Marissa Jaret Winokur,S6:Mario,0,0
+6,9,6-9,rank,1,S6:Marissa Jaret Winokur,,S6:Marissa Jaret Winokur,1,1
+6,9,6-9,percent,1,S6:Marissa Jaret Winokur,,S6:Marissa Jaret Winokur,1,1
+6,9,6-9,rank_js,1,S6:Marissa Jaret Winokur,S6:Marissa Jaret Winokur;S6:Jason Taylor,S6:Marissa Jaret Winokur,1,1
+6,9,6-9,percent_js,1,S6:Marissa Jaret Winokur,S6:Marissa Jaret Winokur;S6:Cristian de la Fuente,S6:Marissa Jaret Winokur,1,1
+6,10,6-10,rank,0,,,,1,1
+6,10,6-10,percent,0,,,,1,1
+6,10,6-10,rank_js,0,,,,1,1
+6,10,6-10,percent_js,0,,,,1,1
+7,1,7-1,rank,2,S7:Jeffrey Ross;S7:Cloris Leachman,,S7:Jeffrey Ross;S7:Ted McGinley,1,0
+7,1,7-1,percent,2,S7:Jeffrey Ross;S7:Cloris Leachman,,S7:Jeffrey Ross;S7:Ted McGinley,1,0
+7,1,7-1,rank_js,2,S7:Jeffrey Ross;S7:Cloris Leachman,,S7:Jeffrey Ross;S7:Ted McGinley,1,0
+7,1,7-1,percent_js,2,S7:Jeffrey Ross;S7:Cloris Leachman,,S7:Jeffrey Ross;S7:Ted McGinley,1,0
+7,2,7-2,rank,2,S7:Rocco DiSpirito;S7:Kim Kardashian,,S7:Kim Kardashian;S7:Misty May-Treanor,1,0
+7,2,7-2,percent,2,S7:Rocco DiSpirito;S7:Cloris Leachman,,S7:Kim Kardashian;S7:Misty May-Treanor,0,0
+7,2,7-2,rank_js,2,S7:Rocco DiSpirito;S7:Kim Kardashian,,S7:Kim Kardashian;S7:Misty May-Treanor,1,0
+7,2,7-2,percent_js,2,S7:Rocco DiSpirito;S7:Cloris Leachman,,S7:Kim Kardashian;S7:Misty May-Treanor,0,0
+7,3,7-3,rank,0,,,,1,1
+7,3,7-3,percent,0,,,,1,1
+7,3,7-3,rank_js,0,,,,1,1
+7,3,7-3,percent_js,0,,,,1,1
+7,4,7-4,rank,1,S7:Rocco DiSpirito,,S7:Rocco DiSpirito,1,1
+7,4,7-4,percent,1,S7:Rocco DiSpirito,,S7:Rocco DiSpirito,1,1
+7,4,7-4,rank_js,1,S7:Rocco DiSpirito,S7:Rocco DiSpirito;S7:Maurice Greene,S7:Rocco DiSpirito,1,1
+7,4,7-4,percent_js,1,S7:Rocco DiSpirito,S7:Rocco DiSpirito;S7:Maurice Greene,S7:Rocco DiSpirito,1,1
+7,5,7-5,rank,1,S7:Toni Braxton,,S7:Toni Braxton,1,1
+7,5,7-5,percent,1,S7:Toni Braxton,,S7:Toni Braxton,1,1
+7,5,7-5,rank_js,1,S7:Cloris Leachman,S7:Toni Braxton;S7:Cloris Leachman,S7:Toni Braxton,0,0
+7,5,7-5,percent_js,1,S7:Cloris Leachman,S7:Toni Braxton;S7:Cloris Leachman,S7:Toni Braxton,0,0
+7,6,7-6,rank,1,S7:Cloris Leachman,,S7:Cloris Leachman,1,1
+7,6,7-6,percent,1,S7:Cloris Leachman,,S7:Cloris Leachman,1,1
+7,6,7-6,rank_js,1,S7:Cloris Leachman,S7:Cloris Leachman;S7:Maurice Greene,S7:Cloris Leachman,1,1
+7,6,7-6,percent_js,1,S7:Cloris Leachman,S7:Cloris Leachman;S7:Maurice Greene,S7:Cloris Leachman,1,1
+7,7,7-7,rank,1,S7:Susan Lucci,,S7:Susan Lucci,1,1
+7,7,7-7,percent,1,S7:Cody Linley,,S7:Susan Lucci,0,0
+7,7,7-7,rank_js,1,S7:Warren Sapp,S7:Susan Lucci;S7:Warren Sapp,S7:Susan Lucci,0,0
+7,7,7-7,percent_js,1,S7:Warren Sapp,S7:Cody Linley;S7:Warren Sapp,S7:Susan Lucci,0,0
+7,8,7-8,rank,1,S7:Maurice Greene,,S7:Maurice Greene,1,1
+7,8,7-8,percent,1,S7:Maurice Greene,,S7:Maurice Greene,1,1
+7,8,7-8,rank_js,1,S7:Maurice Greene,S7:Maurice Greene;S7:Cody Linley,S7:Maurice Greene,1,1
+7,8,7-8,percent_js,1,S7:Maurice Greene,S7:Maurice Greene;S7:Cody Linley,S7:Maurice Greene,1,1
+7,9,7-9,rank,1,S7:Cody Linley,,S7:Cody Linley,1,1
+7,9,7-9,percent,1,S7:Cody Linley,,S7:Cody Linley,1,1
+7,9,7-9,rank_js,1,S7:Cody Linley,S7:Cody Linley;S7:Warren Sapp,S7:Cody Linley,1,1
+7,9,7-9,percent_js,1,S7:Cody Linley,S7:Cody Linley;S7:Warren Sapp,S7:Cody Linley,1,1
+7,10,7-10,rank,0,,,,1,1
+7,10,7-10,percent,0,,,,1,1
+7,10,7-10,rank_js,0,,,,1,1
+7,10,7-10,percent_js,0,,,,1,1
+8,1,8-1,rank,0,,,,1,1
+8,1,8-1,percent,0,,,,1,1
+8,1,8-1,rank_js,0,,,,1,1
+8,1,8-1,percent_js,0,,,,1,1
+8,2,8-2,rank,1,S8:David Alan Grier,,S8:Belinda Carlisle,0,0
+8,2,8-2,percent,1,S8:Steve-O,,S8:Belinda Carlisle,0,0
+8,2,8-2,rank_js,1,S8:David Alan Grier,S8:David Alan Grier;S8:Belinda Carlisle,S8:Belinda Carlisle,0,0
+8,2,8-2,percent_js,1,S8:Steve-O,S8:Steve-O;S8:David Alan Grier,S8:Belinda Carlisle,0,0
+8,3,8-3,rank,1,S8:Steve Wozniak,,S8:Denise Richards,0,0
+8,3,8-3,percent,1,S8:Steve Wozniak,,S8:Denise Richards,0,0
+8,3,8-3,rank_js,1,S8:Steve Wozniak,S8:Steve Wozniak;S8:Denise Richards,S8:Denise Richards,0,0
+8,3,8-3,percent_js,1,S8:Steve Wozniak,S8:Steve Wozniak;S8:Denise Richards,S8:Denise Richards,0,0
+8,4,8-4,rank,2,S8:Steve Wozniak;S8:Holly Madison,,S8:Holly Madison;S8:Steve Wozniak,1,1
+8,4,8-4,percent,2,S8:Steve Wozniak;S8:Holly Madison,,S8:Holly Madison;S8:Steve Wozniak,1,1
+8,4,8-4,rank_js,2,S8:Steve Wozniak;S8:Holly Madison,,S8:Holly Madison;S8:Steve Wozniak,1,1
+8,4,8-4,percent_js,2,S8:Steve Wozniak;S8:Holly Madison,,S8:Holly Madison;S8:Steve Wozniak,1,1
+8,5,8-5,rank,1,S8:Steve-O,,S8:David Alan Grier,0,0
+8,5,8-5,percent,1,S8:Steve-O,,S8:David Alan Grier,0,0
+8,5,8-5,rank_js,1,S8:Steve-O,S8:Steve-O;S8:Ty Murray,S8:David Alan Grier,0,0
+8,5,8-5,percent_js,1,S8:Steve-O,S8:Steve-O;S8:Ty Murray,S8:David Alan Grier,0,0
+8,6,8-6,rank,1,S8:Steve-O,,S8:Steve-O,1,1
+8,6,8-6,percent,1,S8:Steve-O,,S8:Steve-O,1,1
+8,6,8-6,rank_js,1,S8:Steve-O,S8:Steve-O;S8:Ty Murray,S8:Steve-O,1,1
+8,6,8-6,percent_js,1,S8:Steve-O,S8:Steve-O;S8:Ty Murray,S8:Steve-O,1,1
+8,7,8-7,rank,1,S8:Lawrence Taylor,,S8:Lawrence Taylor,1,1
+8,7,8-7,percent,1,S8:Lawrence Taylor,,S8:Lawrence Taylor,1,1
+8,7,8-7,rank_js,1,S8:Lawrence Taylor,S8:Lawrence Taylor;S8:Ty Murray,S8:Lawrence Taylor,1,1
+8,7,8-7,percent_js,1,S8:Lawrence Taylor,S8:Lawrence Taylor;S8:Ty Murray,S8:Lawrence Taylor,1,1
+8,8,8-8,rank,1,S8:Chuck Wicks,,S8:Chuck Wicks,1,1
+8,8,8-8,percent,1,S8:Chuck Wicks,,S8:Chuck Wicks,1,1
+8,8,8-8,rank_js,1,S8:Melissa Rycroft,S8:Chuck Wicks;S8:Melissa Rycroft,S8:Chuck Wicks,0,0
+8,8,8-8,percent_js,1,S8:Melissa Rycroft,S8:Chuck Wicks;S8:Melissa Rycroft,S8:Chuck Wicks,0,0
+8,9,8-9,rank,1,S8:Ty Murray,,S8:Lil' Kim,0,0
+8,9,8-9,percent,1,S8:Ty Murray,,S8:Lil' Kim,0,0
+8,9,8-9,rank_js,1,S8:Ty Murray,S8:Ty Murray;S8:Lil' Kim,S8:Lil' Kim,0,0
+8,9,8-9,percent_js,1,S8:Ty Murray,S8:Ty Murray;S8:Lil' Kim,S8:Lil' Kim,0,0
+8,10,8-10,rank,1,S8:Ty Murray,,S8:Ty Murray,1,1
+8,10,8-10,percent,1,S8:Ty Murray,,S8:Ty Murray,1,1
+8,10,8-10,rank_js,1,S8:Ty Murray,S8:Ty Murray;S8:Melissa Rycroft,S8:Ty Murray,1,1
+8,10,8-10,percent_js,1,S8:Ty Murray,S8:Ty Murray;S8:Melissa Rycroft,S8:Ty Murray,1,1
+8,11,8-11,rank,0,,,,1,1
+8,11,8-11,percent,0,,,,1,1
+8,11,8-11,rank_js,0,,,,1,1
+8,11,8-11,percent_js,0,,,,1,1
+9,1,9-1,rank,2,S9:Ashley Hamiliton;S9:Macy Gray,,S9:Ashley Hamiliton;S9:Macy Gray,1,1
+9,1,9-1,percent,2,S9:Ashley Hamiliton;S9:Macy Gray,,S9:Ashley Hamiliton;S9:Macy Gray,1,1
+9,1,9-1,rank_js,2,S9:Ashley Hamiliton;S9:Macy Gray,,S9:Ashley Hamiliton;S9:Macy Gray,1,1
+9,1,9-1,percent_js,2,S9:Ashley Hamiliton;S9:Macy Gray,,S9:Ashley Hamiliton;S9:Macy Gray,1,1
+9,2,9-2,rank,1,S9:Kathy Ireland,,S9:Kathy Ireland,1,1
+9,2,9-2,percent,1,S9:Kathy Ireland,,S9:Kathy Ireland,1,1
+9,2,9-2,rank_js,1,S9:Kathy Ireland,S9:Kathy Ireland;S9:Tom DeLay,S9:Kathy Ireland,1,1
+9,2,9-2,percent_js,1,S9:Kathy Ireland,S9:Kathy Ireland;S9:Tom DeLay,S9:Kathy Ireland,1,1
+9,3,9-3,rank,2,S9:Tom DeLay;S9:Debi Mazar,,S9:Debi Mazar;S9:Tom DeLay,1,1
+9,3,9-3,percent,2,S9:Tom DeLay;S9:Michael Irvin,,S9:Debi Mazar;S9:Tom DeLay,1,0
+9,3,9-3,rank_js,2,S9:Tom DeLay;S9:Debi Mazar,,S9:Debi Mazar;S9:Tom DeLay,1,1
+9,3,9-3,percent_js,2,S9:Tom DeLay;S9:Michael Irvin,,S9:Debi Mazar;S9:Tom DeLay,1,0
+9,4,9-4,rank,1,S9:Louie Vito,,S9:Chuck Liddell,0,0
+9,4,9-4,percent,1,S9:Chuck Liddell,,S9:Chuck Liddell,1,1
+9,4,9-4,rank_js,1,S9:Louie Vito,S9:Louie Vito;S9:Chuck Liddell,S9:Chuck Liddell,0,0
+9,4,9-4,percent_js,1,S9:Louie Vito,S9:Chuck Liddell;S9:Louie Vito,S9:Chuck Liddell,0,0
+9,5,9-5,rank,1,S9:Louie Vito,,S9:Natalie Coughlin,0,0
+9,5,9-5,percent,1,S9:Louie Vito,,S9:Natalie Coughlin,0,0
+9,5,9-5,rank_js,1,S9:Louie Vito,S9:Louie Vito;S9:Natalie Coughlin,S9:Natalie Coughlin,0,0
+9,5,9-5,percent_js,1,S9:Louie Vito,S9:Louie Vito;S9:Natalie Coughlin,S9:Natalie Coughlin,0,0
+9,6,9-6,rank,2,S9:Melissa Joan Hart;S9:Louie Vito,,S9:Louie Vito;S9:Melissa Joan Hart,1,1
+9,6,9-6,percent,2,S9:Louie Vito;S9:Michael Irvin,,S9:Louie Vito;S9:Melissa Joan Hart,1,0
+9,6,9-6,rank_js,2,S9:Melissa Joan Hart;S9:Louie Vito,,S9:Louie Vito;S9:Melissa Joan Hart,1,1
+9,6,9-6,percent_js,2,S9:Louie Vito;S9:Michael Irvin,,S9:Louie Vito;S9:Melissa Joan Hart,1,0
+9,7,9-7,rank,2,S9:Mark Dacascos;S9:Michael Irvin,,S9:Mark Dacascos;S9:Michael Irvin,1,1
+9,7,9-7,percent,2,S9:Mark Dacascos;S9:Michael Irvin,,S9:Mark Dacascos;S9:Michael Irvin,1,1
+9,7,9-7,rank_js,2,S9:Mark Dacascos;S9:Michael Irvin,,S9:Mark Dacascos;S9:Michael Irvin,1,1
+9,7,9-7,percent_js,2,S9:Mark Dacascos;S9:Michael Irvin,,S9:Mark Dacascos;S9:Michael Irvin,1,1
+9,8,9-8,rank,1,S9:Aaron Carter,,S9:Aaron Carter,1,1
+9,8,9-8,percent,1,S9:Aaron Carter,,S9:Aaron Carter,1,1
+9,8,9-8,rank_js,1,S9:Aaron Carter,S9:Aaron Carter;S9:Donny Osmond,S9:Aaron Carter,1,1
+9,8,9-8,percent_js,1,S9:Aaron Carter,S9:Aaron Carter;S9:Donny Osmond,S9:Aaron Carter,1,1
+9,9,9-9,rank,1,S9:Donny Osmond,,S9:Joanna Krupa,0,0
+9,9,9-9,percent,1,S9:Joanna Krupa,,S9:Joanna Krupa,1,1
+9,9,9-9,rank_js,1,S9:Donny Osmond,S9:Donny Osmond;S9:Kelly Osbourne,S9:Joanna Krupa,0,0
+9,9,9-9,percent_js,1,S9:Donny Osmond,S9:Joanna Krupa;S9:Donny Osmond,S9:Joanna Krupa,0,0
+9,10,9-10,rank,0,,,,1,1
+9,10,9-10,percent,0,,,,1,1
+9,10,9-10,rank_js,0,,,,1,1
+9,10,9-10,percent_js,0,,,,1,1
+10,1,10-1,rank,0,,,,1,1
+10,1,10-1,percent,0,,,,1,1
+10,1,10-1,rank_js,0,,,,1,1
+10,1,10-1,percent_js,0,,,,1,1
+10,2,10-2,rank,1,S10:Aiden Turner,,S10:Shannen Doherty,0,0
+10,2,10-2,percent,1,S10:Buzz Aldrin,,S10:Shannen Doherty,0,0
+10,2,10-2,rank_js,1,S10:Aiden Turner,S10:Aiden Turner;S10:Shannen Doherty,S10:Shannen Doherty,0,0
+10,2,10-2,percent_js,1,S10:Buzz Aldrin,S10:Buzz Aldrin;S10:Kate Gosselin,S10:Shannen Doherty,0,0
+10,3,10-3,rank,1,S10:Buzz Aldrin,,S10:Buzz Aldrin,1,1
+10,3,10-3,percent,1,S10:Buzz Aldrin,,S10:Buzz Aldrin,1,1
+10,3,10-3,rank_js,1,S10:Buzz Aldrin,S10:Buzz Aldrin;S10:Aiden Turner,S10:Buzz Aldrin,1,1
+10,3,10-3,percent_js,1,S10:Buzz Aldrin,S10:Buzz Aldrin;S10:Kate Gosselin,S10:Buzz Aldrin,1,1
+10,4,10-4,rank,1,S10:Aiden Turner,,S10:Aiden Turner,1,1
+10,4,10-4,percent,1,S10:Aiden Turner,,S10:Aiden Turner,1,1
+10,4,10-4,rank_js,1,S10:Kate Gosselin,S10:Aiden Turner;S10:Kate Gosselin,S10:Aiden Turner,0,0
+10,4,10-4,percent_js,1,S10:Kate Gosselin,S10:Aiden Turner;S10:Kate Gosselin,S10:Aiden Turner,0,0
+10,5,10-5,rank,1,S10:Kate Gosselin,,S10:Kate Gosselin,1,1
+10,5,10-5,percent,1,S10:Kate Gosselin,,S10:Kate Gosselin,1,1
+10,5,10-5,rank_js,1,S10:Kate Gosselin,S10:Kate Gosselin;S10:Niecy Nash,S10:Kate Gosselin,1,1
+10,5,10-5,percent_js,1,S10:Kate Gosselin,S10:Kate Gosselin;S10:Niecy Nash,S10:Kate Gosselin,1,1
+10,6,10-6,rank,1,S10:Jake Pavelka,,S10:Jake Pavelka,1,1
+10,6,10-6,percent,1,S10:Jake Pavelka,,S10:Jake Pavelka,1,1
+10,6,10-6,rank_js,1,S10:Jake Pavelka,S10:Jake Pavelka;S10:Niecy Nash,S10:Jake Pavelka,1,1
+10,6,10-6,percent_js,1,S10:Jake Pavelka,S10:Jake Pavelka;S10:Niecy Nash,S10:Jake Pavelka,1,1
+10,7,10-7,rank,1,S10:Niecy Nash,,S10:Pamela Anderson,0,0
+10,7,10-7,percent,1,S10:Pamela Anderson,,S10:Pamela Anderson,1,1
+10,7,10-7,rank_js,1,S10:Niecy Nash,S10:Niecy Nash;S10:Pamela Anderson,S10:Pamela Anderson,0,0
+10,7,10-7,percent_js,1,S10:Niecy Nash,S10:Pamela Anderson;S10:Niecy Nash,S10:Pamela Anderson,0,0
+10,8,10-8,rank,1,S10:Niecy Nash,,S10:Niecy Nash,1,1
+10,8,10-8,percent,1,S10:Niecy Nash,,S10:Niecy Nash,1,1
+10,8,10-8,rank_js,1,S10:Niecy Nash,S10:Niecy Nash;S10:Chad Ochocinco,S10:Niecy Nash,1,1
+10,8,10-8,percent_js,1,S10:Niecy Nash,S10:Niecy Nash;S10:Chad Ochocinco,S10:Niecy Nash,1,1
+10,9,10-9,rank,1,S10:Chad Ochocinco,,S10:Chad Ochocinco,1,1
+10,9,10-9,percent,1,S10:Chad Ochocinco,,S10:Chad Ochocinco,1,1
+10,9,10-9,rank_js,1,S10:Chad Ochocinco,S10:Chad Ochocinco;S10:Erin Andrews,S10:Chad Ochocinco,1,1
+10,9,10-9,percent_js,1,S10:Chad Ochocinco,S10:Chad Ochocinco;S10:Erin Andrews,S10:Chad Ochocinco,1,1
+10,10,10-10,rank,0,,,,1,1
+10,10,10-10,percent,0,,,,1,1
+10,10,10-10,rank_js,0,,,,1,1
+10,10,10-10,percent_js,0,,,,1,1
+11,1,11-1,rank,1,S11:Margaret Cho,,S11:David Hasselhoff,0,0
+11,1,11-1,percent,1,S11:Margaret Cho,,S11:David Hasselhoff,0,0
+11,1,11-1,rank_js,1,S11:Margaret Cho,S11:Margaret Cho;S11:David Hasselhoff,S11:David Hasselhoff,0,0
+11,1,11-1,percent_js,1,S11:Margaret Cho,S11:Margaret Cho;S11:David Hasselhoff,S11:David Hasselhoff,0,0
+11,2,11-2,rank,1,S11:Michael Bolton,,S11:Michael Bolton,1,1
+11,2,11-2,percent,1,S11:Michael Bolton,,S11:Michael Bolton,1,1
+11,2,11-2,rank_js,1,S11:Michael Bolton,S11:Michael Bolton;S11:Florence Henderson,S11:Michael Bolton,1,1
+11,2,11-2,percent_js,1,S11:Michael Bolton,S11:Michael Bolton;S11:Margaret Cho,S11:Michael Bolton,1,1
+11,3,11-3,rank,1,S11:Margaret Cho,,S11:Margaret Cho,1,1
+11,3,11-3,percent,1,S11:Margaret Cho,,S11:Margaret Cho,1,1
+11,3,11-3,rank_js,1,S11:Margaret Cho,S11:Margaret Cho;S11:Florence Henderson,S11:Margaret Cho,1,1
+11,3,11-3,percent_js,1,S11:Margaret Cho,S11:Margaret Cho;S11:Florence Henderson,S11:Margaret Cho,1,1
+11,4,11-4,rank,1,S11:The Situation,,S11:The Situation,1,1
+11,4,11-4,percent,1,S11:The Situation,,S11:The Situation,1,1
+11,4,11-4,rank_js,1,S11:The Situation,S11:The Situation;S11:Kurt Warner,S11:The Situation,1,1
+11,4,11-4,percent_js,1,S11:The Situation,S11:The Situation;S11:Kurt Warner,S11:The Situation,1,1
+11,5,11-5,rank,1,S11:Florence Henderson,,S11:Florence Henderson,1,1
+11,5,11-5,percent,1,S11:Florence Henderson,,S11:Florence Henderson,1,1
+11,5,11-5,rank_js,1,S11:Florence Henderson,S11:Florence Henderson;S11:Audrina Patridge,S11:Florence Henderson,1,1
+11,5,11-5,percent_js,1,S11:Bristol Palin,S11:Florence Henderson;S11:Bristol Palin,S11:Florence Henderson,0,0
+11,6,11-6,rank,1,S11:Kurt Warner,,S11:Audrina Patridge,0,0
+11,6,11-6,percent,1,S11:Kurt Warner,,S11:Audrina Patridge,0,0
+11,6,11-6,rank_js,1,S11:Kurt Warner,S11:Kurt Warner;S11:Audrina Patridge,S11:Audrina Patridge,0,0
+11,6,11-6,percent_js,1,S11:Kurt Warner,S11:Kurt Warner;S11:Audrina Patridge,S11:Audrina Patridge,0,0
+11,7,11-7,rank,1,S11:Rick Fox,,S11:Rick Fox,1,1
+11,7,11-7,percent,1,S11:Rick Fox,,S11:Rick Fox,1,1
+11,7,11-7,rank_js,1,S11:Kyle Massey,S11:Rick Fox;S11:Kyle Massey,S11:Rick Fox,0,0
+11,7,11-7,percent_js,1,S11:Rick Fox,S11:Rick Fox;S11:Kurt Warner,S11:Rick Fox,1,1
+11,8,11-8,rank,1,S11:Kurt Warner,,S11:Kurt Warner,1,1
+11,8,11-8,percent,1,S11:Kurt Warner,,S11:Kurt Warner,1,1
+11,8,11-8,rank_js,1,S11:Bristol Palin,S11:Kurt Warner;S11:Bristol Palin,S11:Kurt Warner,0,0
+11,8,11-8,percent_js,1,S11:Bristol Palin,S11:Kurt Warner;S11:Bristol Palin,S11:Kurt Warner,0,0
+11,9,11-9,rank,1,S11:Bristol Palin,,S11:Brandy,0,0
+11,9,11-9,percent,1,S11:Brandy,,S11:Brandy,1,1
+11,9,11-9,rank_js,1,S11:Bristol Palin,S11:Bristol Palin;S11:Brandy,S11:Brandy,0,0
+11,9,11-9,percent_js,1,S11:Bristol Palin,S11:Brandy;S11:Bristol Palin,S11:Brandy,0,0
+11,10,11-10,rank,0,,,,1,1
+11,10,11-10,percent,0,,,,1,1
+11,10,11-10,rank_js,0,,,,1,1
+11,10,11-10,percent_js,0,,,,1,1
+12,1,12-1,rank,0,,,,1,1
+12,1,12-1,percent,0,,,,1,1
+12,1,12-1,rank_js,0,,,,1,1
+12,1,12-1,percent_js,0,,,,1,1
+12,2,12-2,rank,1,S12:Mike Catherwood,,S12:Mike Catherwood,1,1
+12,2,12-2,percent,1,S12:Mike Catherwood,,S12:Mike Catherwood,1,1
+12,2,12-2,rank_js,1,S12:Mike Catherwood,S12:Mike Catherwood;S12:Wendy Williams,S12:Mike Catherwood,1,1
+12,2,12-2,percent_js,1,S12:Mike Catherwood,S12:Mike Catherwood;S12:Wendy Williams,S12:Mike Catherwood,1,1
+12,3,12-3,rank,1,S12:Wendy Williams,,S12:Wendy Williams,1,1
+12,3,12-3,percent,1,S12:Wendy Williams,,S12:Wendy Williams,1,1
+12,3,12-3,rank_js,1,S12:Wendy Williams,S12:Wendy Williams;S12:Romeo,S12:Wendy Williams,1,1
+12,3,12-3,percent_js,1,S12:Wendy Williams,S12:Wendy Williams;S12:Romeo,S12:Wendy Williams,1,1
+12,4,12-4,rank,1,S12:Sugar Ray Leonard,,S12:Sugar Ray Leonard,1,1
+12,4,12-4,percent,1,S12:Kendra Wilkinson,,S12:Sugar Ray Leonard,0,0
+12,4,12-4,rank_js,1,S12:Kendra Wilkinson,S12:Sugar Ray Leonard;S12:Kendra Wilkinson,S12:Sugar Ray Leonard,0,0
+12,4,12-4,percent_js,1,S12:Kendra Wilkinson,S12:Kendra Wilkinson;S12:Sugar Ray Leonard,S12:Sugar Ray Leonard,0,0
+12,5,12-5,rank,1,S12:Petra Nemcova,,S12:Petra Nemcova,1,1
+12,5,12-5,percent,1,S12:Petra Nemcova,,S12:Petra Nemcova,1,1
+12,5,12-5,rank_js,1,S12:Petra Nemcova,S12:Petra Nemcova;S12:Ralph Macchio,S12:Petra Nemcova,1,1
+12,5,12-5,percent_js,1,S12:Petra Nemcova,S12:Petra Nemcova;S12:Ralph Macchio,S12:Petra Nemcova,1,1
+12,6,12-6,rank,1,S12:Chris Jericho,,S12:Chris Jericho,1,1
+12,6,12-6,percent,1,S12:Chris Jericho,,S12:Chris Jericho,1,1
+12,6,12-6,rank_js,1,S12:Chris Jericho,S12:Chris Jericho;S12:Ralph Macchio,S12:Chris Jericho,1,1
+12,6,12-6,percent_js,1,S12:Chris Jericho,S12:Chris Jericho;S12:Ralph Macchio,S12:Chris Jericho,1,1
+12,7,12-7,rank,1,S12:Kendra Wilkinson,,S12:Kendra Wilkinson,1,1
+12,7,12-7,percent,1,S12:Kendra Wilkinson,,S12:Kendra Wilkinson,1,1
+12,7,12-7,rank_js,1,S12:Romeo,S12:Kendra Wilkinson;S12:Romeo,S12:Kendra Wilkinson,0,0
+12,7,12-7,percent_js,1,S12:Romeo,S12:Kendra Wilkinson;S12:Romeo,S12:Kendra Wilkinson,0,0
+12,8,12-8,rank,1,S12:Ralph Macchio,,S12:Romeo,0,0
+12,8,12-8,percent,1,S12:Ralph Macchio,,S12:Romeo,0,0
+12,8,12-8,rank_js,1,S12:Ralph Macchio,S12:Ralph Macchio;S12:Romeo,S12:Romeo,0,0
+12,8,12-8,percent_js,1,S12:Ralph Macchio,S12:Ralph Macchio;S12:Romeo,S12:Romeo,0,0
+12,9,12-9,rank,1,S12:Ralph Macchio,,S12:Ralph Macchio,1,1
+12,9,12-9,percent,1,S12:Ralph Macchio,,S12:Ralph Macchio,1,1
+12,9,12-9,rank_js,1,S12:Ralph Macchio,S12:Ralph Macchio;S12:Kirstie Alley,S12:Ralph Macchio,1,1
+12,9,12-9,percent_js,1,S12:Ralph Macchio,S12:Ralph Macchio;S12:Kirstie Alley,S12:Ralph Macchio,1,1
+12,10,12-10,rank,0,,,,1,1
+12,10,12-10,percent,0,,,,1,1
+12,10,12-10,rank_js,0,,,,1,1
+12,10,12-10,percent_js,0,,,,1,1
+13,1,13-1,rank,1,S13:Metta World Peace (Ron),,S13:Metta World Peace (Ron),1,1
+13,1,13-1,percent,1,S13:Metta World Peace (Ron),,S13:Metta World Peace (Ron),1,1
+13,1,13-1,rank_js,1,S13:Metta World Peace (Ron),S13:Metta World Peace (Ron);S13:Elisabetta Canalis,S13:Metta World Peace (Ron),1,1
+13,1,13-1,percent_js,1,S13:Metta World Peace (Ron),S13:Metta World Peace (Ron);S13:Elisabetta Canalis,S13:Metta World Peace (Ron),1,1
+13,2,13-2,rank,1,S13:Chaz Bono,,S13:Elisabetta Canalis,0,0
+13,2,13-2,percent,1,S13:Chaz Bono,,S13:Elisabetta Canalis,0,0
+13,2,13-2,rank_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:David Arquette,S13:Elisabetta Canalis,0,0
+13,2,13-2,percent_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:David Arquette,S13:Elisabetta Canalis,0,0
+13,3,13-3,rank,1,S13:Chaz Bono,,S13:Kristin Cavallari,0,0
+13,3,13-3,percent,1,S13:Chaz Bono,,S13:Kristin Cavallari,0,0
+13,3,13-3,rank_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:Carson Kressley,S13:Kristin Cavallari,0,0
+13,3,13-3,percent_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:Nancy Grace,S13:Kristin Cavallari,0,0
+13,4,13-4,rank,1,S13:Carson Kressley,,S13:Chynna Phillips,0,0
+13,4,13-4,percent,1,S13:Chynna Phillips,,S13:Chynna Phillips,1,1
+13,4,13-4,rank_js,1,S13:Carson Kressley,S13:Carson Kressley;S13:Chynna Phillips,S13:Chynna Phillips,0,0
+13,4,13-4,percent_js,1,S13:Carson Kressley,S13:Chynna Phillips;S13:Carson Kressley,S13:Chynna Phillips,0,0
+13,5,13-5,rank,1,S13:Carson Kressley,,S13:Carson Kressley,1,1
+13,5,13-5,percent,1,S13:Carson Kressley,,S13:Carson Kressley,1,1
+13,5,13-5,rank_js,1,S13:Carson Kressley,S13:Carson Kressley;S13:Chaz Bono,S13:Carson Kressley,1,1
+13,5,13-5,percent_js,1,S13:Carson Kressley,S13:Carson Kressley;S13:Chaz Bono,S13:Carson Kressley,1,1
+13,6,13-6,rank,1,S13:Chaz Bono,,S13:Chaz Bono,1,1
+13,6,13-6,percent,1,S13:Chaz Bono,,S13:Chaz Bono,1,1
+13,6,13-6,rank_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:Hope Solo,S13:Chaz Bono,1,1
+13,6,13-6,percent_js,1,S13:Chaz Bono,S13:Chaz Bono;S13:Hope Solo,S13:Chaz Bono,1,1
+13,7,13-7,rank,1,S13:David Arquette,,S13:David Arquette,1,1
+13,7,13-7,percent,1,S13:Nancy Grace,,S13:David Arquette,0,0
+13,7,13-7,rank_js,1,S13:Nancy Grace,S13:David Arquette;S13:Nancy Grace,S13:David Arquette,0,0
+13,7,13-7,percent_js,1,S13:Nancy Grace,S13:Nancy Grace;S13:David Arquette,S13:David Arquette,0,0
+13,8,13-8,rank,1,S13:Nancy Grace,,S13:Nancy Grace,1,1
+13,8,13-8,percent,1,S13:Nancy Grace,,S13:Nancy Grace,1,1
+13,8,13-8,rank_js,1,S13:Nancy Grace,S13:Nancy Grace;S13:Hope Solo,S13:Nancy Grace,1,1
+13,8,13-8,percent_js,1,S13:Nancy Grace,S13:Nancy Grace;S13:Hope Solo,S13:Nancy Grace,1,1
+13,9,13-9,rank,1,S13:Hope Solo,,S13:Hope Solo,1,1
+13,9,13-9,percent,1,S13:Hope Solo,,S13:Hope Solo,1,1
+13,9,13-9,rank_js,1,S13:Hope Solo,S13:Hope Solo;S13:J.R. Martinez,S13:Hope Solo,1,1
+13,9,13-9,percent_js,1,S13:Hope Solo,S13:Hope Solo;S13:J.R. Martinez,S13:Hope Solo,1,1
+13,10,13-10,rank,0,,,,1,1
+13,10,13-10,percent,0,,,,1,1
+13,10,13-10,rank_js,0,,,,1,1
+13,10,13-10,percent_js,0,,,,1,1
+14,1,14-1,rank,0,,,,1,1
+14,1,14-1,percent,0,,,,1,1
+14,1,14-1,rank_js,0,,,,1,1
+14,1,14-1,percent_js,0,,,,1,1
+14,2,14-2,rank,1,S14:Martina Navratilova,,S14:Martina Navratilova,1,1
+14,2,14-2,percent,1,S14:Martina Navratilova,,S14:Martina Navratilova,1,1
+14,2,14-2,rank_js,1,S14:Martina Navratilova,S14:Martina Navratilova;S14:Gladys Knight,S14:Martina Navratilova,1,1
+14,2,14-2,percent_js,1,S14:Martina Navratilova,S14:Martina Navratilova;S14:Gladys Knight,S14:Martina Navratilova,1,1
+14,3,14-3,rank,1,S14:Jack Wagner,,S14:Jack Wagner,1,1
+14,3,14-3,percent,1,S14:Jack Wagner,,S14:Jack Wagner,1,1
+14,3,14-3,rank_js,1,S14:Jack Wagner,S14:Jack Wagner;S14:Gladys Knight,S14:Jack Wagner,1,1
+14,3,14-3,percent_js,1,S14:Jack Wagner,S14:Jack Wagner;S14:Gladys Knight,S14:Jack Wagner,1,1
+14,4,14-4,rank,1,S14:Sherri Sheperd,,S14:Sherri Sheperd,1,1
+14,4,14-4,percent,1,S14:Sherri Sheperd,,S14:Sherri Sheperd,1,1
+14,4,14-4,rank_js,1,S14:Gladys Knight,S14:Sherri Sheperd;S14:Gladys Knight,S14:Sherri Sheperd,0,0
+14,4,14-4,percent_js,1,S14:Gladys Knight,S14:Sherri Sheperd;S14:Gladys Knight,S14:Sherri Sheperd,0,0
+14,5,14-5,rank,1,S14:Gavin DeGraw,,S14:Gavin DeGraw,1,1
+14,5,14-5,percent,1,S14:Gavin DeGraw,,S14:Gavin DeGraw,1,1
+14,5,14-5,rank_js,1,S14:Gavin DeGraw,S14:Gavin DeGraw;S14:Melissa Gilbert,S14:Gavin DeGraw,1,1
+14,5,14-5,percent_js,1,S14:Gavin DeGraw,S14:Gavin DeGraw;S14:Melissa Gilbert,S14:Gavin DeGraw,1,1
+14,6,14-6,rank,1,S14:Gladys Knight,,S14:Gladys Knight,1,1
+14,6,14-6,percent,1,S14:Gladys Knight,,S14:Gladys Knight,1,1
+14,6,14-6,rank_js,1,S14:Gladys Knight,S14:Gladys Knight;S14:Roshon Fegan,S14:Gladys Knight,1,1
+14,6,14-6,percent_js,1,S14:Gladys Knight,S14:Gladys Knight;S14:Roshon Fegan,S14:Gladys Knight,1,1
+14,7,14-7,rank,1,S14:Jaleel White,,S14:Jaleel White,1,1
+14,7,14-7,percent,1,S14:Jaleel White,,S14:Jaleel White,1,1
+14,7,14-7,rank_js,1,S14:Melissa Gilbert,S14:Jaleel White;S14:Melissa Gilbert,S14:Jaleel White,0,0
+14,7,14-7,percent_js,1,S14:Melissa Gilbert,S14:Jaleel White;S14:Melissa Gilbert,S14:Jaleel White,0,0
+14,8,14-8,rank,2,S14:Melissa Gilbert;S14:Maria Menounos,,S14:Melissa Gilbert;S14:Roshon Fegan,1,0
+14,8,14-8,percent,2,S14:Melissa Gilbert;S14:Maria Menounos,,S14:Melissa Gilbert;S14:Roshon Fegan,1,0
+14,8,14-8,rank_js,2,S14:Melissa Gilbert;S14:Maria Menounos,,S14:Melissa Gilbert;S14:Roshon Fegan,1,0
+14,8,14-8,percent_js,2,S14:Melissa Gilbert;S14:Maria Menounos,,S14:Melissa Gilbert;S14:Roshon Fegan,1,0
+14,9,14-9,rank,1,S14:Katherine Jenkins,,S14:Maria Menounos,0,0
+14,9,14-9,percent,1,S14:Maria Menounos,,S14:Maria Menounos,1,1
+14,9,14-9,rank_js,1,S14:Katherine Jenkins,S14:Katherine Jenkins;S14:William Levy,S14:Maria Menounos,0,0
+14,9,14-9,percent_js,1,S14:Katherine Jenkins,S14:Maria Menounos;S14:Katherine Jenkins,S14:Maria Menounos,0,0
+14,10,14-10,rank,0,,,,1,1
+14,10,14-10,percent,0,,,,1,1
+14,10,14-10,rank_js,0,,,,1,1
+14,10,14-10,percent_js,0,,,,1,1
+15,1,15-1,rank,1,S15:Pamela Anderson,,S15:Pamela Anderson,1,1
+15,1,15-1,percent,1,S15:Pamela Anderson,,S15:Pamela Anderson,1,1
+15,1,15-1,rank_js,1,S15:Pamela Anderson,S15:Pamela Anderson;S15:Joey Fatone,S15:Pamela Anderson,1,1
+15,1,15-1,percent_js,1,S15:Pamela Anderson,S15:Pamela Anderson;S15:Kirstie Alley,S15:Pamela Anderson,1,1
+15,2,15-2,rank,1,S15:Joey Fatone,,S15:Joey Fatone,1,1
+15,2,15-2,percent,1,S15:Bristol Palin,,S15:Joey Fatone,0,0
+15,2,15-2,rank_js,1,S15:Bristol Palin,S15:Joey Fatone;S15:Bristol Palin,S15:Joey Fatone,0,0
+15,2,15-2,percent_js,1,S15:Bristol Palin,S15:Bristol Palin;S15:Joey Fatone,S15:Joey Fatone,0,0
+15,3,15-3,rank,2,S15:Bristol Palin;S15:Drew Lachey,,S15:Drew Lachey;S15:Helio Castroneves,1,0
+15,3,15-3,percent,2,S15:Bristol Palin;S15:Drew Lachey,,S15:Drew Lachey;S15:Helio Castroneves,1,0
+15,3,15-3,rank_js,2,S15:Bristol Palin;S15:Drew Lachey,,S15:Drew Lachey;S15:Helio Castroneves,1,0
+15,3,15-3,percent_js,2,S15:Bristol Palin;S15:Drew Lachey,,S15:Drew Lachey;S15:Helio Castroneves,1,0
+15,4,15-4,rank,1,S15:Bristol Palin,,S15:Bristol Palin,1,1
+15,4,15-4,percent,1,S15:Bristol Palin,,S15:Bristol Palin,1,1
+15,4,15-4,rank_js,1,S15:Bristol Palin,S15:Bristol Palin;S15:Sabrina Bryan,S15:Bristol Palin,1,1
+15,4,15-4,percent_js,1,S15:Kirstie Alley,S15:Bristol Palin;S15:Kirstie Alley,S15:Bristol Palin,0,0
+15,5,15-5,rank,0,,,,1,1
+15,5,15-5,percent,0,,,,1,1
+15,5,15-5,rank_js,0,,,,1,1
+15,5,15-5,percent_js,0,,,,1,1
+15,6,15-6,rank,1,S15:Emmitt Smith,,S15:Sabrina Bryan,0,0
+15,6,15-6,percent,1,S15:Emmitt Smith,,S15:Sabrina Bryan,0,0
+15,6,15-6,rank_js,1,S15:Emmitt Smith,S15:Emmitt Smith;S15:Kelly Monaco,S15:Sabrina Bryan,0,0
+15,6,15-6,percent_js,1,S15:Emmitt Smith,S15:Emmitt Smith;S15:Gilles Marini,S15:Sabrina Bryan,0,0
+15,7,15-7,rank,0,,,,1,1
+15,7,15-7,percent,0,,,,1,1
+15,7,15-7,rank_js,0,,,,1,1
+15,7,15-7,percent_js,0,,,,1,1
+15,8,15-8,rank,2,S15:Kirstie Alley;S15:Gilles Marini,,S15:Gilles Marini;S15:Kirstie Alley,1,1
+15,8,15-8,percent,2,S15:Kirstie Alley;S15:Gilles Marini,,S15:Gilles Marini;S15:Kirstie Alley,1,1
+15,8,15-8,rank_js,2,S15:Kirstie Alley;S15:Gilles Marini,,S15:Gilles Marini;S15:Kirstie Alley,1,1
+15,8,15-8,percent_js,2,S15:Kirstie Alley;S15:Gilles Marini,,S15:Gilles Marini;S15:Kirstie Alley,1,1
+15,9,15-9,rank,2,S15:Emmitt Smith;S15:Apolo Anton Ohno,,S15:Apolo Anton Ohno;S15:Emmitt Smith,1,1
+15,9,15-9,percent,2,S15:Emmitt Smith;S15:Apolo Anton Ohno,,S15:Apolo Anton Ohno;S15:Emmitt Smith,1,1
+15,9,15-9,rank_js,2,S15:Emmitt Smith;S15:Apolo Anton Ohno,,S15:Apolo Anton Ohno;S15:Emmitt Smith,1,1
+15,9,15-9,percent_js,2,S15:Emmitt Smith;S15:Apolo Anton Ohno,,S15:Apolo Anton Ohno;S15:Emmitt Smith,1,1
+15,10,15-10,rank,0,,,,1,1
+15,10,15-10,percent,0,,,,1,1
+15,10,15-10,rank_js,0,,,,1,1
+15,10,15-10,percent_js,0,,,,1,1
+16,1,16-1,rank,0,,,,1,1
+16,1,16-1,percent,0,,,,1,1
+16,1,16-1,rank_js,0,,,,1,1
+16,1,16-1,percent_js,0,,,,1,1
+16,2,16-2,rank,1,S16:Dorothy Hamill,,S16:Dorothy Hamill,1,1
+16,2,16-2,percent,1,S16:Dorothy Hamill,,S16:Dorothy Hamill,1,1
+16,2,16-2,rank_js,1,S16:Dorothy Hamill,S16:Dorothy Hamill;S16:D. L. Hughley,S16:Dorothy Hamill,1,1
+16,2,16-2,percent_js,1,S16:Dorothy Hamill,S16:Dorothy Hamill;S16:D. L. Hughley,S16:Dorothy Hamill,1,1
+16,3,16-3,rank,1,S16:D. L. Hughley,,S16:Wynonna Judd,0,0
+16,3,16-3,percent,1,S16:Wynonna Judd,,S16:Wynonna Judd,1,1
+16,3,16-3,rank_js,1,S16:Wynonna Judd,S16:D. L. Hughley;S16:Wynonna Judd,S16:Wynonna Judd,1,1
+16,3,16-3,percent_js,1,S16:Wynonna Judd,S16:Wynonna Judd;S16:D. L. Hughley,S16:Wynonna Judd,1,1
+16,4,16-4,rank,1,S16:Lisa Vanderpump,,S16:Lisa Vanderpump,1,1
+16,4,16-4,percent,1,S16:Lisa Vanderpump,,S16:Lisa Vanderpump,1,1
+16,4,16-4,rank_js,1,S16:Lisa Vanderpump,S16:Lisa Vanderpump;S16:Victor Ortiz,S16:Lisa Vanderpump,1,1
+16,4,16-4,percent_js,1,S16:Lisa Vanderpump,S16:Lisa Vanderpump;S16:Victor Ortiz,S16:Lisa Vanderpump,1,1
+16,5,16-5,rank,1,S16:D. L. Hughley,,S16:D. L. Hughley,1,1
+16,5,16-5,percent,1,S16:D. L. Hughley,,S16:D. L. Hughley,1,1
+16,5,16-5,rank_js,1,S16:D. L. Hughley,S16:D. L. Hughley;S16:Andy Dick,S16:D. L. Hughley,1,1
+16,5,16-5,percent_js,1,S16:D. L. Hughley,S16:D. L. Hughley;S16:Andy Dick,S16:D. L. Hughley,1,1
+16,6,16-6,rank,1,S16:Victor Ortiz,,S16:Victor Ortiz,1,1
+16,6,16-6,percent,1,S16:Victor Ortiz,,S16:Victor Ortiz,1,1
+16,6,16-6,rank_js,1,S16:Victor Ortiz,S16:Victor Ortiz;S16:Andy Dick,S16:Victor Ortiz,1,1
+16,6,16-6,percent_js,1,S16:Victor Ortiz,S16:Victor Ortiz;S16:Andy Dick,S16:Victor Ortiz,1,1
+16,7,16-7,rank,1,S16:Andy Dick,,S16:Andy Dick,1,1
+16,7,16-7,percent,1,S16:Andy Dick,,S16:Andy Dick,1,1
+16,7,16-7,rank_js,1,S16:Andy Dick,S16:Andy Dick;S16:Sean Lowe,S16:Andy Dick,1,1
+16,7,16-7,percent_js,1,S16:Andy Dick,S16:Andy Dick;S16:Sean Lowe,S16:Andy Dick,1,1
+16,8,16-8,rank,1,S16:Sean Lowe,,S16:Sean Lowe,1,1
+16,8,16-8,percent,1,S16:Sean Lowe,,S16:Sean Lowe,1,1
+16,8,16-8,rank_js,1,S16:Sean Lowe,S16:Sean Lowe;S16:Ingo Rademacher,S16:Sean Lowe,1,1
+16,8,16-8,percent_js,1,S16:Sean Lowe,S16:Sean Lowe;S16:Ingo Rademacher,S16:Sean Lowe,1,1
+16,9,16-9,rank,1,S16:Ingo Rademacher,,S16:Ingo Rademacher,1,1
+16,9,16-9,percent,1,S16:Ingo Rademacher,,S16:Ingo Rademacher,1,1
+16,9,16-9,rank_js,1,S16:Ingo Rademacher,S16:Ingo Rademacher;S16:Zendaya,S16:Ingo Rademacher,1,1
+16,9,16-9,percent_js,1,S16:Ingo Rademacher,S16:Ingo Rademacher;S16:Zendaya,S16:Ingo Rademacher,1,1
+16,10,16-10,rank,0,,,,1,1
+16,10,16-10,percent,0,,,,1,1
+16,10,16-10,rank_js,0,,,,1,1
+16,10,16-10,percent_js,0,,,,1,1
+17,1,17-1,rank,0,,,,1,1
+17,1,17-1,percent,0,,,,1,1
+17,1,17-1,rank_js,0,,,,1,1
+17,1,17-1,percent_js,0,,,,1,1
+17,2,17-2,rank,1,S17:Keyshawn Johnson,,S17:Keyshawn Johnson,1,1
+17,2,17-2,percent,1,S17:Keyshawn Johnson,,S17:Keyshawn Johnson,1,1
+17,2,17-2,rank_js,1,S17:Bill Nye,S17:Keyshawn Johnson;S17:Bill Nye,S17:Keyshawn Johnson,0,0
+17,2,17-2,percent_js,1,S17:Bill Nye,S17:Keyshawn Johnson;S17:Bill Nye,S17:Keyshawn Johnson,0,0
+17,3,17-3,rank,1,S17:Bill Nye,,S17:Bill Nye,1,1
+17,3,17-3,percent,1,S17:Bill Nye,,S17:Bill Nye,1,1
+17,3,17-3,rank_js,1,S17:Bill Nye,S17:Bill Nye;S17:Valerie Harper,S17:Bill Nye,1,1
+17,3,17-3,percent_js,1,S17:Bill Nye,S17:Bill Nye;S17:Valerie Harper,S17:Bill Nye,1,1
+17,4,17-4,rank,1,S17:Valerie Harper,,S17:Valerie Harper,1,1
+17,4,17-4,percent,1,S17:Valerie Harper,,S17:Valerie Harper,1,1
+17,4,17-4,rank_js,1,S17:Valerie Harper,S17:Valerie Harper;S17:Brant Daugherty,S17:Valerie Harper,1,1
+17,4,17-4,percent_js,1,S17:Valerie Harper,S17:Valerie Harper;S17:Brant Daugherty,S17:Valerie Harper,1,1
+17,5,17-5,rank,1,S17:Leah Remini,,S17:Christina Milian,0,0
+17,5,17-5,percent,1,S17:Leah Remini,,S17:Christina Milian,0,0
+17,5,17-5,rank_js,1,S17:Leah Remini,S17:Leah Remini;S17:Elizabeth Berkley Lauren,S17:Christina Milian,0,0
+17,5,17-5,percent_js,1,S17:Leah Remini,S17:Leah Remini;S17:Elizabeth Berkley Lauren,S17:Christina Milian,0,0
+17,6,17-6,rank,0,,,,1,1
+17,6,17-6,percent,0,,,,1,1
+17,6,17-6,rank_js,0,,,,1,1
+17,6,17-6,percent_js,0,,,,1,1
+17,7,17-7,rank,1,S17:Leah Remini,,"S17:Nicole ""Snooki"" Polizzi",0,0
+17,7,17-7,percent,1,"S17:Nicole ""Snooki"" Polizzi",,"S17:Nicole ""Snooki"" Polizzi",1,1
+17,7,17-7,rank_js,1,S17:Leah Remini,"S17:Leah Remini;S17:Nicole ""Snooki"" Polizzi","S17:Nicole ""Snooki"" Polizzi",0,0
+17,7,17-7,percent_js,1,S17:Leah Remini,"S17:Nicole ""Snooki"" Polizzi;S17:Leah Remini","S17:Nicole ""Snooki"" Polizzi",0,0
+17,8,17-8,rank,1,S17:Brant Daugherty,,S17:Brant Daugherty,1,1
+17,8,17-8,percent,1,S17:Brant Daugherty,,S17:Brant Daugherty,1,1
+17,8,17-8,rank_js,1,S17:Elizabeth Berkley Lauren,S17:Brant Daugherty;S17:Elizabeth Berkley Lauren,S17:Brant Daugherty,0,0
+17,8,17-8,percent_js,1,S17:Bill Engvall,S17:Brant Daugherty;S17:Bill Engvall,S17:Brant Daugherty,0,0
+17,9,17-9,rank,1,S17:Amber Riley,,S17:Elizabeth Berkley Lauren,0,0
+17,9,17-9,percent,1,S17:Bill Engvall,,S17:Elizabeth Berkley Lauren,0,0
+17,9,17-9,rank_js,1,S17:Bill Engvall,S17:Amber Riley;S17:Bill Engvall,S17:Elizabeth Berkley Lauren,0,0
+17,9,17-9,percent_js,1,S17:Bill Engvall,S17:Bill Engvall;S17:Leah Remini,S17:Elizabeth Berkley Lauren,0,0
+17,10,17-10,rank,1,S17:Leah Remini,,S17:Leah Remini,1,1
+17,10,17-10,percent,1,S17:Leah Remini,,S17:Leah Remini,1,1
+17,10,17-10,rank_js,1,S17:Bill Engvall,S17:Leah Remini;S17:Bill Engvall,S17:Leah Remini,0,0
+17,10,17-10,percent_js,1,S17:Bill Engvall,S17:Leah Remini;S17:Bill Engvall,S17:Leah Remini,0,0
+17,11,17-11,rank,0,,,,1,1
+17,11,17-11,percent,0,,,,1,1
+17,11,17-11,rank_js,0,,,,1,1
+17,11,17-11,percent_js,0,,,,1,1
+18,1,18-1,rank,1,S18:Diana Nyad,,S18:Diana Nyad,1,1
+18,1,18-1,percent,1,S18:Billy Dee Williams,,S18:Diana Nyad,0,0
+18,1,18-1,rank_js,1,S18:Diana Nyad,S18:Diana Nyad;S18:Sean Avery,S18:Diana Nyad,1,1
+18,1,18-1,percent_js,1,S18:Billy Dee Williams,S18:Billy Dee Williams;S18:Diana Nyad,S18:Diana Nyad,0,0
+18,2,18-2,rank,2,S18:Billy Dee Williams;S18:Sean Avery,,S18:Billy Dee Williams;S18:Sean Avery,1,1
+18,2,18-2,percent,2,S18:Billy Dee Williams;S18:Sean Avery,,S18:Billy Dee Williams;S18:Sean Avery,1,1
+18,2,18-2,rank_js,2,S18:Billy Dee Williams;S18:Sean Avery,,S18:Billy Dee Williams;S18:Sean Avery,1,1
+18,2,18-2,percent_js,2,S18:Billy Dee Williams;S18:Sean Avery,,S18:Billy Dee Williams;S18:Sean Avery,1,1
+18,3,18-3,rank,0,,,,1,1
+18,3,18-3,percent,0,,,,1,1
+18,3,18-3,rank_js,0,,,,1,1
+18,3,18-3,percent_js,0,,,,1,1
+18,4,18-4,rank,0,,,,1,1
+18,4,18-4,percent,0,,,,1,1
+18,4,18-4,rank_js,0,,,,1,1
+18,4,18-4,percent_js,0,,,,1,1
+18,5,18-5,rank,1,S18:Cody Simpson,,S18:Cody Simpson,1,1
+18,5,18-5,percent,1,S18:Drew Carey,,S18:Cody Simpson,0,0
+18,5,18-5,rank_js,1,S18:Drew Carey,S18:Cody Simpson;S18:Drew Carey,S18:Cody Simpson,0,0
+18,5,18-5,percent_js,1,S18:Drew Carey,S18:Drew Carey;S18:Cody Simpson,S18:Cody Simpson,0,0
+18,6,18-6,rank,1,S18:Drew Carey,,S18:Drew Carey,1,1
+18,6,18-6,percent,1,S18:Drew Carey,,S18:Drew Carey,1,1
+18,6,18-6,rank_js,1,S18:Drew Carey,S18:Drew Carey;S18:NeNe Leakes,S18:Drew Carey,1,1
+18,6,18-6,percent_js,1,S18:Drew Carey,S18:Drew Carey;S18:Candace Cameron Bure,S18:Drew Carey,1,1
+18,7,18-7,rank,1,S18:NeNe Leakes,,S18:NeNe Leakes,1,1
+18,7,18-7,percent,1,S18:NeNe Leakes,,S18:NeNe Leakes,1,1
+18,7,18-7,rank_js,1,S18:NeNe Leakes,S18:NeNe Leakes;S18:Charlie White,S18:NeNe Leakes,1,1
+18,7,18-7,percent_js,1,S18:NeNe Leakes,S18:NeNe Leakes;S18:Danica McKellar,S18:NeNe Leakes,1,1
+18,8,18-8,rank,1,S18:Danica McKellar,,S18:Danica McKellar,1,1
+18,8,18-8,percent,1,S18:Danica McKellar,,S18:Danica McKellar,1,1
+18,8,18-8,rank_js,1,S18:James Maslow,S18:Danica McKellar;S18:James Maslow,S18:Danica McKellar,0,0
+18,8,18-8,percent_js,1,S18:James Maslow,S18:Danica McKellar;S18:James Maslow,S18:Danica McKellar,0,0
+18,9,18-9,rank,1,S18:Candace Cameron Bure,,S18:Charlie White,0,0
+18,9,18-9,percent,1,S18:Charlie White,,S18:Charlie White,1,1
+18,9,18-9,rank_js,1,S18:Candace Cameron Bure,S18:Candace Cameron Bure;S18:Charlie White,S18:Charlie White,0,0
+18,9,18-9,percent_js,1,S18:Candace Cameron Bure,S18:Charlie White;S18:Candace Cameron Bure,S18:Charlie White,0,0
+18,10,18-10,rank,0,,,,1,1
+18,10,18-10,percent,0,,,,1,1
+18,10,18-10,rank_js,0,,,,1,1
+18,10,18-10,percent_js,0,,,,1,1
+19,1,19-1,rank,1,S19:Lolo Jones,,S19:Lolo Jones,1,1
+19,1,19-1,percent,1,S19:Betsey Johnson,,S19:Lolo Jones,0,0
+19,1,19-1,rank_js,1,S19:Betsey Johnson,S19:Lolo Jones;S19:Betsey Johnson,S19:Lolo Jones,0,0
+19,1,19-1,percent_js,1,S19:Betsey Johnson,S19:Betsey Johnson;S19:Lolo Jones,S19:Lolo Jones,0,0
+19,2,19-2,rank,1,S19:Michael Waltrip,,S19:Tavis Smiley,0,0
+19,2,19-2,percent,1,S19:Michael Waltrip,,S19:Tavis Smiley,0,0
+19,2,19-2,rank_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Tavis Smiley,S19:Tavis Smiley,0,0
+19,2,19-2,percent_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Tavis Smiley,S19:Tavis Smiley,0,0
+19,3,19-3,rank,1,S19:Michael Waltrip,,S19:Randy Couture,0,0
+19,3,19-3,percent,1,S19:Randy Couture,,S19:Randy Couture,1,1
+19,3,19-3,rank_js,1,S19:Randy Couture,S19:Michael Waltrip;S19:Randy Couture,S19:Randy Couture,1,1
+19,3,19-3,percent_js,1,S19:Randy Couture,S19:Randy Couture;S19:Michael Waltrip,S19:Randy Couture,1,1
+19,4,19-4,rank,1,S19:Michael Waltrip,,S19:Betsey Johnson,0,0
+19,4,19-4,percent,1,S19:Michael Waltrip,,S19:Betsey Johnson,0,0
+19,4,19-4,rank_js,1,S19:Jonathan Bennett,S19:Michael Waltrip;S19:Jonathan Bennett,S19:Betsey Johnson,0,0
+19,4,19-4,percent_js,1,S19:Jonathan Bennett,S19:Michael Waltrip;S19:Jonathan Bennett,S19:Betsey Johnson,0,0
+19,5,19-5,rank,0,,,,1,1
+19,5,19-5,percent,0,,,,1,1
+19,5,19-5,rank_js,0,,,,1,1
+19,5,19-5,percent_js,0,,,,1,1
+19,6,19-6,rank,1,S19:Tommy Chong,,S19:Jonathan Bennett,0,0
+19,6,19-6,percent,1,S19:Tommy Chong,,S19:Jonathan Bennett,0,0
+19,6,19-6,rank_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Michael Waltrip,S19:Jonathan Bennett,0,0
+19,6,19-6,percent_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Antonio Sabato Jr.,S19:Jonathan Bennett,0,0
+19,7,19-7,rank,1,S19:Michael Waltrip,,S19:Antonio Sabato Jr.,0,0
+19,7,19-7,percent,1,S19:Michael Waltrip,,S19:Antonio Sabato Jr.,0,0
+19,7,19-7,rank_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Antonio Sabato Jr.,S19:Antonio Sabato Jr.,0,0
+19,7,19-7,percent_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Antonio Sabato Jr.,S19:Antonio Sabato Jr.,0,0
+19,8,19-8,rank,1,S19:Michael Waltrip,,S19:Michael Waltrip,1,1
+19,8,19-8,percent,1,S19:Michael Waltrip,,S19:Michael Waltrip,1,1
+19,8,19-8,rank_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Tommy Chong,S19:Michael Waltrip,1,1
+19,8,19-8,percent_js,1,S19:Michael Waltrip,S19:Michael Waltrip;S19:Tommy Chong,S19:Michael Waltrip,1,1
+19,9,19-9,rank,1,S19:Tommy Chong,,S19:Lea Thompson,0,0
+19,9,19-9,percent,1,S19:Tommy Chong,,S19:Lea Thompson,0,0
+19,9,19-9,rank_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Lea Thompson,S19:Lea Thompson,0,0
+19,9,19-9,percent_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Lea Thompson,S19:Lea Thompson,0,0
+19,10,19-10,rank,1,S19:Tommy Chong,,S19:Tommy Chong,1,1
+19,10,19-10,percent,1,S19:Tommy Chong,,S19:Tommy Chong,1,1
+19,10,19-10,rank_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Alfonso Ribeiro,S19:Tommy Chong,1,1
+19,10,19-10,percent_js,1,S19:Tommy Chong,S19:Tommy Chong;S19:Alfonso Ribeiro,S19:Tommy Chong,1,1
+19,11,19-11,rank,0,,,,1,1
+19,11,19-11,percent,0,,,,1,1
+19,11,19-11,rank_js,0,,,,1,1
+19,11,19-11,percent_js,0,,,,1,1
+20,1,20-1,rank,0,,,,1,1
+20,1,20-1,percent,0,,,,1,1
+20,1,20-1,rank_js,0,,,,1,1
+20,1,20-1,percent_js,0,,,,1,1
+20,2,20-2,rank,1,S20:Chris Soules,,S20:Redfoo,0,0
+20,2,20-2,percent,1,S20:Chris Soules,,S20:Redfoo,0,0
+20,2,20-2,rank_js,1,S20:Chris Soules,S20:Chris Soules;S20:Charlotte McKinney,S20:Redfoo,0,0
+20,2,20-2,percent_js,1,S20:Chris Soules,S20:Chris Soules;S20:Charlotte McKinney,S20:Redfoo,0,0
+20,3,20-3,rank,1,S20:Michael Sam,,S20:Charlotte McKinney,0,0
+20,3,20-3,percent,1,S20:Charlotte McKinney,,S20:Charlotte McKinney,1,1
+20,3,20-3,rank_js,1,S20:Charlotte McKinney,S20:Michael Sam;S20:Charlotte McKinney,S20:Charlotte McKinney,1,1
+20,3,20-3,percent_js,1,S20:Charlotte McKinney,S20:Charlotte McKinney;S20:Patti LaBelle,S20:Charlotte McKinney,1,1
+20,4,20-4,rank,1,S20:Chris Soules,,S20:Michael Sam,0,0
+20,4,20-4,percent,1,S20:Chris Soules,,S20:Michael Sam,0,0
+20,4,20-4,rank_js,1,S20:Chris Soules,S20:Chris Soules;S20:Michael Sam,S20:Michael Sam,0,0
+20,4,20-4,percent_js,1,S20:Chris Soules,S20:Chris Soules;S20:Suzanne Somers,S20:Michael Sam,0,0
+20,5,20-5,rank,1,S20:Robert Herjavec,,S20:Suzanne Somers,0,0
+20,5,20-5,percent,1,S20:Robert Herjavec,,S20:Suzanne Somers,0,0
+20,5,20-5,rank_js,1,S20:Robert Herjavec,S20:Robert Herjavec;S20:Suzanne Somers,S20:Suzanne Somers,0,0
+20,5,20-5,percent_js,1,S20:Robert Herjavec,S20:Robert Herjavec;S20:Chris Soules,S20:Suzanne Somers,0,0
+20,6,20-6,rank,1,S20:Patti LaBelle,,S20:Patti LaBelle,1,1
+20,6,20-6,percent,1,S20:Patti LaBelle,,S20:Patti LaBelle,1,1
+20,6,20-6,rank_js,1,S20:Robert Herjavec,S20:Patti LaBelle;S20:Robert Herjavec,S20:Patti LaBelle,0,0
+20,6,20-6,percent_js,1,S20:Patti LaBelle,S20:Patti LaBelle;S20:Chris Soules,S20:Patti LaBelle,1,1
+20,7,20-7,rank,1,S20:Robert Herjavec,,S20:Willow Shields,0,0
+20,7,20-7,percent,1,S20:Robert Herjavec,,S20:Willow Shields,0,0
+20,7,20-7,rank_js,1,S20:Robert Herjavec,S20:Robert Herjavec;S20:Chris Soules,S20:Willow Shields,0,0
+20,7,20-7,percent_js,1,S20:Robert Herjavec,S20:Robert Herjavec;S20:Chris Soules,S20:Willow Shields,0,0
+20,8,20-8,rank,2,S20:Robert Herjavec;S20:Chris Soules,,S20:Chris Soules;S20:Robert Herjavec,1,1
+20,8,20-8,percent,2,S20:Robert Herjavec;S20:Chris Soules,,S20:Chris Soules;S20:Robert Herjavec,1,1
+20,8,20-8,rank_js,2,S20:Robert Herjavec;S20:Chris Soules,,S20:Chris Soules;S20:Robert Herjavec,1,1
+20,8,20-8,percent_js,2,S20:Robert Herjavec;S20:Chris Soules,,S20:Chris Soules;S20:Robert Herjavec,1,1
+20,9,20-9,rank,1,S20:Noah Galloway,,S20:Nastia Liukin,0,0
+20,9,20-9,percent,1,S20:Nastia Liukin,,S20:Nastia Liukin,1,1
+20,9,20-9,rank_js,1,S20:Noah Galloway,S20:Noah Galloway;S20:Nastia Liukin,S20:Nastia Liukin,0,0
+20,9,20-9,percent_js,1,S20:Noah Galloway,S20:Nastia Liukin;S20:Noah Galloway,S20:Nastia Liukin,0,0
+20,10,20-10,rank,0,,,,1,1
+20,10,20-10,percent,0,,,,1,1
+20,10,20-10,rank_js,0,,,,1,1
+20,10,20-10,percent_js,0,,,,1,1
+21,1,21-1,rank,0,,,,1,1
+21,1,21-1,percent,0,,,,1,1
+21,1,21-1,rank_js,0,,,,1,1
+21,1,21-1,percent_js,0,,,,1,1
+21,2,21-2,rank,3,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Paula Deen,,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Victor Espinoza,1,0
+21,2,21-2,percent,3,S21:Chaka Khan;S21:Gary Busey;S21:Kim Zolciak-Biermann,,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Victor Espinoza,1,0
+21,2,21-2,rank_js,3,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Paula Deen,,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Victor Espinoza,1,0
+21,2,21-2,percent_js,3,S21:Chaka Khan;S21:Gary Busey;S21:Kim Zolciak-Biermann,,S21:Chaka Khan;S21:Kim Zolciak-Biermann;S21:Victor Espinoza,1,0
+21,3,21-3,rank,0,,,,1,1
+21,3,21-3,percent,0,,,,1,1
+21,3,21-3,rank_js,0,,,,1,1
+21,3,21-3,percent_js,0,,,,1,1
+21,4,21-4,rank,1,S21:Paula Deen,,S21:Gary Busey,0,0
+21,4,21-4,percent,1,S21:Gary Busey,,S21:Gary Busey,1,1
+21,4,21-4,rank_js,1,S21:Gary Busey,S21:Paula Deen;S21:Gary Busey,S21:Gary Busey,1,1
+21,4,21-4,percent_js,1,S21:Gary Busey,S21:Gary Busey;S21:Paula Deen,S21:Gary Busey,1,1
+21,5,21-5,rank,0,,,,1,1
+21,5,21-5,percent,0,,,,1,1
+21,5,21-5,rank_js,0,,,,1,1
+21,5,21-5,percent_js,0,,,,1,1
+21,6,21-6,rank,1,S21:Paula Deen,,S21:Paula Deen,1,1
+21,6,21-6,percent,1,S21:Paula Deen,,S21:Paula Deen,1,1
+21,6,21-6,rank_js,1,S21:Paula Deen,S21:Paula Deen;S21:Alexa PenaVega,S21:Paula Deen,1,1
+21,6,21-6,percent_js,1,S21:Paula Deen,S21:Paula Deen;S21:Alexa PenaVega,S21:Paula Deen,1,1
+21,7,21-7,rank,1,S21:Alexa PenaVega,,S21:Hayes Grier,0,0
+21,7,21-7,percent,1,S21:Hayes Grier,,S21:Hayes Grier,1,1
+21,7,21-7,rank_js,1,S21:Alek Skarlatos,S21:Alexa PenaVega;S21:Alek Skarlatos,S21:Hayes Grier,0,0
+21,7,21-7,percent_js,1,S21:Alexa PenaVega,S21:Hayes Grier;S21:Alexa PenaVega,S21:Hayes Grier,0,0
+21,8,21-8,rank,1,S21:Andy Grammer,,S21:Andy Grammer,1,1
+21,8,21-8,percent,1,S21:Andy Grammer,,S21:Andy Grammer,1,1
+21,8,21-8,rank_js,1,S21:Andy Grammer,S21:Andy Grammer;S21:Alexa PenaVega,S21:Andy Grammer,1,1
+21,8,21-8,percent_js,1,S21:Andy Grammer,S21:Andy Grammer;S21:Alek Skarlatos,S21:Andy Grammer,1,1
+21,9,21-9,rank,2,S21:Tamar Braxton;S21:Alek Skarlatos,,S21:Alexa PenaVega;S21:Tamar Braxton,1,0
+21,9,21-9,percent,2,S21:Tamar Braxton;S21:Alek Skarlatos,,S21:Alexa PenaVega;S21:Tamar Braxton,1,0
+21,9,21-9,rank_js,2,S21:Tamar Braxton;S21:Alek Skarlatos,,S21:Alexa PenaVega;S21:Tamar Braxton,1,0
+21,9,21-9,percent_js,2,S21:Tamar Braxton;S21:Alek Skarlatos,,S21:Alexa PenaVega;S21:Tamar Braxton,1,0
+21,10,21-10,rank,0,,,,1,1
+21,10,21-10,percent,0,,,,1,1
+21,10,21-10,rank_js,0,,,,1,1
+21,10,21-10,percent_js,0,,,,1,1
+21,11,21-11,rank,0,,,,1,1
+21,11,21-11,percent,0,,,,1,1
+21,11,21-11,rank_js,0,,,,1,1
+21,11,21-11,percent_js,0,,,,1,1
+22,1,22-1,rank,0,,,,1,1
+22,1,22-1,percent,0,,,,1,1
+22,1,22-1,rank_js,0,,,,1,1
+22,1,22-1,percent_js,0,,,,1,1
+22,2,22-2,rank,1,S22:Geraldo Rivera,,S22:Geraldo Rivera,1,1
+22,2,22-2,percent,1,S22:Geraldo Rivera,,S22:Geraldo Rivera,1,1
+22,2,22-2,rank_js,1,S22:Geraldo Rivera,S22:Geraldo Rivera;S22:Mischa Barton,S22:Geraldo Rivera,1,1
+22,2,22-2,percent_js,1,S22:Geraldo Rivera,S22:Geraldo Rivera;S22:Mischa Barton,S22:Geraldo Rivera,1,1
+22,3,22-3,rank,1,S22:Mischa Barton,,S22:Mischa Barton,1,1
+22,3,22-3,percent,1,S22:Mischa Barton,,S22:Mischa Barton,1,1
+22,3,22-3,rank_js,1,S22:Mischa Barton,S22:Mischa Barton;S22:Von Miller,S22:Mischa Barton,1,1
+22,3,22-3,percent_js,1,S22:Mischa Barton,S22:Mischa Barton;S22:Von Miller,S22:Mischa Barton,1,1
+22,4,22-4,rank,1,S22:Jodie Sweetin,,S22:Marla Maples,0,0
+22,4,22-4,percent,1,S22:Doug Flutie,,S22:Marla Maples,0,0
+22,4,22-4,rank_js,1,S22:Jodie Sweetin,S22:Jodie Sweetin;S22:Marla Maples,S22:Marla Maples,0,0
+22,4,22-4,percent_js,1,S22:Doug Flutie,S22:Doug Flutie;S22:Marla Maples,S22:Marla Maples,0,0
+22,5,22-5,rank,0,,,,1,1
+22,5,22-5,percent,0,,,,1,1
+22,5,22-5,rank_js,0,,,,1,1
+22,5,22-5,percent_js,0,,,,1,1
+22,6,22-6,rank,1,S22:Doug Flutie,,S22:Doug Flutie,1,1
+22,6,22-6,percent,1,S22:Doug Flutie,,S22:Doug Flutie,1,1
+22,6,22-6,rank_js,1,S22:Doug Flutie,S22:Doug Flutie;S22:Von Miller,S22:Doug Flutie,1,1
+22,6,22-6,percent_js,1,S22:Doug Flutie,S22:Doug Flutie;S22:Von Miller,S22:Doug Flutie,1,1
+22,7,22-7,rank,2,S22:Jodie Sweetin;S22:Von Miller,,S22:Kim Fields;S22:Von Miller,1,0
+22,7,22-7,percent,2,S22:Von Miller;S22:Jodie Sweetin,,S22:Kim Fields;S22:Von Miller,1,0
+22,7,22-7,rank_js,2,S22:Jodie Sweetin;S22:Von Miller,,S22:Kim Fields;S22:Von Miller,1,0
+22,7,22-7,percent_js,2,S22:Von Miller;S22:Jodie Sweetin,,S22:Kim Fields;S22:Von Miller,1,0
+22,8,22-8,rank,1,S22:Wanya Morris,,S22:Jodie Sweetin,0,0
+22,8,22-8,percent,1,S22:Wanya Morris,,S22:Jodie Sweetin,0,0
+22,8,22-8,rank_js,1,S22:Wanya Morris,S22:Wanya Morris;S22:Antonio Brown,S22:Jodie Sweetin,0,0
+22,8,22-8,percent_js,1,S22:Wanya Morris,S22:Wanya Morris;S22:Antonio Brown,S22:Jodie Sweetin,0,0
+22,9,22-9,rank,2,S22:Antonio Brown;S22:Ginger Zee,,S22:Antonio Brown;S22:Wanya Morris,1,0
+22,9,22-9,percent,2,S22:Antonio Brown;S22:Wanya Morris,,S22:Antonio Brown;S22:Wanya Morris,1,1
+22,9,22-9,rank_js,2,S22:Antonio Brown;S22:Ginger Zee,,S22:Antonio Brown;S22:Wanya Morris,1,0
+22,9,22-9,percent_js,2,S22:Antonio Brown;S22:Wanya Morris,,S22:Antonio Brown;S22:Wanya Morris,1,1
+22,10,22-10,rank,0,,,,1,1
+22,10,22-10,percent,0,,,,1,1
+22,10,22-10,rank_js,0,,,,1,1
+22,10,22-10,percent_js,0,,,,1,1
+23,1,23-1,rank,0,,,,1,1
+23,1,23-1,percent,0,,,,1,1
+23,1,23-1,rank_js,0,,,,1,1
+23,1,23-1,percent_js,0,,,,1,1
+23,2,23-2,rank,1,S23:Jake T. Austin,,S23:Jake T. Austin,1,1
+23,2,23-2,percent,1,S23:Rick Perry,,S23:Jake T. Austin,0,0
+23,2,23-2,rank_js,1,S23:Jake T. Austin,S23:Jake T. Austin;S23:Amber Rose,S23:Jake T. Austin,1,1
+23,2,23-2,percent_js,1,S23:Rick Perry,S23:Rick Perry;S23:Jake T. Austin,S23:Jake T. Austin,0,0
+23,3,23-3,rank,1,S23:Rick Perry,,S23:Rick Perry,1,1
+23,3,23-3,percent,1,S23:Rick Perry,,S23:Rick Perry,1,1
+23,3,23-3,rank_js,1,S23:Rick Perry,S23:Rick Perry;S23:Vanilla Ice,S23:Rick Perry,1,1
+23,3,23-3,percent_js,1,S23:Rick Perry,S23:Rick Perry;S23:Vanilla Ice,S23:Rick Perry,1,1
+23,4,23-4,rank,2,S23:Babyface;S23:Ryan Lochte,,S23:Babyface;S23:Vanilla Ice,1,0
+23,4,23-4,percent,2,S23:Babyface;S23:Marilu Henner,,S23:Babyface;S23:Vanilla Ice,1,0
+23,4,23-4,rank_js,2,S23:Babyface;S23:Ryan Lochte,,S23:Babyface;S23:Vanilla Ice,1,0
+23,4,23-4,percent_js,2,S23:Babyface;S23:Marilu Henner,,S23:Babyface;S23:Vanilla Ice,1,0
+23,5,23-5,rank,0,,,,1,1
+23,5,23-5,percent,0,,,,1,1
+23,5,23-5,rank_js,0,,,,1,1
+23,5,23-5,percent_js,0,,,,1,1
+23,6,23-6,rank,1,S23:Amber Rose,,S23:Amber Rose,1,1
+23,6,23-6,percent,1,S23:Amber Rose,,S23:Amber Rose,1,1
+23,6,23-6,rank_js,1,S23:Amber Rose,S23:Amber Rose;S23:Ryan Lochte,S23:Amber Rose,1,1
+23,6,23-6,percent_js,1,S23:Amber Rose,S23:Amber Rose;S23:Ryan Lochte,S23:Amber Rose,1,1
+23,7,23-7,rank,1,S23:Maureen McCormick,,S23:Maureen McCormick,1,1
+23,7,23-7,percent,1,S23:Maureen McCormick,,S23:Maureen McCormick,1,1
+23,7,23-7,rank_js,1,S23:Marilu Henner,S23:Maureen McCormick;S23:Marilu Henner,S23:Maureen McCormick,0,0
+23,7,23-7,percent_js,1,S23:Marilu Henner,S23:Maureen McCormick;S23:Marilu Henner,S23:Maureen McCormick,0,0
+23,8,23-8,rank,1,S23:Marilu Henner,,S23:Ryan Lochte,0,0
+23,8,23-8,percent,1,S23:Marilu Henner,,S23:Ryan Lochte,0,0
+23,8,23-8,rank_js,1,S23:Marilu Henner,S23:Marilu Henner;S23:Terra Jole,S23:Ryan Lochte,0,0
+23,8,23-8,percent_js,1,S23:Marilu Henner,S23:Marilu Henner;S23:Terra Jole,S23:Ryan Lochte,0,0
+23,9,23-9,rank,1,S23:Marilu Henner,,S23:Marilu Henner,1,1
+23,9,23-9,percent,1,S23:Marilu Henner,,S23:Marilu Henner,1,1
+23,9,23-9,rank_js,1,S23:Marilu Henner,S23:Marilu Henner;S23:James Hinchcliffe,S23:Marilu Henner,1,1
+23,9,23-9,percent_js,1,S23:Marilu Henner,S23:Marilu Henner;S23:James Hinchcliffe,S23:Marilu Henner,1,1
+23,10,23-10,rank,1,S23:Calvin Johnson Jr.,,S23:Terra Jole,0,0
+23,10,23-10,percent,1,S23:Terra Jole,,S23:Terra Jole,1,1
+23,10,23-10,rank_js,1,S23:Calvin Johnson Jr.,S23:Calvin Johnson Jr.;S23:Terra Jole,S23:Terra Jole,0,0
+23,10,23-10,percent_js,1,S23:Calvin Johnson Jr.,S23:Terra Jole;S23:Calvin Johnson Jr.,S23:Terra Jole,0,0
+23,11,23-11,rank,0,,,,1,1
+23,11,23-11,percent,0,,,,1,1
+23,11,23-11,rank_js,0,,,,1,1
+23,11,23-11,percent_js,0,,,,1,1
+24,1,24-1,rank,0,,,,1,1
+24,1,24-1,percent,0,,,,1,1
+24,1,24-1,rank_js,0,,,,1,1
+24,1,24-1,percent_js,0,,,,1,1
+24,2,24-2,rank,1,S24:Chris Kattan,,S24:Chris Kattan,1,1
+24,2,24-2,percent,1,S24:Chris Kattan,,S24:Chris Kattan,1,1
+24,2,24-2,rank_js,1,S24:Chris Kattan,S24:Chris Kattan;S24:Mr. T,S24:Chris Kattan,1,1
+24,2,24-2,percent_js,1,S24:Chris Kattan,S24:Chris Kattan;S24:Mr. T,S24:Chris Kattan,1,1
+24,3,24-3,rank,1,S24:Charo,,S24:Charo,1,1
+24,3,24-3,percent,1,S24:Charo,,S24:Charo,1,1
+24,3,24-3,rank_js,1,S24:Charo,S24:Charo;S24:Erika Jayne,S24:Charo,1,1
+24,3,24-3,percent_js,1,S24:Charo,S24:Charo;S24:Bonner Bolton,S24:Charo,1,1
+24,4,24-4,rank,1,S24:Mr. T,,S24:Mr. T,1,1
+24,4,24-4,percent,1,S24:Mr. T,,S24:Mr. T,1,1
+24,4,24-4,rank_js,1,S24:Mr. T,S24:Mr. T;S24:Erika Jayne,S24:Mr. T,1,1
+24,4,24-4,percent_js,1,S24:Mr. T,S24:Mr. T;S24:Erika Jayne,S24:Mr. T,1,1
+24,5,24-5,rank,1,S24:Bonner Bolton,,S24:Erika Jayne,0,0
+24,5,24-5,percent,1,S24:Erika Jayne,,S24:Erika Jayne,1,1
+24,5,24-5,rank_js,1,S24:Bonner Bolton,S24:Bonner Bolton;S24:Erika Jayne,S24:Erika Jayne,0,0
+24,5,24-5,percent_js,1,S24:Bonner Bolton,S24:Erika Jayne;S24:Bonner Bolton,S24:Erika Jayne,0,0
+24,6,24-6,rank,1,S24:Nick Viall,,S24:Heather Morris,0,0
+24,6,24-6,percent,1,S24:Bonner Bolton,,S24:Heather Morris,0,0
+24,6,24-6,rank_js,1,S24:Nick Viall,S24:Nick Viall;S24:Bonner Bolton,S24:Heather Morris,0,0
+24,6,24-6,percent_js,1,S24:Nick Viall,S24:Bonner Bolton;S24:Nick Viall,S24:Heather Morris,0,0
+24,7,24-7,rank,2,S24:Bonner Bolton;S24:Nick Viall,,S24:Nancy Kerrigan;S24:Nick Viall,1,0
+24,7,24-7,percent,2,S24:Bonner Bolton;S24:Nick Viall,,S24:Nancy Kerrigan;S24:Nick Viall,1,0
+24,7,24-7,rank_js,2,S24:Bonner Bolton;S24:Nick Viall,,S24:Nancy Kerrigan;S24:Nick Viall,1,0
+24,7,24-7,percent_js,2,S24:Bonner Bolton;S24:Nick Viall,,S24:Nancy Kerrigan;S24:Nick Viall,1,0
+24,8,24-8,rank,1,S24:Bonner Bolton,,S24:Bonner Bolton,1,1
+24,8,24-8,percent,1,S24:Bonner Bolton,,S24:Bonner Bolton,1,1
+24,8,24-8,rank_js,1,S24:Bonner Bolton,S24:Bonner Bolton;S24:Simone Biles,S24:Bonner Bolton,1,1
+24,8,24-8,percent_js,1,S24:Bonner Bolton,S24:Bonner Bolton;S24:David Ross,S24:Bonner Bolton,1,1
+24,9,24-9,rank,1,S24:David Ross,,S24:Simone Biles,0,0
+24,9,24-9,percent,1,S24:Simone Biles,,S24:Simone Biles,1,1
+24,9,24-9,rank_js,1,S24:David Ross,S24:David Ross;S24:Normani,S24:Simone Biles,0,0
+24,9,24-9,percent_js,1,S24:David Ross,S24:Simone Biles;S24:David Ross,S24:Simone Biles,0,0
+24,10,24-10,rank,0,,,,1,1
+24,10,24-10,percent,0,,,,1,1
+24,10,24-10,rank_js,0,,,,1,1
+24,10,24-10,percent_js,0,,,,1,1
+25,1,25-1,rank,0,,,,1,1
+25,1,25-1,percent,0,,,,1,1
+25,1,25-1,rank_js,0,,,,1,1
+25,1,25-1,percent_js,0,,,,1,1
+25,2,25-2,rank,2,S25:Barbara Corcoran;S25:Terrell Owens,,S25:Barbara Corcoran;S25:Debbie Gibson,1,0
+25,2,25-2,percent,2,S25:Barbara Corcoran;S25:Nick Lachey,,S25:Barbara Corcoran;S25:Debbie Gibson,1,0
+25,2,25-2,rank_js,2,S25:Barbara Corcoran;S25:Terrell Owens,,S25:Barbara Corcoran;S25:Debbie Gibson,1,0
+25,2,25-2,percent_js,2,S25:Barbara Corcoran;S25:Nick Lachey,,S25:Barbara Corcoran;S25:Debbie Gibson,1,0
+25,3,25-3,rank,0,,,,1,1
+25,3,25-3,percent,0,,,,1,1
+25,3,25-3,rank_js,0,,,,1,1
+25,3,25-3,percent_js,0,,,,1,1
+25,4,25-4,rank,1,S25:Nick Lachey,,S25:Derek Fisher,0,0
+25,4,25-4,percent,1,S25:Nick Lachey,,S25:Derek Fisher,0,0
+25,4,25-4,rank_js,1,S25:Nick Lachey,S25:Nick Lachey;S25:Derek Fisher,S25:Derek Fisher,0,0
+25,4,25-4,percent_js,1,S25:Nick Lachey,S25:Nick Lachey;S25:Derek Fisher,S25:Derek Fisher,0,0
+25,5,25-5,rank,1,S25:Sasha Pieterse,,S25:Sasha Pieterse,1,1
+25,5,25-5,percent,1,S25:Nick Lachey,,S25:Sasha Pieterse,0,0
+25,5,25-5,rank_js,1,S25:Nick Lachey,S25:Sasha Pieterse;S25:Nick Lachey,S25:Sasha Pieterse,0,0
+25,5,25-5,percent_js,1,S25:Nick Lachey,S25:Nick Lachey;S25:Sasha Pieterse,S25:Sasha Pieterse,0,0
+25,6,25-6,rank,1,S25:Nick Lachey,,S25:Nick Lachey,1,1
+25,6,25-6,percent,1,S25:Nick Lachey,,S25:Nick Lachey,1,1
+25,6,25-6,rank_js,1,S25:Nick Lachey,S25:Nick Lachey;S25:Victoria Arlen,S25:Nick Lachey,1,1
+25,6,25-6,percent_js,1,S25:Nick Lachey,S25:Nick Lachey;S25:Victoria Arlen,S25:Nick Lachey,1,1
+25,7,25-7,rank,2,S25:Nikki Bella;S25:Terrell Owens,,S25:Nikki Bella;S25:Vanessa Lachey,1,0
+25,7,25-7,percent,2,S25:Nikki Bella;S25:Terrell Owens,,S25:Nikki Bella;S25:Vanessa Lachey,1,0
+25,7,25-7,rank_js,2,S25:Nikki Bella;S25:Terrell Owens,,S25:Nikki Bella;S25:Vanessa Lachey,1,0
+25,7,25-7,percent_js,2,S25:Nikki Bella;S25:Terrell Owens,,S25:Nikki Bella;S25:Vanessa Lachey,1,0
+25,8,25-8,rank,1,S25:Victoria Arlen,,S25:Terrell Owens,0,0
+25,8,25-8,percent,1,S25:Terrell Owens,,S25:Terrell Owens,1,1
+25,8,25-8,rank_js,1,S25:Victoria Arlen,S25:Victoria Arlen;S25:Terrell Owens,S25:Terrell Owens,0,0
+25,8,25-8,percent_js,1,S25:Victoria Arlen,S25:Terrell Owens;S25:Victoria Arlen,S25:Terrell Owens,0,0
+25,9,25-9,rank,1,S25:Drew Scott,,S25:Victoria Arlen,0,0
+25,9,25-9,percent,1,S25:Drew Scott,,S25:Victoria Arlen,0,0
+25,9,25-9,rank_js,1,S25:Drew Scott,S25:Drew Scott;S25:Victoria Arlen,S25:Victoria Arlen,0,0
+25,9,25-9,percent_js,1,S25:Drew Scott,S25:Drew Scott;S25:Victoria Arlen,S25:Victoria Arlen,0,0
+25,10,25-10,rank,0,,,,1,1
+25,10,25-10,percent,0,,,,1,1
+25,10,25-10,rank_js,0,,,,1,1
+25,10,25-10,percent_js,0,,,,1,1
+26,1,26-1,rank,2,S26:Johnny Damon;S26:Jamie Anderson,,S26:Jamie Anderson;S26:Johnny Damon,1,1
+26,1,26-1,percent,2,S26:Johnny Damon;S26:Jamie Anderson,,S26:Jamie Anderson;S26:Johnny Damon,1,1
+26,1,26-1,rank_js,2,S26:Johnny Damon;S26:Jamie Anderson,,S26:Jamie Anderson;S26:Johnny Damon,1,1
+26,1,26-1,percent_js,2,S26:Johnny Damon;S26:Jamie Anderson,,S26:Jamie Anderson;S26:Johnny Damon,1,1
+26,2,26-2,rank,2,S26:Kareem Abdul-Jabbar;S26:Arike Ogunbowale,,S26:Arike Ogunbowale;S26:Kareem Abdul-Jabbar,1,1
+26,2,26-2,percent,2,S26:Kareem Abdul-Jabbar;S26:Arike Ogunbowale,,S26:Arike Ogunbowale;S26:Kareem Abdul-Jabbar,1,1
+26,2,26-2,rank_js,2,S26:Kareem Abdul-Jabbar;S26:Arike Ogunbowale,,S26:Arike Ogunbowale;S26:Kareem Abdul-Jabbar,1,1
+26,2,26-2,percent_js,2,S26:Kareem Abdul-Jabbar;S26:Arike Ogunbowale,,S26:Arike Ogunbowale;S26:Kareem Abdul-Jabbar,1,1
+26,3,26-3,rank,3,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,1,1
+26,3,26-3,percent,3,S26:Jennie Finch Daigle;S26:Chris Mazdzer;S26:Mirai Nagasu,,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,1,1
+26,3,26-3,rank_js,3,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,1,1
+26,3,26-3,percent_js,3,S26:Jennie Finch Daigle;S26:Chris Mazdzer;S26:Mirai Nagasu,,S26:Chris Mazdzer;S26:Jennie Finch Daigle;S26:Mirai Nagasu,1,1
+26,4,26-4,rank,0,,,,1,1
+26,4,26-4,percent,0,,,,1,1
+26,4,26-4,rank_js,0,,,,1,1
+26,4,26-4,percent_js,0,,,,1,1
+27,1,27-1,rank,1,S27:Nikki Glaser,,S27:Nikki Glaser,1,1
+27,1,27-1,percent,1,S27:Joe Amabile,,S27:Nikki Glaser,0,0
+27,1,27-1,rank_js,1,S27:Nikki Glaser,S27:Nikki Glaser;S27:Nancy McKeon,S27:Nikki Glaser,1,1
+27,1,27-1,percent_js,1,S27:Joe Amabile,S27:Joe Amabile;S27:Nikki Glaser,S27:Nikki Glaser,0,0
+27,2,27-2,rank,1,S27:Danelle Umstead,,S27:Danelle Umstead,1,1
+27,2,27-2,percent,1,S27:Danelle Umstead,,S27:Danelle Umstead,1,1
+27,2,27-2,rank_js,1,S27:Joe Amabile,S27:Danelle Umstead;S27:Joe Amabile,S27:Danelle Umstead,0,0
+27,2,27-2,percent_js,1,S27:Joe Amabile,S27:Danelle Umstead;S27:Joe Amabile,S27:Danelle Umstead,0,0
+27,3,27-3,rank,1,S27:Nancy McKeon,,S27:Nancy McKeon,1,1
+27,3,27-3,percent,1,S27:Joe Amabile,,S27:Nancy McKeon,0,0
+27,3,27-3,rank_js,1,S27:Joe Amabile,S27:Nancy McKeon;S27:Joe Amabile,S27:Nancy McKeon,0,0
+27,3,27-3,percent_js,1,S27:Joe Amabile,S27:Joe Amabile;S27:Nancy McKeon,S27:Nancy McKeon,0,0
+27,4,27-4,rank,1,S27:DeMarcus Ware,,S27:Tinashe,0,0
+27,4,27-4,percent,1,S27:Joe Amabile,,S27:Tinashe,0,0
+27,4,27-4,rank_js,1,S27:Joe Amabile,S27:DeMarcus Ware;S27:Joe Amabile,S27:Tinashe,0,0
+27,4,27-4,percent_js,1,S27:Joe Amabile,S27:Joe Amabile;S27:John Schneider,S27:Tinashe,0,0
+27,5,27-5,rank,0,,,,1,1
+27,5,27-5,percent,0,,,,1,1
+27,5,27-5,rank_js,0,,,,1,1
+27,5,27-5,percent_js,0,,,,1,1
+27,6,27-6,rank,1,S27:John Schneider,,S27:Mary Lou Retton,0,0
+27,6,27-6,percent,1,S27:John Schneider,,S27:Mary Lou Retton,0,0
+27,6,27-6,rank_js,1,S27:John Schneider,S27:John Schneider;S27:Mary Lou Retton,S27:Mary Lou Retton,0,0
+27,6,27-6,percent_js,1,S27:John Schneider,S27:John Schneider;S27:Joe Amabile,S27:Mary Lou Retton,0,0
+27,7,27-7,rank,2,S27:Joe Amabile;S27:DeMarcus Ware,,S27:DeMarcus Ware;S27:John Schneider,1,0
+27,7,27-7,percent,2,S27:Joe Amabile;S27:DeMarcus Ware,,S27:DeMarcus Ware;S27:John Schneider,1,0
+27,7,27-7,rank_js,2,S27:Joe Amabile;S27:DeMarcus Ware,,S27:DeMarcus Ware;S27:John Schneider,1,0
+27,7,27-7,percent_js,2,S27:Joe Amabile;S27:DeMarcus Ware,,S27:DeMarcus Ware;S27:John Schneider,1,0
+27,8,27-8,rank,2,S27:Joe Amabile;S27:Bobby Bones,,S27:Joe Amabile;S27:Juan Pablo Di Pace,1,0
+27,8,27-8,percent,2,S27:Joe Amabile;S27:Bobby Bones,,S27:Joe Amabile;S27:Juan Pablo Di Pace,1,0
+27,8,27-8,rank_js,2,S27:Joe Amabile;S27:Bobby Bones,,S27:Joe Amabile;S27:Juan Pablo Di Pace,1,0
+27,8,27-8,percent_js,2,S27:Joe Amabile;S27:Bobby Bones,,S27:Joe Amabile;S27:Juan Pablo Di Pace,1,0
+27,9,27-9,rank,0,,,,1,1
+27,9,27-9,percent,0,,,,1,1
+27,9,27-9,rank_js,0,,,,1,1
+27,9,27-9,percent_js,0,,,,1,1
+28,1,28-1,rank,0,,,,1,1
+28,1,28-1,percent,0,,,,1,1
+28,1,28-1,rank_js,0,,,,1,1
+28,1,28-1,percent_js,0,,,,1,1
+28,2,28-2,rank,2,S28:Mary Wilson;S28:Ray Lewis,,S28:Mary Wilson;S28:Ray Lewis,1,1
+28,2,28-2,percent,2,S28:Mary Wilson;S28:Ray Lewis,,S28:Mary Wilson;S28:Ray Lewis,1,1
+28,2,28-2,rank_js,2,S28:Mary Wilson;S28:Ray Lewis,,S28:Mary Wilson;S28:Ray Lewis,1,1
+28,2,28-2,percent_js,2,S28:Mary Wilson;S28:Ray Lewis,,S28:Mary Wilson;S28:Ray Lewis,1,1
+28,3,28-3,rank,0,,,,1,1
+28,3,28-3,percent,0,,,,1,1
+28,3,28-3,rank_js,0,,,,1,1
+28,3,28-3,percent_js,0,,,,1,1
+28,4,28-4,rank,1,S28:Lamar Odom,,S28:Lamar Odom,1,1
+28,4,28-4,percent,1,S28:Lamar Odom,,S28:Lamar Odom,1,1
+28,4,28-4,rank_js,1,S28:Lamar Odom,S28:Lamar Odom;S28:Kate Flannery,S28:Lamar Odom,1,1
+28,4,28-4,percent_js,1,S28:Lamar Odom,S28:Lamar Odom;S28:Kate Flannery,S28:Lamar Odom,1,1
+28,5,28-5,rank,0,,,,1,1
+28,5,28-5,percent,0,,,,1,1
+28,5,28-5,rank_js,0,,,,1,1
+28,5,28-5,percent_js,0,,,,1,1
+28,6,28-6,rank,1,S28:Karamo Brown,,S28:Sailor Brinkley-Cook,0,0
+28,6,28-6,percent,1,S28:Sailor Brinkley-Cook,,S28:Sailor Brinkley-Cook,1,1
+28,6,28-6,rank_js,1,S28:Sean Spicer,S28:Karamo Brown;S28:Sean Spicer,S28:Sailor Brinkley-Cook,0,0
+28,6,28-6,percent_js,1,S28:Karamo Brown,S28:Sailor Brinkley-Cook;S28:Karamo Brown,S28:Sailor Brinkley-Cook,0,0
+28,7,28-7,rank,1,S28:Kate Flannery,,S28:Karamo Brown,0,0
+28,7,28-7,percent,1,S28:Karamo Brown,,S28:Karamo Brown,1,1
+28,7,28-7,rank_js,1,S28:Kate Flannery,S28:Kate Flannery;S28:Karamo Brown,S28:Karamo Brown,0,0
+28,7,28-7,percent_js,1,S28:Kate Flannery,S28:Karamo Brown;S28:Kate Flannery,S28:Karamo Brown,0,0
+28,8,28-8,rank,1,S28:Kate Flannery,,S28:Kate Flannery,1,1
+28,8,28-8,percent,1,S28:Kate Flannery,,S28:Kate Flannery,1,1
+28,8,28-8,rank_js,1,S28:Kate Flannery,S28:Kate Flannery;S28:Kel Mitchell,S28:Kate Flannery,1,1
+28,8,28-8,percent_js,1,S28:Sean Spicer,S28:Kate Flannery;S28:Sean Spicer,S28:Kate Flannery,0,0
+28,9,28-9,rank,1,S28:Sean Spicer,,S28:Sean Spicer,1,1
+28,9,28-9,percent,1,S28:Sean Spicer,,S28:Sean Spicer,1,1
+28,9,28-9,rank_js,1,S28:Sean Spicer,S28:Sean Spicer;S28:James Van Der Beek,S28:Sean Spicer,1,1
+28,9,28-9,percent_js,1,S28:Sean Spicer,S28:Sean Spicer;S28:James Van Der Beek,S28:Sean Spicer,1,1
+28,10,28-10,rank,1,S28:James Van Der Beek,,S28:James Van Der Beek,1,1
+28,10,28-10,percent,1,S28:James Van Der Beek,,S28:James Van Der Beek,1,1
+28,10,28-10,rank_js,1,S28:James Van Der Beek,S28:James Van Der Beek;S28:Kel Mitchell,S28:James Van Der Beek,1,1
+28,10,28-10,percent_js,1,S28:James Van Der Beek,S28:James Van Der Beek;S28:Kel Mitchell,S28:James Van Der Beek,1,1
+28,11,28-11,rank,0,,,,1,1
+28,11,28-11,percent,0,,,,1,1
+28,11,28-11,rank_js,0,,,,1,1
+28,11,28-11,percent_js,0,,,,1,1
+29,1,29-1,rank,0,,,,1,1
+29,1,29-1,percent,0,,,,1,1
+29,1,29-1,rank_js,0,,,,1,1
+29,1,29-1,percent_js,0,,,,1,1
+29,2,29-2,rank,1,S29:Charles Oakley,,S29:Charles Oakley,1,1
+29,2,29-2,percent,1,S29:Charles Oakley,,S29:Charles Oakley,1,1
+29,2,29-2,rank_js,1,S29:Charles Oakley,S29:Charles Oakley;S29:Carole Baskin,S29:Charles Oakley,1,1
+29,2,29-2,percent_js,1,S29:Charles Oakley,S29:Charles Oakley;S29:Carole Baskin,S29:Charles Oakley,1,1
+29,3,29-3,rank,1,S29:Carole Baskin,,S29:Carole Baskin,1,1
+29,3,29-3,percent,1,S29:Carole Baskin,,S29:Carole Baskin,1,1
+29,3,29-3,rank_js,1,S29:Carole Baskin,S29:Carole Baskin;S29:Anne Heche,S29:Carole Baskin,1,1
+29,3,29-3,percent_js,1,S29:Carole Baskin,S29:Carole Baskin;S29:Anne Heche,S29:Carole Baskin,1,1
+29,4,29-4,rank,1,S29:Anne Heche,,S29:Anne Heche,1,1
+29,4,29-4,percent,1,S29:Anne Heche,,S29:Anne Heche,1,1
+29,4,29-4,rank_js,1,S29:Anne Heche,S29:Anne Heche;S29:Veron Davis,S29:Anne Heche,1,1
+29,4,29-4,percent_js,1,S29:Anne Heche,S29:Anne Heche;S29:Veron Davis,S29:Anne Heche,1,1
+29,5,29-5,rank,1,S29:Jesse Metcalfe,,S29:Jesse Metcalfe,1,1
+29,5,29-5,percent,1,S29:Jesse Metcalfe,,S29:Jesse Metcalfe,1,1
+29,5,29-5,rank_js,1,S29:Jesse Metcalfe,S29:Jesse Metcalfe;S29:Veron Davis,S29:Jesse Metcalfe,1,1
+29,5,29-5,percent_js,1,S29:Jesse Metcalfe,S29:Jesse Metcalfe;S29:Veron Davis,S29:Jesse Metcalfe,1,1
+29,6,29-6,rank,1,S29:Veron Davis,,S29:Veron Davis,1,1
+29,6,29-6,percent,1,S29:Veron Davis,,S29:Veron Davis,1,1
+29,6,29-6,rank_js,1,S29:Veron Davis,S29:Veron Davis;S29:Jeannie Mai,S29:Veron Davis,1,1
+29,6,29-6,percent_js,1,S29:Veron Davis,S29:Veron Davis;S29:Johnny Weir,S29:Veron Davis,1,1
+29,7,29-7,rank,2,S29:Monica Aldama;S29:Jeannie Mai,,S29:Jeannie Mai;S29:Monica Aldama,1,1
+29,7,29-7,percent,2,S29:Monica Aldama;S29:Jeannie Mai,,S29:Jeannie Mai;S29:Monica Aldama,1,1
+29,7,29-7,rank_js,2,S29:Monica Aldama;S29:Jeannie Mai,,S29:Jeannie Mai;S29:Monica Aldama,1,1
+29,7,29-7,percent_js,2,S29:Monica Aldama;S29:Jeannie Mai,,S29:Jeannie Mai;S29:Monica Aldama,1,1
+29,8,29-8,rank,1,S29:Chrishell Stause,,S29:Chrishell Stause,1,1
+29,8,29-8,percent,1,S29:Chrishell Stause,,S29:Chrishell Stause,1,1
+29,8,29-8,rank_js,1,S29:Skai Jackson,S29:Chrishell Stause;S29:Skai Jackson,S29:Chrishell Stause,0,0
+29,8,29-8,percent_js,1,S29:Chrishell Stause,S29:Chrishell Stause;S29:AJ McLean,S29:Chrishell Stause,1,1
+29,9,29-9,rank,1,S29:AJ McLean,,S29:AJ McLean,1,1
+29,9,29-9,percent,1,S29:AJ McLean,,S29:AJ McLean,1,1
+29,9,29-9,rank_js,1,S29:Nelly,S29:AJ McLean;S29:Nelly,S29:AJ McLean,0,0
+29,9,29-9,percent_js,1,S29:AJ McLean,S29:AJ McLean;S29:Johnny Weir,S29:AJ McLean,1,1
+29,10,29-10,rank,2,S29:Johnny Weir;S29:Skai Jackson,,S29:Johnny Weir;S29:Skai Jackson,1,1
+29,10,29-10,percent,2,S29:Johnny Weir;S29:Skai Jackson,,S29:Johnny Weir;S29:Skai Jackson,1,1
+29,10,29-10,rank_js,2,S29:Johnny Weir;S29:Skai Jackson,,S29:Johnny Weir;S29:Skai Jackson,1,1
+29,10,29-10,percent_js,2,S29:Johnny Weir;S29:Skai Jackson,,S29:Johnny Weir;S29:Skai Jackson,1,1
+29,11,29-11,rank,0,,,,1,1
+29,11,29-11,percent,0,,,,1,1
+29,11,29-11,rank_js,0,,,,1,1
+29,11,29-11,percent_js,0,,,,1,1
+30,1,30-1,rank,0,,,,1,1
+30,1,30-1,percent,0,,,,1,1
+30,1,30-1,rank_js,0,,,,1,1
+30,1,30-1,percent_js,0,,,,1,1
+30,2,30-2,rank,1,S30:Martin Kove,,S30:Martin Kove,1,1
+30,2,30-2,percent,1,S30:Martin Kove,,S30:Martin Kove,1,1
+30,2,30-2,rank_js,1,S30:Martin Kove,S30:Martin Kove;S30:Matt James,S30:Martin Kove,1,1
+30,2,30-2,percent_js,1,S30:Martin Kove,S30:Martin Kove;S30:Christine Chiu,S30:Martin Kove,1,1
+30,3,30-3,rank,1,S30:Christine Chiu,,S30:Christine Chiu,1,1
+30,3,30-3,percent,1,S30:Christine Chiu,,S30:Christine Chiu,1,1
+30,3,30-3,rank_js,1,S30:Matt James,S30:Christine Chiu;S30:Matt James,S30:Christine Chiu,0,0
+30,3,30-3,percent_js,1,S30:Christine Chiu,S30:Christine Chiu;S30:Melanie C,S30:Christine Chiu,1,1
+30,4,30-4,rank,2,S30:Brian Austin Green;S30:Matt James,,S30:Brian Austin Green;S30:Matt James,1,1
+30,4,30-4,percent,2,S30:Brian Austin Green;S30:Matt James,,S30:Brian Austin Green;S30:Matt James,1,1
+30,4,30-4,rank_js,2,S30:Brian Austin Green;S30:Matt James,,S30:Brian Austin Green;S30:Matt James,1,1
+30,4,30-4,percent_js,2,S30:Brian Austin Green;S30:Matt James,,S30:Brian Austin Green;S30:Matt James,1,1
+30,5,30-5,rank,1,S30:Jimmie Allen,,S30:Melanie C,0,0
+30,5,30-5,percent,1,S30:Melanie C,,S30:Melanie C,1,1
+30,5,30-5,rank_js,1,S30:Jimmie Allen,S30:Jimmie Allen;S30:Melanie C,S30:Melanie C,0,0
+30,5,30-5,percent_js,1,S30:Melanie C,S30:Melanie C;S30:Olivia Jade,S30:Melanie C,1,1
+30,6,30-6,rank,1,S30:Kenya Moore,,S30:Kenya Moore,1,1
+30,6,30-6,percent,1,S30:Kenya Moore,,S30:Kenya Moore,1,1
+30,6,30-6,rank_js,1,S30:Kenya Moore,S30:Kenya Moore;S30:Melora Hardin,S30:Kenya Moore,1,1
+30,6,30-6,percent_js,1,S30:Kenya Moore,S30:Kenya Moore;S30:Olivia Jade,S30:Kenya Moore,1,1
+30,7,30-7,rank,1,"S30:Mike ""The Miz"" Mizanin",,"S30:Mike ""The Miz"" Mizanin",1,1
+30,7,30-7,percent,1,"S30:Mike ""The Miz"" Mizanin",,"S30:Mike ""The Miz"" Mizanin",1,1
+30,7,30-7,rank_js,1,"S30:Mike ""The Miz"" Mizanin","S30:Mike ""The Miz"" Mizanin;S30:Suni Lee","S30:Mike ""The Miz"" Mizanin",1,1
+30,7,30-7,percent_js,1,"S30:Mike ""The Miz"" Mizanin","S30:Mike ""The Miz"" Mizanin;S30:Suni Lee","S30:Mike ""The Miz"" Mizanin",1,1
+30,8,30-8,rank,2,S30:Jimmie Allen;S30:Olivia Jade,,S30:Jimmie Allen;S30:Olivia Jade,1,1
+30,8,30-8,percent,2,S30:Jimmie Allen;S30:Olivia Jade,,S30:Jimmie Allen;S30:Olivia Jade,1,1
+30,8,30-8,rank_js,2,S30:Jimmie Allen;S30:Olivia Jade,,S30:Jimmie Allen;S30:Olivia Jade,1,1
+30,8,30-8,percent_js,2,S30:Jimmie Allen;S30:Olivia Jade,,S30:Jimmie Allen;S30:Olivia Jade,1,1
+30,9,30-9,rank,2,S30:Melora Hardin;S30:Suni Lee,,S30:Melora Hardin;S30:Suni Lee,1,1
+30,9,30-9,percent,2,S30:Melora Hardin;S30:Suni Lee,,S30:Melora Hardin;S30:Suni Lee,1,1
+30,9,30-9,rank_js,2,S30:Melora Hardin;S30:Suni Lee,,S30:Melora Hardin;S30:Suni Lee,1,1
+30,9,30-9,percent_js,2,S30:Melora Hardin;S30:Suni Lee,,S30:Melora Hardin;S30:Suni Lee,1,1
+30,10,30-10,rank,0,,,,1,1
+30,10,30-10,percent,0,,,,1,1
+30,10,30-10,rank_js,0,,,,1,1
+30,10,30-10,percent_js,0,,,,1,1
+31,1,31-1,rank,1,S31:Jason Lewis,,S31:Jason Lewis,1,1
+31,1,31-1,percent,1,S31:Jason Lewis,,S31:Jason Lewis,1,1
+31,1,31-1,rank_js,1,S31:Jason Lewis,S31:Jason Lewis;S31:Teresa Giudice,S31:Jason Lewis,1,1
+31,1,31-1,percent_js,1,S31:Jason Lewis,S31:Jason Lewis;S31:Teresa Giudice,S31:Jason Lewis,1,1
+31,2,31-2,rank,1,S31:Teresa Giudice,,S31:Teresa Giudice,1,1
+31,2,31-2,percent,1,S31:Teresa Giudice,,S31:Teresa Giudice,1,1
+31,2,31-2,rank_js,1,S31:Cheryl Ladd,S31:Teresa Giudice;S31:Cheryl Ladd,S31:Teresa Giudice,0,0
+31,2,31-2,percent_js,1,S31:Cheryl Ladd,S31:Teresa Giudice;S31:Cheryl Ladd,S31:Teresa Giudice,0,0
+31,3,31-3,rank,1,S31:Cheryl Ladd,,S31:Cheryl Ladd,1,1
+31,3,31-3,percent,1,S31:Cheryl Ladd,,S31:Cheryl Ladd,1,1
+31,3,31-3,rank_js,1,S31:Cheryl Ladd,S31:Cheryl Ladd;S31:Jessie James Decker,S31:Cheryl Ladd,1,1
+31,3,31-3,percent_js,1,S31:Cheryl Ladd,S31:Cheryl Ladd;S31:Selma Blair,S31:Cheryl Ladd,1,1
+31,4,31-4,rank,1,S31:Sam Champion,,S31:Sam Champion,1,1
+31,4,31-4,percent,1,S31:Sam Champion,,S31:Sam Champion,1,1
+31,4,31-4,rank_js,1,S31:Sam Champion,S31:Sam Champion;S31:Joseph Baena,S31:Sam Champion,1,1
+31,4,31-4,percent_js,1,S31:Sam Champion,S31:Sam Champion;S31:Joseph Baena,S31:Sam Champion,1,1
+31,5,31-5,rank,2,S31:Joseph Baena;S31:Jordin Sparks,,S31:Joseph Baena;S31:Selma Blair,1,0
+31,5,31-5,percent,2,S31:Joseph Baena;S31:Selma Blair,,S31:Joseph Baena;S31:Selma Blair,1,1
+31,5,31-5,rank_js,2,S31:Joseph Baena;S31:Jordin Sparks,,S31:Joseph Baena;S31:Selma Blair,1,0
+31,5,31-5,percent_js,2,S31:Joseph Baena;S31:Selma Blair,,S31:Joseph Baena;S31:Selma Blair,1,1
+31,6,31-6,rank,1,S31:Jessie James Decker,,S31:Jessie James Decker,1,1
+31,6,31-6,percent,1,S31:Jessie James Decker,,S31:Jessie James Decker,1,1
+31,6,31-6,rank_js,1,S31:Jessie James Decker,S31:Jessie James Decker;S31:Jordin Sparks,S31:Jessie James Decker,1,1
+31,6,31-6,percent_js,1,S31:Jessie James Decker,S31:Jessie James Decker;S31:Jordin Sparks,S31:Jessie James Decker,1,1
+31,7,31-7,rank,1,S31:Jordin Sparks,,S31:Jordin Sparks,1,1
+31,7,31-7,percent,1,S31:Jordin Sparks,,S31:Jordin Sparks,1,1
+31,7,31-7,rank_js,1,S31:Jordin Sparks,S31:Jordin Sparks;S31:Heidi D'Amelio,S31:Jordin Sparks,1,1
+31,7,31-7,percent_js,1,S31:Jordin Sparks,S31:Jordin Sparks;S31:Heidi D'Amelio,S31:Jordin Sparks,1,1
+31,8,31-8,rank,2,S31:Heidi D'Amelio;S31:Vinny Guadagnino,,S31:Heidi D'Amelio;S31:Vinny Guadagnino,1,1
+31,8,31-8,percent,2,S31:Heidi D'Amelio;S31:Vinny Guadagnino,,S31:Heidi D'Amelio;S31:Vinny Guadagnino,1,1
+31,8,31-8,rank_js,2,S31:Heidi D'Amelio;S31:Vinny Guadagnino,,S31:Heidi D'Amelio;S31:Vinny Guadagnino,1,1
+31,8,31-8,percent_js,2,S31:Heidi D'Amelio;S31:Vinny Guadagnino,,S31:Heidi D'Amelio;S31:Vinny Guadagnino,1,1
+31,9,31-9,rank,2,S31:Trevor Donovan;S31:Daniel Durant,,S31:Daniel Durant;S31:Trevor Donovan,1,1
+31,9,31-9,percent,2,S31:Trevor Donovan;S31:Daniel Durant,,S31:Daniel Durant;S31:Trevor Donovan,1,1
+31,9,31-9,rank_js,2,S31:Trevor Donovan;S31:Daniel Durant,,S31:Daniel Durant;S31:Trevor Donovan,1,1
+31,9,31-9,percent_js,2,S31:Trevor Donovan;S31:Daniel Durant,,S31:Daniel Durant;S31:Trevor Donovan,1,1
+31,10,31-10,rank,0,,,,1,1
+31,10,31-10,percent,0,,,,1,1
+31,10,31-10,rank_js,0,,,,1,1
+31,10,31-10,percent_js,0,,,,1,1
+32,1,32-1,rank,1,S32:Matt Walsh,,S32:Matt Walsh,1,1
+32,1,32-1,percent,1,S32:Matt Walsh,,S32:Matt Walsh,1,1
+32,1,32-1,rank_js,1,S32:Matt Walsh,S32:Matt Walsh;S32:Jamie Lynn Spears,S32:Matt Walsh,1,1
+32,1,32-1,percent_js,1,S32:Matt Walsh,S32:Matt Walsh;S32:Tyson Beckford,S32:Matt Walsh,1,1
+32,2,32-2,rank,1,S32:Jamie Lynn Spears,,S32:Jamie Lynn Spears,1,1
+32,2,32-2,percent,1,S32:Jamie Lynn Spears,,S32:Jamie Lynn Spears,1,1
+32,2,32-2,rank_js,1,S32:Adrian Peterson,S32:Jamie Lynn Spears;S32:Adrian Peterson,S32:Jamie Lynn Spears,0,0
+32,2,32-2,percent_js,1,S32:Mauricio Umansky,S32:Jamie Lynn Spears;S32:Mauricio Umansky,S32:Jamie Lynn Spears,0,0
+32,3,32-3,rank,1,S32:Tyson Beckford,,S32:Tyson Beckford,1,1
+32,3,32-3,percent,1,S32:Tyson Beckford,,S32:Tyson Beckford,1,1
+32,3,32-3,rank_js,1,S32:Tyson Beckford,S32:Tyson Beckford;S32:Adrian Peterson,S32:Tyson Beckford,1,1
+32,3,32-3,percent_js,1,S32:Tyson Beckford,S32:Tyson Beckford;S32:Adrian Peterson,S32:Tyson Beckford,1,1
+32,4,32-4,rank,1,S32:Adrian Peterson,,S32:Adrian Peterson,1,1
+32,4,32-4,percent,1,S32:Adrian Peterson,,S32:Adrian Peterson,1,1
+32,4,32-4,rank_js,1,S32:Mauricio Umansky,S32:Adrian Peterson;S32:Mauricio Umansky,S32:Adrian Peterson,0,0
+32,4,32-4,percent_js,1,S32:Adrian Peterson,S32:Adrian Peterson;S32:Mira Sorvino,S32:Adrian Peterson,1,1
+32,5,32-5,rank,1,S32:Mira Sorvino,,S32:Mira Sorvino,1,1
+32,5,32-5,percent,1,S32:Mira Sorvino,,S32:Mira Sorvino,1,1
+32,5,32-5,rank_js,1,S32:Mira Sorvino,S32:Mira Sorvino;S32:Lele Pons,S32:Mira Sorvino,1,1
+32,5,32-5,percent_js,1,S32:Mira Sorvino,S32:Mira Sorvino;S32:Lele Pons,S32:Mira Sorvino,1,1
+32,6,32-6,rank,1,S32:Mauricio Umansky,,S32:Mauricio Umansky,1,1
+32,6,32-6,percent,1,S32:Mauricio Umansky,,S32:Mauricio Umansky,1,1
+32,6,32-6,rank_js,1,S32:Mauricio Umansky,S32:Mauricio Umansky;S32:Lele Pons,S32:Mauricio Umansky,1,1
+32,6,32-6,percent_js,1,S32:Mauricio Umansky,S32:Mauricio Umansky;S32:Lele Pons,S32:Mauricio Umansky,1,1
+32,7,32-7,rank,1,S32:Lele Pons,,S32:Lele Pons,1,1
+32,7,32-7,percent,1,S32:Lele Pons,,S32:Lele Pons,1,1
+32,7,32-7,rank_js,1,S32:Barry Williams,S32:Lele Pons;S32:Barry Williams,S32:Lele Pons,0,0
+32,7,32-7,percent_js,1,S32:Barry Williams,S32:Lele Pons;S32:Barry Williams,S32:Lele Pons,0,0
+32,8,32-8,rank,1,S32:Barry Williams,,S32:Barry Williams,1,1
+32,8,32-8,percent,1,S32:Barry Williams,,S32:Barry Williams,1,1
+32,8,32-8,rank_js,1,S32:Jason Mraz,S32:Barry Williams;S32:Jason Mraz,S32:Barry Williams,0,0
+32,8,32-8,percent_js,1,S32:Jason Mraz,S32:Barry Williams;S32:Jason Mraz,S32:Barry Williams,0,0
+32,9,32-9,rank,1,S32:Harry Jowsey,,S32:Harry Jowsey,1,1
+32,9,32-9,percent,1,S32:Harry Jowsey,,S32:Harry Jowsey,1,1
+32,9,32-9,rank_js,1,S32:Harry Jowsey,S32:Harry Jowsey;S32:Charity Lawson,S32:Harry Jowsey,1,1
+32,9,32-9,percent_js,1,S32:Harry Jowsey,S32:Harry Jowsey;S32:Ariana Madix,S32:Harry Jowsey,1,1
+32,10,32-10,rank,0,,,,1,1
+32,10,32-10,percent,0,,,,1,1
+32,10,32-10,rank_js,0,,,,1,1
+32,10,32-10,percent_js,0,,,,1,1
+32,11,32-11,rank,0,,,,1,1
+32,11,32-11,percent,0,,,,1,1
+32,11,32-11,rank_js,0,,,,1,1
+32,11,32-11,percent_js,0,,,,1,1
+33,1,33-1,rank,0,,,,1,1
+33,1,33-1,percent,0,,,,1,1
+33,1,33-1,rank_js,0,,,,1,1
+33,1,33-1,percent_js,0,,,,1,1
+33,2,33-2,rank,2,S33:Anna Delvey;S33:Tori Spelling,,S33:Anna Delvey;S33:Tori Spelling,1,1
+33,2,33-2,percent,2,S33:Anna Delvey;S33:Tori Spelling,,S33:Anna Delvey;S33:Tori Spelling,1,1
+33,2,33-2,rank_js,2,S33:Anna Delvey;S33:Tori Spelling,,S33:Anna Delvey;S33:Tori Spelling,1,1
+33,2,33-2,percent_js,2,S33:Anna Delvey;S33:Tori Spelling,,S33:Anna Delvey;S33:Tori Spelling,1,1
+33,3,33-3,rank,2,S33:Reginald VelJohnson;S33:Eric Roberts,,S33:Eric Roberts;S33:Reginald VelJohnson,1,1
+33,3,33-3,percent,2,S33:Reginald VelJohnson;S33:Eric Roberts,,S33:Eric Roberts;S33:Reginald VelJohnson,1,1
+33,3,33-3,rank_js,2,S33:Reginald VelJohnson;S33:Eric Roberts,,S33:Eric Roberts;S33:Reginald VelJohnson,1,1
+33,3,33-3,percent_js,2,S33:Reginald VelJohnson;S33:Eric Roberts,,S33:Eric Roberts;S33:Reginald VelJohnson,1,1
+33,4,33-4,rank,1,S33:Brooks Nader,,S33:Brooks Nader,1,1
+33,4,33-4,percent,1,S33:Brooks Nader,,S33:Brooks Nader,1,1
+33,4,33-4,rank_js,1,S33:Brooks Nader,S33:Brooks Nader;S33:Jenn Tran,S33:Brooks Nader,1,1
+33,4,33-4,percent_js,1,S33:Brooks Nader,S33:Brooks Nader;S33:Jenn Tran,S33:Brooks Nader,1,1
+33,5,33-5,rank,1,S33:Phaedra Parks,,S33:Phaedra Parks,1,1
+33,5,33-5,percent,1,S33:Phaedra Parks,,S33:Phaedra Parks,1,1
+33,5,33-5,rank_js,1,S33:Phaedra Parks,S33:Phaedra Parks;S33:Jenn Tran,S33:Phaedra Parks,1,1
+33,5,33-5,percent_js,1,S33:Phaedra Parks,S33:Phaedra Parks;S33:Jenn Tran,S33:Phaedra Parks,1,1
+33,6,33-6,rank,1,S33:Jenn Tran,,S33:Jenn Tran,1,1
+33,6,33-6,percent,1,S33:Jenn Tran,,S33:Jenn Tran,1,1
+33,6,33-6,rank_js,1,S33:Ilona Maher,S33:Jenn Tran;S33:Ilona Maher,S33:Jenn Tran,0,0
+33,6,33-6,percent_js,1,S33:Ilona Maher,S33:Jenn Tran;S33:Ilona Maher,S33:Jenn Tran,0,0
+33,7,33-7,rank,1,S33:Dwight Howard ,,S33:Dwight Howard ,1,1
+33,7,33-7,percent,1,S33:Dwight Howard ,,S33:Dwight Howard ,1,1
+33,7,33-7,rank_js,1,S33:Dwight Howard ,S33:Dwight Howard ;S33:Danny Amendola,S33:Dwight Howard ,1,1
+33,7,33-7,percent_js,1,S33:Dwight Howard ,S33:Dwight Howard ;S33:Joey Graziadei,S33:Dwight Howard ,1,1
+33,8,33-8,rank,0,,,,1,1
+33,8,33-8,percent,0,,,,1,1
+33,8,33-8,rank_js,0,,,,1,1
+33,8,33-8,percent_js,0,,,,1,1
+33,9,33-9,rank,0,,,,1,1
+33,9,33-9,percent,0,,,,1,1
+33,9,33-9,rank_js,0,,,,1,1
+33,9,33-9,percent_js,0,,,,1,1
+34,1,34-1,rank,0,,,,1,1
+34,1,34-1,percent,0,,,,1,1
+34,1,34-1,rank_js,0,,,,1,1
+34,1,34-1,percent_js,0,,,,1,1
+34,2,34-2,rank,2,S34:Corey Feldman;S34:Baron Davis,,S34:Baron Davis;S34:Corey Feldman,1,1
+34,2,34-2,percent,2,S34:Corey Feldman;S34:Baron Davis,,S34:Baron Davis;S34:Corey Feldman,1,1
+34,2,34-2,rank_js,2,S34:Corey Feldman;S34:Baron Davis,,S34:Baron Davis;S34:Corey Feldman,1,1
+34,2,34-2,percent_js,2,S34:Corey Feldman;S34:Baron Davis,,S34:Baron Davis;S34:Corey Feldman,1,1
+34,3,34-3,rank,1,S34:Lauren Jauregui,,S34:Lauren Jauregui,1,1
+34,3,34-3,percent,1,S34:Lauren Jauregui,,S34:Lauren Jauregui,1,1
+34,3,34-3,rank_js,1,S34:Lauren Jauregui,S34:Lauren Jauregui;S34:Jen Affleck,S34:Lauren Jauregui,1,1
+34,3,34-3,percent_js,1,S34:Lauren Jauregui,S34:Lauren Jauregui;S34:Jen Affleck,S34:Lauren Jauregui,1,1
+34,4,34-4,rank,1,S34:Scott Hoying,,S34:Hilaria Baldwin,0,0
+34,4,34-4,percent,1,S34:Hilaria Baldwin,,S34:Hilaria Baldwin,1,1
+34,4,34-4,rank_js,1,S34:Scott Hoying,S34:Scott Hoying;S34:Danielle Fishel,S34:Hilaria Baldwin,0,0
+34,4,34-4,percent_js,1,S34:Hilaria Baldwin,S34:Hilaria Baldwin;S34:Jen Affleck,S34:Hilaria Baldwin,1,1
+34,5,34-5,rank,0,,,,1,1
+34,5,34-5,percent,0,,,,1,1
+34,5,34-5,rank_js,0,,,,1,1
+34,5,34-5,percent_js,0,,,,1,1
+34,6,34-6,rank,1,S34:Scott Hoying,,S34:Scott Hoying,1,1
+34,6,34-6,percent,1,S34:Scott Hoying,,S34:Scott Hoying,1,1
+34,6,34-6,rank_js,1,S34:Scott Hoying,S34:Scott Hoying;S34:Jen Affleck,S34:Scott Hoying,1,1
+34,6,34-6,percent_js,1,S34:Scott Hoying,S34:Scott Hoying;S34:Jen Affleck,S34:Scott Hoying,1,1
+34,7,34-7,rank,1,S34:Jen Affleck,,S34:Jen Affleck,1,1
+34,7,34-7,percent,1,S34:Jen Affleck,,S34:Jen Affleck,1,1
+34,7,34-7,rank_js,1,S34:Jen Affleck,S34:Jen Affleck;S34:Danielle Fishel,S34:Jen Affleck,1,1
+34,7,34-7,percent_js,1,S34:Jen Affleck,S34:Jen Affleck;S34:Danielle Fishel,S34:Jen Affleck,1,1
+34,8,34-8,rank,1,S34:Danielle Fishel,,S34:Danielle Fishel,1,1
+34,8,34-8,percent,1,S34:Danielle Fishel,,S34:Danielle Fishel,1,1
+34,8,34-8,rank_js,1,S34:Andy Richter,S34:Danielle Fishel;S34:Andy Richter,S34:Danielle Fishel,0,0
+34,8,34-8,percent_js,1,S34:Danielle Fishel,S34:Danielle Fishel;S34:Whitney Leavitt,S34:Danielle Fishel,1,1
+34,9,34-9,rank,1,S34:Alix Earle,,S34:Andy Richter,0,0
+34,9,34-9,percent,1,S34:Whitney Leavitt,,S34:Andy Richter,0,0
+34,9,34-9,rank_js,1,S34:Andy Richter,S34:Alix Earle;S34:Andy Richter,S34:Andy Richter,1,1
+34,9,34-9,percent_js,1,S34:Andy Richter,S34:Whitney Leavitt;S34:Andy Richter,S34:Andy Richter,1,1
+34,10,34-10,rank,1,S34:Whitney Leavitt,,S34:Whitney Leavitt,1,1
+34,10,34-10,percent,1,S34:Whitney Leavitt,,S34:Whitney Leavitt,1,1
+34,10,34-10,rank_js,1,S34:Dylan Efron,S34:Whitney Leavitt;S34:Dylan Efron,S34:Whitney Leavitt,0,0
+34,10,34-10,percent_js,1,S34:Whitney Leavitt,S34:Whitney Leavitt;S34:Robert Irwin,S34:Whitney Leavitt,1,1
+34,11,34-11,rank,0,,,,1,1
+34,11,34-11,percent,0,,,,1,1
+34,11,34-11,rank_js,0,,,,1,1
+34,11,34-11,percent_js,0,,,,1,1

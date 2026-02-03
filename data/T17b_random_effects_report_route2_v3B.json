@@ -1,0 +1,30 @@
+{
+  "trace": "data/T07f_trace_route2_v3B.nc",
+  "posterior_vars": [
+    "u_raw",
+    "w_raw",
+    "eps_raw",
+    "sigma_u",
+    "sigma_w",
+    "sigma_eps",
+    "kappa_S",
+    "kappa_J",
+    "u",
+    "w",
+    "eps",
+    "theta",
+    "pi",
+    "S"
+  ],
+  "selected": {
+    "kappa_S": "kappa_S",
+    "kappa_S_mean": 0.5518415959006864,
+    "kappa_J": "kappa_J",
+    "kappa_J_mean": 0.12374041420451445,
+    "u": "u",
+    "u_len": 421,
+    "w": "w",
+    "w_len": 335
+  },
+  "notes": "Selections use heuristics; adjust candidates in script if your trace uses different variable names."
+}

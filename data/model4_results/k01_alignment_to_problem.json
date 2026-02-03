@@ -1,0 +1,10 @@
+{
+  "interpreted_regimes": {
+    "S1-S2": "Rank",
+    "S3-S27": "Percent",
+    "S28-S34": "Rank + Judges' Save"
+  },
+  "elimination_check": "Consistent with event table elim_count",
+  "judges_save_check": "Supported via delta parameter",
+  "data_consistency": "T05 contains required active_ids and J_total_by_active"
+}

@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "t05": "data/T05_model_ready_events_route2_v3B.csv",
+    "t08b_csv": "data/T08b_votes_posterior_stats_route2_v3B.csv",
+    "t10b_csv": "data/T10b_hard_consistency_S_route2_v3B.csv",
+    "t11b_csv": "data/T11b_soft_consistency_2stage_route2_v3B.csv"
+  },
+  "n_events": 335,
+  "missing_rates": {
+    "ppc_p_mean": 0.0,
+    "hard_hit_set": 0.0,
+    "pi_hdi_width_mean": 0.0
+  },
+  "ppc_p_mean_by_rule_mode": {
+    "percent": 0.31514421308412927,
+    "rank": 0.41966096670715003
+  },
+  "hard_hit_set_by_rule_mode": {
+    "percent": 0.7298387096774194,
+    "rank": 0.5862068965517241
+  }
+}

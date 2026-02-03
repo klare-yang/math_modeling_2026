@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "panel": "data/M01_panel_m3.csv",
+    "map": "data/M01_keymap_m3.json"
+  },
+  "outputs": {
+    "trace": "data/M03_trace_m3_judges.nc",
+    "summary": "data/M03_summary_m3_judges.csv"
+  },
+  "config": {
+    "include_celeb_re": false,
+    "seed": 20260201,
+    "chains": 4,
+    "draws": 1000,
+    "tune": 1000,
+    "target_accept": 0.95
+  },
+  "qc": {
+    "n_obs_used": 2766,
+    "divergences_total": 0,
+    "rhat_max": 1.0094636119701719,
+    "ess_min": 382.86251049018216,
+    "max_id_check": {
+      "pro_id_max": 59,
+      "pro_id_dim": 60,
+      "industry_id_max": 7,
+      "industry_dim": 8,
+      "season_id_max": 33,
+      "season_dim": 34,
+      "celeb_id_max": 418,
+      "celeb_dim": 419
+    },
+    "include_celeb_re": false,
+    "sigma_celeb_fixed_if_disabled": 0.0
+  }
+}

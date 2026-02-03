@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "elim_panel": "data/M11_elim_panel.csv",
+    "map": "data/M01_keymap_m3.json"
+  },
+  "outputs": {
+    "trace": "data/M12_trace_elim_hazard.nc",
+    "summary": "data/M12_summary_elim_hazard.csv",
+    "metrics": "data/M12_metrics_elim_hazard.json",
+    "pred": "data/M12_predprob_obs.csv"
+  },
+  "qc": {
+    "n_obs_used": 2228,
+    "divergences_total": 0,
+    "rhat_max": 1.003814082622624,
+    "ess_min": 1464.4197702539743,
+    "max_id_check": {
+      "pro_id_max": 59,
+      "pro_id_dim": 60,
+      "industry_id_max": 7,
+      "industry_dim": 8,
+      "season_id_max": 33,
+      "season_dim": 34,
+      "celeb_id_max": 418,
+      "celeb_dim": 419
+    }
+  },
+  "notes": {
+    "auc_method": "rank (pandas average-rank ties)",
+    "roc_method": "quantile thresholds",
+    "reconstructed_cols": {
+      "score_col": false,
+      "fan_col": false
+    }
+  }
+}
