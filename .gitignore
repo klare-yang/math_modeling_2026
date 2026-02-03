@@ -1,0 +1,98 @@
+# =========================
+
+# Python / venv
+
+# =========================
+
+.venv/
+venv/
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter / IPython
+
+.ipynb_checkpoints/
+
+# =========================
+
+# Data science / modeling
+
+# =========================
+
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.h5
+*.hdf5
+
+# Large generated outputs
+
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# =========================
+
+# VS Code
+
+# =========================
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =========================
+
+# macOS
+
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+
+# Logs / temp
+
+# =========================
+
+*.log
+*.tmp
+*.temp
+
+# =========================
+
+# Build / cache
+
+# =========================
+
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# =========================
+
+# OS / editor backups
+
+# =========================
+
+*~
+*.swp
+*.swo
+
+.venv311
+Archive.zip
+data/
+Archive_第一题第一版.zip
+trash/

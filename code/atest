@@ -1,0 +1,12 @@
+import xarray as xr
+
+trace = xr.open_dataset("./data/T07f_trace_route2_v3B.nc")
+
+print("=== DIMS ===")
+print(trace.dims)
+
+print("\n=== COORDS ===")
+print(list(trace.coords))
+
+print("\n=== DATA VARS (first 10) ===")
+print(list(trace.data_vars)[:10])
